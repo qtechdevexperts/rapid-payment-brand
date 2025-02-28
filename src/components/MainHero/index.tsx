@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./index.module.scss";
 import clsx from "clsx";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useRouter } from "next/router";
+import Modal from "@/common/Modal";
 
 const MainHero = () => {
 
@@ -11,7 +12,11 @@ const MainHero = () => {
     const router  = useRouter()
 
 
+    const [contactModal,setContactModal] = useState(false) 
+
+
     return (
+        <>
         <section className={clsx(style.mainHero, "px-sm-4  d-flex flex-column justify-content-center align-items-center")}>
             <div className="container h-100">
                 <Row className="h-100">
@@ -78,14 +83,22 @@ const MainHero = () => {
                         </Row>
 
                         <div className="d-flex flex-column flex-sm-row gap-3 mt-3 justify-content-start align-items-sm-center">
-                            <Button onClick={()=>router.push("#ContactForm")} className=" btn-lg btn-feature ">Talk To an Expert</Button>
+                            <Button onClick={()=>setContactModal(true)} className=" btn-lg btn-feature ">Talk To an Expert</Button>
                             <Button onClick={()=>router.push('tel:012-3456-789')} className=" btn-lg btn-outline-feature">Call Us: 012-3456-789</Button>
                         </div>
                     </Col>
                 </Row>
             </div>
         </section>
-    );
+
+            <Modal 
+                show={contactModal}
+                handleClose={()=>setContactModal(false)}
+            />
+
+        </>
+    
+);
 };
 
 export default MainHero;

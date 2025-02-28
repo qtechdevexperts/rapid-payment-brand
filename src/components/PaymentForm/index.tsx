@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import Form from "@/Form";
 
 const PaymentForm = () => {
     return (
@@ -37,115 +38,7 @@ const PaymentForm = () => {
                     </p>
                 </Col>
                 <Col lg={6} >
-                    <Row>
-                        <Col md={6}>
-                            <div className="mb-3">
-                                <label
-                                    htmlFor="exampleFormControlInput1"
-                                    className="form-label"
-                                >
-                                    First Name:
-                                </label>
-                                <input
-                                    type="text"
-                                    className="form-control py-3"
-                                    id="exampleFormControlInput1"
-                                />
-                            </div>
-                        </Col>
-                        <Col md={6}>
-                            <div className="mb-3">
-                                <label
-                                    htmlFor="exampleFormControlInput1"
-                                    className="form-label"
-                                >
-                                    Last Name:
-                                </label>
-                                <input
-                                    type="text"
-                                    className="form-control py-3"
-                                    id="exampleFormControlInput1"
-                                />
-                            </div>
-                        </Col>
-                        <Col md={6}>
-                            <div className="mb-3">
-                                <label
-                                    htmlFor="exampleFormControlInput1"
-                                    className="form-label"
-                                >
-                                    Company Name:
-                                </label>
-                                <input
-                                    type="text"
-                                    className="form-control py-3"
-                                    id="exampleFormControlInput1"
-                                />
-                            </div>
-                        </Col>
-                        <Col md={6}>
-                            <div className="mb-3">
-                                <label
-                                    htmlFor="exampleFormControlInput1"
-                                    className="form-label"
-                                >
-                                    Phone Number:
-                                </label>
-                                <input
-                                    type="tel"
-                                    className="form-control py-3"
-                                    id="exampleFormControlInput1"
-                                />
-                            </div>
-                        </Col>
-                        <Col md={12}>
-                            <div className="mb-3">
-                                <label
-                                    htmlFor="exampleFormControlInput1"
-                                    className="form-label"
-                                >
-                                    Email Address:
-                                </label>
-                                <input
-                                    type="tel"
-                                    className="form-control py-3"
-                                    id="exampleFormControlInput1"
-                                />
-                            </div>
-                        </Col>
-                        <Col md={12}>
-                            <div className="mb-3">
-                                <label
-                                    htmlFor="exampleFormControlInput1"
-                                    className="form-label"
-                                >
-                                    Your message:
-                                </label>
-                                <textarea
-                                    className="form-control py-3"
-                                    id="exampleFormControlInput1"
-                                    rows={5}
-                                />
-                            </div>
-                        </Col>
-                        <Col md={12}>
-                            <div className="form-check">
-                                <input
-                                    className="form-check-input"
-                                    type="checkbox"
-                                    name="exampleRadios"
-                                    id="exampleRadios1"
-                                    defaultValue="option1"
-                                />
-                                <label className="form-check-label text-gray-2" htmlFor="exampleRadios1">
-                                    By providing a telephone number and submitting this form you are consenting to be contacted by SMS text message. Message & data rates may apply. You can reply STOP to opt-out of further messaging.
-                                </label>
-                            </div>
-                        </Col>
-                        <Col md={12}>
-                            <Button className="btn-feature btn-lg mt-3 px-5">Submit</Button>
-                        </Col>
-                    </Row>
+                   <Form />
                 </Col>
             </Row>
         </Container>

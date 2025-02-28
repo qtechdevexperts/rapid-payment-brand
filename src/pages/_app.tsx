@@ -7,18 +7,23 @@ import Footer from '@/components/Footer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Head from 'next/head';
+import { Toaster } from 'react-hot-toast';
 
 
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-    <Head>
-      <title>Rapid Payment</title>
-    </Head>
+      <Head>
+        <title>Rapid Payment</title>
+      </Head>
       <Header />
       <Component {...pageProps} />
       <Footer />
+      <Toaster
+        position="top-center"
+
+      />
     </>
   );
 }

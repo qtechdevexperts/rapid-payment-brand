@@ -33,27 +33,33 @@ const RapidPaymentUniversity = () => {
 
     const slides = [
         {
-            title: "Restaurant",
-            imgSrc: "/images/university.png",
-            desc:"Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly."
-        },
-        {
-            title: "Ecommerce",
-            imgSrc: "/images/ecommerce.png",
-            desc:"Secure your online transactions with a dedicated merchant account and reliable payment processing. Accept credit and debit cards with ease while protecting your business from fraud and chargebacks."
+            title: "Retail",
+            imgSrc: "/images/industries/Retail.png",
+            desc:"Simplify in-store payments with secure merchant account services and advanced POS solutions. Accept credit and debit card payments seamlessly while managing inventory, transactions, and customer insights efficiently."
         },
         {
             title: "Restaurant",
-            imgSrc: "/images/university.png",
+            imgSrc: "/images/industries/resturant.png",
             desc:"Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly."
         },
+        {
+            title: "eCommerce",
+            imgSrc: "/images/industries/ecommerce.png",
+            desc:"Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly."
+        },
+        {
+            title: "Professional Services",
+            imgSrc: "/images/industries/professional-services.png",
+            desc:"Get paid on time with custom invoicing, recurring billing, and seamless card payment acceptance. Our merchant accounts and POS solutions help service professionals simplify transactions and improve cash flow."
+        },
+
     ];
 
     const totalSlides = slides.length;
     const progress = ((currentSlide + 1) / totalSlides) * 100;
 
     return (
-        <section className={clsx(style.RapidPayment, "p-sm-4 p-1 rounded-3 ")}>
+        <section className={clsx(style.RapidPayment, "p-sm-4 p-3 rounded-3 ")}>
             <div className="row">
                 <div className="col-md-8">
                     <h4 className="heading-3 fw-normal text-capitalize">

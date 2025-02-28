@@ -24,10 +24,10 @@ const Footer = () => {
         <div className={clsx(style.footer, "pt-9")}>
             <Container>
                 <div className={clsx(style["border-footer"], style.footerRow, "")}>
-                    <div className={clsx(style.borderright, style.notInclude, style.firstBox, 'py-5 pe-3')}>
+                    <div className={clsx(style.borderright, style.notInclude, style.firstBox, 'py-sm-5 pe-3')}>
                         <img src="/images/logo-dark.png" className="img-fluid" alt="" />
 
-                        <p className="para fs-9 text-white my-5">
+                        <p className="para fs-9 text-white my-md-5 my-1">
                             Rapid Payments empowers businesses to accept payments effortlessly
                             online, in-store, or on the go with secure processing, robust
                             fraud protection, and lightning-fast funding. Our seamless

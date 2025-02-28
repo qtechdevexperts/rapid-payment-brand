@@ -32,3 +32,18 @@ textarea {
 button {
   border-radius: 7px !important;
 }
+
+
+.form-control {
+  @extend .py-3; 
+
+  @media (max-width:1400px) {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+}
+
+div[role="dialog"] { 
+  padding-left: 0px !important;
+}

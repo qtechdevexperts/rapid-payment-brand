@@ -14,7 +14,7 @@ interface PaymentCardProps {
 
 const PaymentCard = ({title,description,icon}:PaymentCardProps) => {
     return (
-        <div className={clsx(style.paymentCard, 'p-4')}>
+        <div className={clsx(style.paymentCard, 'p-4 h-100')}>
             <div className={clsx(style.paymentIcon)}>
                 {icon}
             </div>
