@@ -1,0 +1,21 @@
+@import "@/styles/responsive.scss";
+
+.LogoSlider { 
+    @include respond-to('md','max') { 
+        img { 
+            height: 80px !important;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+}
+.logoCard {
+    // width: 300px;
+    height: 100px;
+
+    border-radius: 4px;
+    border: 1px solid #E9E9E9;
+    background: linear-gradient(180deg, #FFF 50%, rgba(73, 144, 226, 0.10) 276.77%);
+    margin-right: 10px !important;
+
+}

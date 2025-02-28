@@ -1,0 +1,72 @@
+@import "@/styles/responsive";
+@import "rfs/scss";
+
+.mainHero {
+  max-width: 97%;
+  margin: 0 auto;
+
+  background-image: url("/images/hero.png");
+  background-size: cover;
+  background-position: center;
+
+  background-color: #f1f7fd;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+
+  min-height: 85vh;
+  height: 100%;
+
+  & > * {
+    position: relative;
+    z-index: 10;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1000px;
+    height: 1096.873px;
+    background-image: url("/images/vector.png");
+
+    @include respond-to('lg','max'){
+        width: 0px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 887px;
+    height: 956.525px;
+    transform: rotate(-0.552deg);
+    right: 0px;
+    top: 0px;
+    background: url("/images/mobile-image.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+
+    @include respond-to('xxl','max'){
+      
+            width: 718px;
+            right: -91px;
+         
+    }
+
+
+
+
+    @include respond-to("xl", "max") {
+      width: 0px;
+    }
+  }
+
+  @include respond-to("xxl", "max") {
+    min-height: auto !important;
+
+    @include padding-top(80px);
+    @include padding-bottom(80px);
+
+  }
+}

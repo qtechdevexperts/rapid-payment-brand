@@ -1,0 +1,64 @@
+.paymentCard {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    background: linear-gradient(210deg, #FFF -9.83%, #4990E2 773.8%);
+    mix-blend-mode: multiply;
+    transition: background 0.4s ease-in-out, box-shadow 0.3s ease, transform 0.3s ease-in-out;
+    position: relative;
+
+
+    .paymentIcon {
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+        background: linear-gradient(180deg, #FFF -32.14%, #4990E2 84.9%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s ease, transform 0.3s ease-in-out;
+
+    }
+
+    h5, p {
+        transition: color 0.3s ease;
+    }
+
+    &:hover {
+        background: linear-gradient(180deg, #FFF -62.51%, #4990E2 84.9%);
+        transform: scale(1.05);  
+        
+        h5 { 
+            color: white;
+        }
+        p { 
+            color: white;
+        }
+
+        .paymentIcon { 
+            background: white;
+            // transform: rotate(360deg);
+            
+            svg { 
+                path { 
+                    fill: #4990E2 !important;
+                    transition: fill 0.3s ease; 
+                }
+            }
+        }
+    }
+
+
+    &::after { 
+        content:"";
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        background-image: url('/images/icons/vector-2.svg');
+        background-repeat: no-repeat;
+        top: 30px;
+        right: 30px;
+    }
+
+
+}

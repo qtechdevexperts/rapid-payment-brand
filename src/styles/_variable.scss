@@ -1,0 +1,38 @@
+$gray-1:#4F4F4F;
+$gray-2:#626262;
+$primary-100:#4990E2;
+
+
+$black-1:#1C2630;
+$primary-light:#ECF5FF;
+
+
+.text-black-1 { 
+    color: $black-1;
+}
+
+.text-gray-1 { 
+    color: $gray-1;
+}
+
+
+.text-gray-2 { 
+    color: $gray-2;
+}
+
+
+.text-primary-100 { 
+    color: $primary-100;
+}
+
+.text-primary-light { 
+    color: $primary-light;
+}
+
+.bg-primary-light {
+    background-color: $primary-light;
+}
+
+.bg-primary-100 { 
+    background: $primary-100;
+}

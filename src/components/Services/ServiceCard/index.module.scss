@@ -1,0 +1,53 @@
+@import "@/styles/responsive.scss";
+
+.ServiceCard { 
+    background: #4990E2;
+
+    transition: background 0.4s ease-in-out;
+    border: 1px solid transparent;
+
+
+
+    h5 { 
+        color: white;
+        font-size: 26px;
+    }
+
+    p { 
+        color: white;
+        font-size: 18px;
+    }
+
+    &:hover { 
+        background: transparent;
+        border: 1px solid #4990E2;
+
+        h5 { 
+            color: #4990E2;
+        }
+
+        p { 
+            color: #4990E2;
+        }
+
+        svg { 
+            path { 
+                fill: #4990E2;
+            }
+        }
+    }
+
+
+
+    @include  respond-to('xxl','max'){
+        padding: 16px !important;
+
+        h5 { 
+            font-size: 22px;
+        }
+
+        p { 
+            font-size: 16px;
+        }
+    }
+}
