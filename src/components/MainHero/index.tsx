@@ -87,8 +87,8 @@ const MainHero = () => {
                         </Row>
 
                         <div className="d-flex flex-column flex-sm-row gap-3 mt-3 justify-content-start align-items-sm-center">
-                            <Button onClick={()=>setContactModal(true)} className={` ${isLaptop ? "":"btn-lg"} btn-feature `}>Talk To an Expert</Button>
-                            <Button onClick={()=>router.push('tel:012-3456-789')} className={` ${isLaptop ? "":"btn-lg"} btn-outline-feature `}>Call Us: 012-3456-789</Button>
+                            <Button onClick={()=>setContactModal(true)} className={`  btn-feature `}>Talk To an Expert</Button>
+                            <Button onClick={()=>router.push('tel:012-3456-789')} className={`  btn-outline-feature `}>Call Us: 012-3456-789</Button>
                         </div>
                     </Col>
                 </Row>
