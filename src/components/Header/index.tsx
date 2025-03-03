@@ -13,13 +13,13 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="m-auto gap-sm-4 gap-1">
+                    <Nav className="m-auto gap-md-4 gap-1">
                         <Nav.Link href="#home" rel="nofollow">Solutions</Nav.Link>
                         <Nav.Link href="#link" rel="nofollow">Who We Serve</Nav.Link>
                         <Nav.Link href="#link" rel="nofollow">Who We Are</Nav.Link>
                         <Nav.Link href="#link" rel="nofollow">Integrated Partners</Nav.Link>
                     </Nav>
-                    <Button className="btn-feature btn-lg" onClick={() => router.push("#ContactForm")}>
+                    <Button className="btn-feature " onClick={() => router.push("#ContactForm")}>
                         Contact Us
                     </Button>
                 </Navbar.Collapse>

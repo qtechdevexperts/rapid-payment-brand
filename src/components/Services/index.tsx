@@ -19,7 +19,7 @@ const Services = () => {
 
     return (
         <>
-            <Container className="py-7">
+            <Container className="py-md-7 py-2">
                 <Row className="gy-3">
                     <Col lg={6} className="d-flex justify-content-center align-items-start flex-col flex-column">
                         <div className="">

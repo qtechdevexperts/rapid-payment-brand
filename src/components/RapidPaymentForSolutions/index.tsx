@@ -112,7 +112,7 @@ const RapidPaymentForSolutions = () => {
                                                             terminals, manage tips and tabs, and streamline
                                                             operations effortlessly.
                                                         </p>
-                                                        <button className={`btn btn-feature ${!isBigScreen && "btn-lg"} px-sm-5 py-2`}>
+                                                        <button className={`btn btn-feature  px-sm-5 py-2`}>
                                                             Get Started
                                                         </button>
                                                     </div>

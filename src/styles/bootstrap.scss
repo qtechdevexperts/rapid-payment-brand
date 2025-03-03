@@ -271,6 +271,11 @@ $feature-bg: #4990E2;
         color: $feature-bg !important;
         border-color: $feature-bg !important;
     }
+
+    @media (min-width: 1400px) {
+        font-size: 1.25rem; // Adjust the size to match the `.btn-lg` class, or apply other appropriate styles
+        padding: 0.75rem 1.5rem; // Add necessary padding
+    }
 }
 
 
@@ -287,9 +292,15 @@ $feature-bg: #4990E2;
 
     color: $feature-bg !important; // Text color matches feature color
 
-    // Override hover styles
+    
     &:hover {
-        color: #FFF !important; // Text color changes to white on hover
+        color: #FFF !important; 
+    }
+
+
+    @media (min-width: 1400px) {
+        font-size: 1.25rem; // Adjust the size to match the `.btn-lg` class, or apply other appropriate styles
+        padding: 0.75rem 1.5rem; // Add necessary padding
     }
 }
 

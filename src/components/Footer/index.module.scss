@@ -235,9 +235,15 @@
 
 .footerBottomText { 
     font-size: clamp(16px,4vw,22px);
+
+    @media (max-width:992px) {
+        font-size: clamp(16px,4vw,20px);
+    }
 }
 
 
 .footerLink { 
     font-size: clamp(14px,4vw,16px);
+
+    
 }
