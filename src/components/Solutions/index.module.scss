@@ -1,4 +1,9 @@
 .solution { 
-    max-width: 86%;
-    margin: 0 auto;
+
+    @media (max-width:1920px) {
+        max-width: 86%;
+        margin: 0 auto;
+            
+    }
+
 }

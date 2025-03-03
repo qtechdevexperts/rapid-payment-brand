@@ -5,6 +5,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaLongArrowAltDown, FaLongArrowAltUp } from "react-icons/fa";
+import { useMediaQuery } from "react-responsive";
 
 
 const Footer = () => {
@@ -17,6 +18,10 @@ const Footer = () => {
 
 
 
+    const isBigScreen = useMediaQuery({ query: '(min-width: 1500px)' })
+
+
+
 
     const router = useRouter();
 
@@ -24,7 +29,7 @@ const Footer = () => {
         <div className={clsx(style.footer, "pt-9")}>
             <Container>
                 <div className={clsx(style["border-footer"], style.footerRow, "")}>
-                    <div className={clsx(style.borderright, style.notInclude, style.firstBox, 'py-sm-5 pe-3')}>
+                    <div className={clsx(style.borderright, style.notInclude, style.firstBox, ' pe-3 pt-5',{"pb-sm-5":isBigScreen})}>
                         <img src="/images/logo-dark.png" className="img-fluid" alt="" />
 
                         <p className="para fs-9 text-white my-md-5 my-1">
@@ -36,9 +41,9 @@ const Footer = () => {
                             speed.
                         </p>
                     </div>
-                    <div className={clsx(style.borderright, style.notInclude, style.secondBox, ' py-5 ps-sm-4 p-2')}>
+                    <div className={clsx(style.borderright, style.notInclude, style.secondBox, ' pt-sm-5  ps-sm-4 p-2',{"pb-sm-5":isBigScreen})}>
                         <div className={`d-flex justify-content-between align-items-center ${style.footerAccordian}`}>
-                            <h4 className="text-primary-100 mb-0">Accept Payments</h4>
+                            <h4 className={`text-primary-100 mb-0 ${style.footerBottomText}`}>Accept Payments</h4>
                             <div className={`${style.accordianIcon}`} onClick={() => setPaymentFooter(!acceptPaymentFooter)}>
                                 {
                                     acceptPaymentFooter ? <FaLongArrowAltUp color="#4990E2" size={15}   className={`${style.accordianIcon}`} /> : <FaLongArrowAltDown color="#4990E2" className={`${style.accordianIcon}`} />
@@ -50,7 +55,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Online
                                 </Link>
@@ -58,7 +63,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white  fs-11 text-decoration-none "
+                                    className={`text-white  ${style.footerLink} text-decoration-none `}
                                 >
                                     In-Person
                                 </Link>
@@ -66,7 +71,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     OmniChannel
                                 </Link>
@@ -74,7 +79,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} fs-11 text-decoration-none `}
                                 >
                                     Point of Sales
                                 </Link>
@@ -84,7 +89,7 @@ const Footer = () => {
                     </div>
                     <div className={clsx(style.borderright, style.notInclude, style.thirdBox, ' py-5 ps-sm-4 p-2' )}>
                         <div className={`d-flex justify-content-between align-items-center ${style.footerAccordian}`}>
-                            <h4 className="text-primary-100 mb-0">Run Your Buinsess</h4>
+                            <h4 className={`text-primary-100 mb-0 ${style.footerBottomText}`}>Run Your Buinsess</h4>
                             <div className={`${style.accordianIcon}`} onClick={() => setBuisnessFooter(!buisnessFooter)}>
                                 {
                                     buisnessFooter ? <FaLongArrowAltUp color="#4990E2" size={15}   className={`${style.accordianIcon}`} /> : <FaLongArrowAltDown color="#4990E2" className={`${style.accordianIcon}`} />
@@ -96,7 +101,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Payment Gateways
                                 </Link>
@@ -104,7 +109,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Virtual Terminals
                                 </Link>
@@ -112,7 +117,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Fraud Protection
                                 </Link>
@@ -120,7 +125,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Funding
                                 </Link>
@@ -128,7 +133,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Chargeback Management
                                 </Link>
@@ -138,7 +143,7 @@ const Footer = () => {
                     </div>
                     <div className={clsx(style.borderright, style.notInclude, style.secondLast, ' py-5 ps-sm-4 p-2')}>
                         <div className={`d-flex justify-content-between align-items-center ${style.footerAccordian}`}>
-                            <h4 className="text-primary-100 mb-0">Who we Serve</h4>
+                            <h4 className={`text-primary-100 mb-0 ${style.footerBottomText}`}>Who we Serve</h4>
                             <div className={`${style.accordianIcon}`} onClick={() => setWhoWeServe(!whoWeServe)}>
                                 {
                                     whoWeServe ? <FaLongArrowAltUp color="#4990E2" size={15}   className={`${style.accordianIcon}`} /> : <FaLongArrowAltDown color="#4990E2" className={`${style.accordianIcon}`} />
@@ -150,7 +155,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Payment Gateways
                                 </Link>
@@ -158,7 +163,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Virtual Terminals
                                 </Link>
@@ -166,7 +171,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Fraud Protection
                                 </Link>
@@ -174,7 +179,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Funding
                                 </Link>
@@ -182,7 +187,7 @@ const Footer = () => {
                             <li className="my-3">
                                 <Link
                                     href={"#!"}
-                                    className="text-white fs-11 text-decoration-none "
+                                    className={`text-white ${style.footerLink} text-decoration-none `}
                                 >
                                     Chargeback Management
                                 </Link>
@@ -193,11 +198,11 @@ const Footer = () => {
                     <div className={clsx('ps-xxl-5 ps-sm-4 ps-2 py-5', style.notInclude, style.lastBox)}>
                         <div className="mb-3">
                             <h4 className="text-white fs-11">Sales</h4>
-                            <div onClick={() => router.push("tel:012-3456-789")} className="text-primary-100 cursor-pointer fs-13 fw-bold">012-3456-789</div>
+                            <div onClick={() => router.push("tel:012-3456-789")} className={`text-primary-100 cursor-pointer ${style.footerBottomText}  fw-bold`}>012-3456-789</div>
                         </div>
                         <div className="mb-3">
                             <h4 className="text-white fs-11">Email</h4>
-                            <div onClick={() => router.push("mailto:sales@rapidpayments.io")} className="text-primary-100 cursor-pointer fs-13 fw-bold">sales@rapidpayments.io</div>
+                            <div onClick={() => router.push("mailto:sales@rapidpayments.io")} className={`text-primary-100 ${style.footerBottomText} cursor-pointer fw-bold`}>sales@rapidpayments.io</div>
                         </div>
                         <div className="mb-3">
                             {/* <h4 className="text-white fs-13">Social Links:</h4>
@@ -235,8 +240,8 @@ const Footer = () => {
 
                 </div>
                 <div className="d-flex py-4 flex-column flex-sm-row gap-3 justify-content-between align-items-center">
-                    <h3 className="text-white fs-9 fs-xl-13 mb-0">©2025, RapidPayment. All Rights Reserved</h3>
-                    <h6 className=" fs-9 fs-xl-13 text-white">
+                    <h3 className={`text-white ${style.footerBottomText} mb-0`}>©2025, RapidPayment. All Rights Reserved</h3>
+                    <h6 className={`${style.footerBottomText} text-white`}>
                         <Link href={'#!'} className="text-white text-decoration-none"> Privacy Policy</Link>  | <Link href={'#!'} className="text-white text-decoration-none">Terms and Conditions</Link>
                     </h6>
                 </div>

@@ -29,7 +29,7 @@ const slickSettings = {
     ],
 };
 
-const RapidPaymentUniversity = () => {
+const RapidPaymentForSolutions = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const slides = [
@@ -156,4 +156,4 @@ const RapidPaymentUniversity = () => {
     );
 };
 
-export default RapidPaymentUniversity;
+export default RapidPaymentForSolutions;

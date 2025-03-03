@@ -16,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Rapid Payment</title>
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Header />
       <Component {...pageProps} />

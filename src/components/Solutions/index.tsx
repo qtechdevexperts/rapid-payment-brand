@@ -4,6 +4,7 @@ import style from "./index.module.scss";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 import Modal from "@/common/Modal";
+import useResponsive from "@/hooks/useResponsive";
 
 const Solutions = () => {
   const [currentTab, setCurrentTab] = useState("small-business");
@@ -12,6 +13,9 @@ const Solutions = () => {
 
 
   const [isshowModal, setShowModal] = useState<boolean>(false)
+
+  const isBigScreen = useResponsive({ query: '(min-width: 1921px)' });
+  const isLaptop = useResponsive({ query: '(max-width: 1400px)' });
 
 
   const handleTabClick = (tab: string) => {
@@ -23,15 +27,16 @@ const Solutions = () => {
       <section
         className={clsx(style.solution, "bg-primary-light rounded-4 my-5")}
       >
-        <Container className="me-lg-0 pe-lg-0">
+        <Container className={` ${isBigScreen ? "" : "me-lg-0 pe-lg-0"} `}>
           <Row>
-            {/* Left Column - Tab Buttons & Content */}
+
             <Col lg={6} className="pb-8">
               <div className="d-flex flex-column flex-sm-row gap-3 justify-content-start align-items-sm-center">
                 {/* Small Business Tab */}
                 <Button
                   className={clsx(
-                    "btn-lg px-md-5 px-3 py-md-3 py-2",
+                    "px-md-5 px-3 py-md-3 py-2",
+                    { "btn-lg": !isLaptop },
                     currentTab === "small-business"
                       ? "btn-feature"
                       : "btn-outline-feature"
@@ -44,7 +49,8 @@ const Solutions = () => {
                 {/* Enterprises Tab */}
                 <Button
                   className={clsx(
-                    "btn-lg px-md-5 px-3 py-md-3 py-2",
+                    "px-md-5 px-3 py-md-3 py-2",
+                    { "btn-lg": !isLaptop },
                     currentTab === "enterprises"
                       ? "btn-feature"
                       : "btn-outline-feature"
@@ -135,13 +141,13 @@ const Solutions = () => {
               <div className="d-flex flex-column flex-sm-row mt-8 justify-content-start align-items-sm-center gap-3">
                 <Button
                   onClick={() => setShowModal(true)}
-                  className="btn-lg btn-feature"
+                  className={`${!isLaptop && "btn-lg"} btn-feature`}
                 >
                   Talk to Sales
                 </Button>
                 <Button
                   onClick={() => router.push("tel:012-3456-789")}
-                  className="btn-lg btn-outline-feature"
+                  className={`${!isLaptop && "btn-lg"} btn-outline-feature`}
                 >
                   Call Us: 012-3456-789
                 </Button>

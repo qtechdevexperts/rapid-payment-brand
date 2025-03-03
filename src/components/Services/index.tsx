@@ -3,6 +3,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import ServiceCard from "./ServiceCard";
 import { useRouter } from "next/router";
 import Modal from "@/common/Modal";
+import { useMediaQuery } from "react-responsive";
 
 const Services = () => {
 
@@ -12,6 +13,7 @@ const Services = () => {
 
 
     const [isshowModalModal, setShowModal] = useState(false)
+    const isLaptop = useMediaQuery({ query: "(max-width: 1400px)" });
 
 
 
@@ -36,7 +38,7 @@ const Services = () => {
                             </p>
                         </div>
 
-                        <Button onClick={() => setShowModal(true)} className="btn btn-feature btn-lg mt-4">Talk to An Expert</Button>
+                        <Button onClick={() => setShowModal(true)} className={`btn btn-feature ${!isLaptop && "btn-lg"}  mt-4`}>Talk to An Expert</Button>
                     </Col>
                     <Col lg={6}>
                         <Row className="gy-4 ">

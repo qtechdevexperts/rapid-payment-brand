@@ -3,7 +3,7 @@
 .RapidPayment {
     // max-width: 86%;
     // margin: 0 auto;
-    background-color: #ECF5FF;
+    background-color: transparent;
 
     // @include respond-to('xxl') {
     //     max-width: 90%;
@@ -17,4 +17,14 @@
         object-fit: cover;
         border-radius: 30px;
     }
+}
+
+
+.paymentUniversityCard { 
+    border-radius: 20px;
+    
+    & > div { 
+       background-color: #eff5fc;
+
+   }
 }

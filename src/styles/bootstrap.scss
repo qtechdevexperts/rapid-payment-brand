@@ -8,48 +8,48 @@
 
 
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size,
-  7: 10px,
-  8: 12px,
-  9: 14px,
-  10: 16px,
-  11: 18px,
-  12: 20px,
-  13: 22px,
-  14: 24px,
-  15: 26px,
-  16: 28px,
-  17: 30px,
-  18: 32px,
-  19: 34px,
-  20: 36px,
-  21: 38px,
-  22: 40px,
-  23: 42px,
-  24: 44px,
-  25: 46px,
-  26: 48px,
-  27: 50px,
-  28: 52px,
-  29: 54px,
-  30: 56px,
-  31: 58px,
-  32: 60px,
-  33: 62px,
-  34: 64px,
-  35: 66px,
-  36: 68px,
-  37: 70px,
-  38: 72px,
-  39: 74px,
-  40: 76px,
-  41: 78px,
-  42: 80px,
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size,
+    7: 10px,
+    8: 12px,
+    9: 14px,
+    10: 16px,
+    11: 18px,
+    12: 20px,
+    13: 22px,
+    14: 24px,
+    15: 26px,
+    16: 28px,
+    17: 30px,
+    18: 32px,
+    19: 34px,
+    20: 36px,
+    21: 38px,
+    22: 40px,
+    23: 42px,
+    24: 44px,
+    25: 46px,
+    26: 48px,
+    27: 50px,
+    28: 52px,
+    29: 54px,
+    30: 56px,
+    31: 58px,
+    32: 60px,
+    33: 62px,
+    34: 64px,
+    35: 66px,
+    36: 68px,
+    37: 70px,
+    38: 72px,
+    39: 74px,
+    40: 76px,
+    41: 78px,
+    42: 80px,
 );
 
 
@@ -104,11 +104,11 @@ $utilities: map-merge($utilities,
                     )),
             ),
             'font-size': (rfs: true,
-            responsive: true,
-            property: font-size,
-            class: fs,
-            values: $font-sizes,
-          ),
+                responsive: true,
+                property: font-size,
+                class: fs,
+                values: $font-sizes,
+            ),
             "margin-x": (responsive: true,
                 property: margin-right margin-left,
                 class: mx,
@@ -211,7 +211,7 @@ $container-max-widths: (
     lg: 960px,
     xl: 1240px,
     xxl: 1220px,
-    3xl: 1600px 
+    3xl: 1600px
 );
 
 
@@ -226,12 +226,12 @@ $container-max-widths: (
 
 
 @include respond-to('xxl') {
-    
+
     .container {
         @include make-container();
         max-width: map-get($container-max-widths, 3xl);
     }
-  }
+}
 
 
 
@@ -239,6 +239,20 @@ $container-max-widths: (
 
 
 $feature-bg: #4990E2;
+
+
+
+
+/*
+  Change Bootstrap Border
+*/
+
+.card {
+    border: 1px solid #E9E9E9 !important;
+
+}
+
+
 
 .btn-feature {
     @include button-variant($background: $feature-bg,

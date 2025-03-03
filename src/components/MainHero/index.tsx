@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useRouter } from "next/router";
 import Modal from "@/common/Modal";
+import { useMediaQuery } from "react-responsive";
 
 const MainHero = () => {
 
@@ -14,13 +15,16 @@ const MainHero = () => {
 
     const [contactModal,setContactModal] = useState(false) 
 
+    const isLaptop = useMediaQuery({ query: '(max-width: 1400px)' });
+
+
 
     return (
         <>
         <section className={clsx(style.mainHero, "px-sm-4  d-flex flex-column justify-content-center align-items-center")}>
-            <div className="container h-100">
+            <div className={`container ${style.container} h-100`}>
                 <Row className="h-100">
-                    <Col lg={6} md={12} className="mb-10 h-100 d-flex flex-column justify-content-center align-items-start">
+                    <Col lg={5} md={12} className="mb-10 h-100 d-flex flex-column justify-content-center align-items-start">
                         <h1 className="heading-1 fw-normal mt-4">
                             Rapid Payments Your Partner in{" "}
                             <span className="fw-bolder"> Payment Success</span>
@@ -83,8 +87,8 @@ const MainHero = () => {
                         </Row>
 
                         <div className="d-flex flex-column flex-sm-row gap-3 mt-3 justify-content-start align-items-sm-center">
-                            <Button onClick={()=>setContactModal(true)} className=" btn-lg btn-feature ">Talk To an Expert</Button>
-                            <Button onClick={()=>router.push('tel:012-3456-789')} className=" btn-lg btn-outline-feature">Call Us: 012-3456-789</Button>
+                            <Button onClick={()=>setContactModal(true)} className={` ${isLaptop ? "":"btn-lg"} btn-feature `}>Talk To an Expert</Button>
+                            <Button onClick={()=>router.push('tel:012-3456-789')} className={` ${isLaptop ? "":"btn-lg"} btn-outline-feature `}>Call Us: 012-3456-789</Button>
                         </div>
                     </Col>
                 </Row>
