@@ -20,7 +20,7 @@
 .footerRow {
 
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 
 
@@ -38,33 +38,27 @@
             }
 
             &:nth-child(3) {
+        
                 border-bottom: 1px solid rgba(255, 255, 255, 0.30);
-            }
-
-            &:nth-child(4) {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.30);
-                border-right: 0px;
-            }
-
-            &:nth-child(5) {
-                // border-right: 1px solid rgba(255, 255, 255, 0.30);
-
+                // border-right: 0px;
+                
             }
         }
     }
 
     @media (max-width:1180px) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
 
 
         &>div {
 
             &:nth-child(3) {
-                border-right: 0px;
+                // border-right: 0px;
             }
 
             &:nth-child(4) {
-                border-right: 1px solid rgba(255, 255, 255, 0.30);
+                // border-right: 1px solid rgba(255, 255, 255, 0.30);
+                border-right: 0px;
             }
 
             &:nth-child(5) {

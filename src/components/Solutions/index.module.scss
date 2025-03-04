@@ -7,3 +7,27 @@
     }
 
 }
+
+.sliderTab { 
+    max-width: 493px;
+}
+
+.solutinTabButton { 
+    @media (max-width:500px) {
+        display: none !important;
+    }
+}
+
+.carouselTab { 
+    display: none;
+
+    @media (max-width:500px) {
+        display: block !important;
+        max-width: 95%;
+        margin: 0 auto; 
+    }
+
+
+
+
+}

@@ -65,9 +65,9 @@ const RapidPaymentUniversity = () => {
 
 
     return (
-        <section className={clsx(style.RapidPayment, "p-sm-4 p-3 rounded-3 ")}>
+        <section className={clsx(style.RapidPayment, "p-sm-4 container p-3 rounded-3 ")}>
 
-            <div className={clsx({ "container": isBigScreen })}>
+            <div className={clsx("")}>
                 <div className="row">
                     <div className="col-md-8">
                         <h4 className="heading-3 fw-normal text-capitalize">

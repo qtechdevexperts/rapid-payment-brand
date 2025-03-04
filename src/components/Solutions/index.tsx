@@ -1,3 +1,4 @@
+import 'react-multi-carousel/lib/styles.css';
 import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import style from "./index.module.scss";
@@ -5,6 +6,35 @@ import clsx from "clsx";
 import { useRouter } from "next/router";
 import Modal from "@/common/Modal";
 import useResponsive from "@/hooks/useResponsive";
+import dynamic from 'next/dynamic';
+
+
+// import Carousel from 'react-multi-carousel';
+
+const Carousel = dynamic(() => import("react-multi-carousel"), { ssr: false })
+
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
+
+
 
 const Solutions = () => {
   const [currentTab, setCurrentTab] = useState("small-business");
@@ -25,14 +55,46 @@ const Solutions = () => {
   return (
     <>
       <section
-        className={clsx(style.solution, "bg-primary-light rounded-4 my-5")}
+        className={clsx(style.solution, { "container": isBigScreen }, "bg-primary-light rounded-4 my-5")}
       >
         <Container className={` ${isBigScreen ? "" : "me-lg-0 pe-lg-0"} `}>
           <Row>
 
             <Col lg={6} className="pb-8">
-              <div className="d-flex flex-column flex-sm-row gap-3 justify-content-start align-items-sm-center">
-                {/* Small Business Tab */}
+              
+              <div className={`${style.carouselTab}`}>
+                <Carousel responsive={responsive} arrows={false} >
+                  <Button
+                    className={clsx(
+                      "px-md-5 px-sm-3 py-md-3 py-2",
+                      { "btn-lg": !isLaptop },
+                      currentTab === "small-business"
+                        ? "btn-feature"
+                        : "btn-outline-feature"
+                    )}
+                    onClick={() => handleTabClick("small-business")}
+                  >
+                    Small Business
+                  </Button>
+
+                  {/* Enterprises Tab */}
+                  <Button
+                    className={clsx(
+                      "px-md-5 px-sm-3 py-md-3 py-2",
+                      { "btn-lg": !isLaptop },
+                      currentTab === "enterprises"
+                        ? "btn-feature"
+                        : "btn-outline-feature"
+                    )}
+                    onClick={() => handleTabClick("enterprises")}
+                  >
+                    Enterprises
+                  </Button>
+
+                </Carousel>
+              </div>
+
+              <div className={`d-flex ${style.solutinTabButton}  gap-3 justify-content-start align-items-sm-center`}>
                 <Button
                   className={clsx(
                     "px-md-5 px-3 py-md-3 py-2",
@@ -59,6 +121,11 @@ const Solutions = () => {
                 >
                   Enterprises
                 </Button>
+                {/* Small Business Tab */}
+
+
+
+
               </div>
 
               {/* Dynamic Content */}

@@ -25,7 +25,7 @@ const PaymentType = () => {
       </Row>
 
       <Row className="mt-5 gy-3 gy-lg-0 justify-content-center">
-        <Col md={4} sm={6}>
+        <Col lg={4} md={6}>
           <PaymentCard
             title="Online Payments"
             description="Secure virtual terminal payment processing for cards, wallets & more."
@@ -49,7 +49,7 @@ const PaymentType = () => {
             }
           />
         </Col>
-        <Col md={4} sm={6}>
+        <Col lg={4} md={6}>
           <PaymentCard
             title="In-Person Payments"
             description="Smart POS, mobile readers & contactless terminals for speed & convenience."
@@ -75,7 +75,7 @@ const PaymentType = () => {
             }
           />
         </Col>
-        <Col md={4} sm={6}>
+        <Col lg={4} md={6}>
           <PaymentCard
             title="Omnichannel Payments"
             description="Seamlessly integrate online, in-store & mobile transactions"
