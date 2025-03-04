@@ -65,7 +65,7 @@ const RapidPaymentUniversity = () => {
 
 
     return (
-        <section className={clsx(style.RapidPayment, "p-sm-4 container p-3 rounded-3 ")}>
+        <section className={clsx(style.RapidPayment, "p-xxl-10 p-xl-8 p-md-7 container p-3 rounded-3 ")}>
 
             <div className={clsx("")}>
                 <div className="row">

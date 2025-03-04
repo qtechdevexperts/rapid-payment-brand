@@ -4,6 +4,9 @@ import ServiceCard from "./ServiceCard";
 import { useRouter } from "next/router";
 import Modal from "@/common/Modal";
 import { useMediaQuery } from "react-responsive";
+import clsx from "clsx";
+import style from "./index.module.scss"
+
 
 const Services = () => {
 
@@ -18,13 +21,13 @@ const Services = () => {
 
 
     return (
-        <>
+        <div className={clsx(style.rapidbackground)}>
             <Container className="py-md-7 py-2">
                 <Row className="gy-3">
                     <Col lg={6} className="d-flex justify-content-center align-items-start flex-col flex-column">
                         <div className="">
 
-                            <h2 className="heading-large fw-normal">
+                            <h2 className={`heading-large fw-normal ${style.fontSizeHeading}`}>
                                 Rapid Payments <br /> Elevate Your Business <br /> th{" "}
                                 <span className="fw-bold">Next-Level</span> <br />{" "}
                                 <span className="fw-bold"> Merchant</span>
@@ -64,7 +67,7 @@ const Services = () => {
                 handleClose={() => setShowModal(false)}
             />
 
-        </>
+        </div>
 
     );
 };

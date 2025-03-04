@@ -1,0 +1,22 @@
+// .rapidbackground { 
+//     position: relative;
+//     overflow-x: auto !important;
+
+//     &::before {
+//         content:"";
+//         position: absolute;
+//         width: 811.8px;
+//         height: 876.066px;
+//         background: url('/images/icons/vector-3.svg');
+//         background-repeat: no-repeat;
+//         background-size: contain;
+//         bottom: 0px;
+
+//     }
+// }
+
+.fontSizeHeading { 
+    @media (min-width:1921px) {
+        font-size: 60px;
+    }
+}

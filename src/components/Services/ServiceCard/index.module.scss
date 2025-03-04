@@ -1,6 +1,6 @@
 @import "@/styles/responsive.scss";
 
-.ServiceCard { 
+.ServiceCard {
     background: #4990E2;
 
     transition: background 0.4s ease-in-out;
@@ -8,30 +8,30 @@
 
 
 
-    h5 { 
+    h5 {
         color: white;
         font-size: 26px;
     }
 
-    p { 
+    p {
         color: white;
         font-size: 18px;
     }
 
-    &:hover { 
+    &:hover {
         background: transparent;
         border: 1px solid #4990E2;
 
-        h5 { 
+        h5 {
             color: #4990E2;
         }
 
-        p { 
+        p {
             color: #4990E2;
         }
 
-        svg { 
-            path { 
+        svg {
+            path {
                 fill: #4990E2;
             }
         }
@@ -39,15 +39,20 @@
 
 
 
-    @include  respond-to('xxl','max'){
+    @include respond-to('xxl', 'max') {
         padding: 16px !important;
 
-        h5 { 
+        h5 {
             font-size: 22px;
         }
 
-        p { 
+        p {
             font-size: 16px;
         }
     }
+
+    @media (max-width:1199px) {
+        background-image: none !important;
+    }
+
 }

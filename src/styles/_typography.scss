@@ -7,6 +7,8 @@
 .heading-1 {
     font-size: clamp(22px, 4vw, 70px);
 
+
+
     @include respond-to('xxl', 'max') {
         font-size: clamp(28px, 3vw, 60px);
     }
@@ -23,8 +25,9 @@
     font-size: clamp(22px, 4vw, 56px);
 
     @include respond-to('xxl', 'max') {
-        font-size: clamp(22px, 3vw, 56px);
+        font-size: clamp(27px, 3vw, 56px);
     }
+    
 }
 
 .heading-4 {

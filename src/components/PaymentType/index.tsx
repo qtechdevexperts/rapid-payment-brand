@@ -7,7 +7,7 @@ import { useMediaQuery } from "react-responsive";
 const PaymentType = () => {
 
   return (
-    <Container className="py-md-9 py-3">
+    <Container className="py-md-9 py-3 overflow-x-hidden">
       <Row>
         <Col lg={8}>
           <h4 className="heading-3 fw-normal">

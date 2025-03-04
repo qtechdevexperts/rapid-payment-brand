@@ -65,7 +65,7 @@
 
 
   @include respond-to('lg','max'){
-    background-image: none;
+    background-image: none !important;
   
   }
 

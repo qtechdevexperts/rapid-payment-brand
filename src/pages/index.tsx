@@ -13,8 +13,11 @@ const Home = () => {
       <MainHero />
       {/* <LogoSlider /> */}
       <Solutions />
-      <Services />
-      <PaymentType />
+
+      <section className='wrapper'>
+        <Services />
+        <PaymentType />
+      </section>
       <RapidPaymentUniversity />
       <PaymentForm />
     </>

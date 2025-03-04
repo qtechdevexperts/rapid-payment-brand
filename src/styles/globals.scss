@@ -54,3 +54,35 @@ div[role="dialog"] {
 .react-multi-carousel-track  { 
   width: 100% !important;
 }
+
+.wrapper { 
+    position: relative;
+    overflow-x: auto !important;
+
+    & > * { 
+      position: relative;
+      z-index: 100;
+    }
+
+    &::before {
+        content:"";
+        position: absolute;
+        width: 811.8px;
+        height: 876.066px;
+        background: url('/images/icons/vector-3.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: 50px;
+        z-index: -1;
+
+    }
+
+    @media (max-width:760px) {
+      overflow-x: hidden !important;
+
+      &::before { 
+        display: none;
+        width: 0px !important;
+      }
+    }
+}

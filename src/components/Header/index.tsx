@@ -19,7 +19,7 @@ const Header = () => {
                         <Nav.Link href="#link" rel="nofollow">Who We Are</Nav.Link>
                         <Nav.Link href="#link" rel="nofollow">Integrated Partners</Nav.Link>
                     </Nav>
-                    <Button className="btn-feature " onClick={() => router.push("#ContactForm")}>
+                    <Button className="btn-feature " onClick={() => router.push("/contact")}>
                         Contact Us
                     </Button>
                 </Navbar.Collapse>
