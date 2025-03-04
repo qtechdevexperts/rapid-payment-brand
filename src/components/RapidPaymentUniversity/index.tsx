@@ -92,7 +92,7 @@ const RapidPaymentUniversity = () => {
                             className="rapid-payment-slider"
                         >
                             {slides.map((slide, index) => (
-                                <div className="px-1">
+                                <div className="px-1 h-100">
                                     <div
                                         key={index}
                                         className={clsx(style.paymentUniversityCard)}
