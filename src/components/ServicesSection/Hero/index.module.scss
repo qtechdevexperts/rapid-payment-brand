@@ -2,7 +2,11 @@
 @import "rfs/scss";
 
 .mainHero {
-  max-width: 97%;
+
+  @media (max-width:2000px) {
+    max-width: 97%;
+    
+  }
   margin: 0 auto;
 
  

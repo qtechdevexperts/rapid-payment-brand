@@ -1,4 +1,5 @@
-import 'react-multi-carousel/lib/styles.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import style from "./index.module.scss";
@@ -8,33 +9,32 @@ import Modal from "@/common/Modal";
 import useResponsive from "@/hooks/useResponsive";
 import dynamic from 'next/dynamic';
 
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-// import Carousel from 'react-multi-carousel';
-
-const Carousel = dynamic(() => import("react-multi-carousel"), { ssr: false })
-
-
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
+const sliderSettings = {
+  dots: false,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 464,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
+  ]
 };
-
-
 
 const Solutions = () => {
   const [currentTab, setCurrentTab] = useState("small-business");
@@ -63,35 +63,39 @@ const Solutions = () => {
             <Col lg={6} className="pb-8">
               
               <div className={`${style.carouselTab}`}>
-                <Carousel responsive={responsive} arrows={false} >
-                  <Button
-                    className={clsx(
-                      "px-md-5 px-sm-3 py-md-3 py-2",
-                      { "btn-lg": !isLaptop },
-                      currentTab === "small-business"
-                        ? "btn-feature"
-                        : "btn-outline-feature"
-                    )}
-                    onClick={() => handleTabClick("small-business")}
-                  >
-                    Small Business
-                  </Button>
+                <Slider {...sliderSettings}>
+                  <div>
+                    <Button
+                      className={clsx(
+                        "px-md-5 px-sm-3 py-md-3 py-2 me-2 w-100",
+                        { "btn-lg": !isLaptop },
+                        currentTab === "small-business"
+                          ? "btn-feature"
+                          : "btn-outline-feature"
+                      )}
+                      onClick={() => handleTabClick("small-business")}
+                    >
+                      Small Business
+                    </Button>
+                  </div>
 
-                  {/* Enterprises Tab */}
-                  <Button
-                    className={clsx(
-                      "px-md-5 px-sm-3 py-md-3 py-2",
-                      { "btn-lg": !isLaptop },
-                      currentTab === "enterprises"
-                        ? "btn-feature"
-                        : "btn-outline-feature"
-                    )}
-                    onClick={() => handleTabClick("enterprises")}
-                  >
-                    Enterprises
-                  </Button>
-
-                </Carousel>
+                  <div>
+                    <Button
+                      className={clsx(
+                        "px-md-5 px-sm-3 py-md-3 py-2 me-2 w-100",
+                        { "btn-lg": !isLaptop },
+                        currentTab === "enterprises"
+                          ? "btn-feature"
+                          : "btn-outline-feature"
+                      )}
+                      onClick={() => handleTabClick("enterprises")}
+                    >
+                      Enterprises
+                    </Button>
+                  </div>
+                  
+              
+                </Slider>
               </div>
 
               <div className={`d-flex ${style.solutinTabButton}  gap-3 justify-content-start align-items-sm-center`}>

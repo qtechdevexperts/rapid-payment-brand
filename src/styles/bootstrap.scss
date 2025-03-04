@@ -278,9 +278,12 @@ $feature-bg: #4990E2;
     }
 
 
-    @media (max-width:360px) {
-        font-size: 14px !important;
+    @media (max-width:450px) {
+        font-size: 12px !important;
+        padding: 7px !important;
     }
+
+    
 }
 
 
@@ -307,9 +310,9 @@ $feature-bg: #4990E2;
         font-size: 1.25rem; // Adjust the size to match the `.btn-lg` class, or apply other appropriate styles
         padding: 0.75rem 1.5rem; // Add necessary padding
     }
-
-    @media (max-width:360px) {
-        font-size: 14px !important;
+    @media (max-width:450px) {
+        font-size: 12px !important;
+        padding: 7px !important;
     }
 }
 

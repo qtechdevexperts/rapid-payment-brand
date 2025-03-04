@@ -1,3 +1,5 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import '@fontsource-variable/inter';
 import Header from "@/components/Header";
 import "@/styles/globals.scss";

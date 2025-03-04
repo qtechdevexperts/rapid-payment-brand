@@ -27,7 +27,30 @@
         margin: 0 auto; 
     }
 
+    @media (max-width:340px) {
+        max-width: unset !important;
 
+        li { 
+            max-width: calc(100% / 2) !important;
+            width: 100% !important;
+            button { 
+                width: 100% !important;
+            }
+        }
+    }
 
-
+    @media (max-width: 575px) {
+        display: block;
+        margin-bottom: 20px;
+        
+        :global {
+            .slick-slide {
+                padding: 0 5px;
+            }
+            
+            .slick-track {
+                display: flex;
+            }
+        }
+    }
 }
