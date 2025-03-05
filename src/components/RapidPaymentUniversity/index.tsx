@@ -5,22 +5,22 @@ import style from "./index.module.scss";
 import useResponsive from "@/hooks/useResponsive";
 
 const slickSettings = {
-    infinite: true,
-    slidesToShow: 2,
+    infinite: false,
+    slidesToShow: 1.7,
     slidesToScroll: 1,
     dots: false,
 
     focusOnSelect: true,
     responsive: [
         {
-            breakpoint: 1500,
+            breakpoint: 1300,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 1.4,
                 slidesToScroll: 1,
             },
         },
         {
-            breakpoint: 768,
+            breakpoint: 992,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -46,7 +46,7 @@ const RapidPaymentUniversity = () => {
         {
             title: "eCommerce",
             imgSrc: "/images/industries/ecommerce.png",
-            desc: "Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly."
+            desc: "Secure your online transactions with a dedicated merchant account and reliable payment processing. Accept credit and debit cards with ease while protecting your business from fraud and chargebacks."
         },
         {
             title: "Professional Services",
@@ -57,7 +57,7 @@ const RapidPaymentUniversity = () => {
     ];
 
     const totalSlides = slides.length;
-    const progress = ((currentSlide + 1) / totalSlides) * 100;
+    const progress = ((currentSlide + 1) / totalSlides ) * 100;
 
 
     const isBigScreen = useResponsive({ query: '(min-width: 1921px)' });
@@ -65,7 +65,7 @@ const RapidPaymentUniversity = () => {
 
 
     return (
-        <section className={clsx(style.RapidPayment, "p-xxl-10 p-xl-8 p-md-7 container p-3 rounded-3 ")}>
+        <section className={clsx(style.RapidPayment, " p-xl-8 p-md-7 container p-3 rounded-3 ")}>
 
             <div className={clsx("")}>
                 <div className="row">

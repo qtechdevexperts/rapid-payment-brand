@@ -57,7 +57,7 @@ const Solutions = () => {
       <section
         className={clsx(style.solution, { "container": isBigScreen }, "bg-primary-light rounded-4 my-5")}
       >
-        <Container className={` ${isBigScreen ? "" : "me-lg-0 pe-lg-0"} `}>
+        <Container className={` ${isBigScreen ? "" : "me-lg-0 pe-lg-0"} ${style.SolutionContainer} `}>
           <Row>
 
             <Col lg={6} className="pb-8">

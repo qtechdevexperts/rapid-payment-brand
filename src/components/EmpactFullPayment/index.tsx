@@ -46,7 +46,7 @@ const EmpactFullPayment = () => {
     {
       title: "eCommerce",
       imgSrc: "/images/industries/ecommerce.png",
-      desc: "Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly.",
+      desc: "Secure your online transactions with a dedicated merchant account and reliable payment processing. Accept credit and debit cards with ease while protecting your business from fraud and chargebacks.",
     },
     {
       title: "Professional Services",
@@ -61,10 +61,13 @@ const EmpactFullPayment = () => {
   const isBigScreen = useResponsive({ query: "(min-width: 1921px)" });
 
   return (
-    <section className={clsx(style.RapidPayment, "p-sm-4 p-3 rounded-3 ")}>
+    <section className={clsx(style.RapidPayment, "container p-sm-4 p-3 rounded-3 ")}>
       <div className={clsx({ container: isBigScreen })}>
         <div className="row">
           <div className="col-md-8">
+            <div className={`badge  ${style.badge}`}>
+              <h6 className="mb-0">Products</h6>
+            </div>
             <h4 className="heading-3 fw-normal text-capitalize">
               Rapid Payment <br />{" "}
               <span className="fw-bold">Impactful Tech</span>{" "}
@@ -85,7 +88,7 @@ const EmpactFullPayment = () => {
             <Slider
               {...slickSettings}
               afterChange={(index) => setCurrentSlide(index)}
-              className="rapid-payment-slider"
+              className="rapid-payment-slider solution-slider"
             >
               {slides.map((slide, index) => (
                 <div className="px-1">

@@ -44,9 +44,9 @@ const RapidPaymentForSolutions = () => {
             desc: "Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly."
         },
         {
-            title: "eCommerce",
+            title: "Ecommerce",
             imgSrc: "/images/industries/ecommerce.png",
-            desc: "Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly."
+            desc: "Secure your online transactions with a dedicated merchant account and reliable payment processing. Accept credit and debit cards with ease while protecting your business from fraud and chargebacks."
         },
         {
             title: "Professional Services",
@@ -65,7 +65,7 @@ const RapidPaymentForSolutions = () => {
 
 
     return (
-        <section className={clsx(style.RapidPayment, "p-sm-4 p-3 rounded-3 ")}>
+        <section className={clsx(style.RapidPayment, " container p-sm-4 p-3 mt-8 rounded-3 ")}>
 
             <div className={clsx({ "container": isBigScreen })}>
                 <div className="row">

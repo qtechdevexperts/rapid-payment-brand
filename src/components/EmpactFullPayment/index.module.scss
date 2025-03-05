@@ -12,9 +12,24 @@
 
 
 .paymentUniversityCard {
+    &>div {
+        background: linear-gradient(210deg, #FFF -9.83%, #4990E2 773.8%);
+
+
+        mix-blend-mode: multiply;
+
+    }
+
+
     img {
-        height: 360px;
-        object-fit: cover;
+        height       : 360px;
+        object-fit   : cover;
         border-radius: 30px;
     }
+}
+
+
+.badge {
+    border-radius: 5px;
+    background   : #4990E2;
 }
