@@ -1,21 +1,24 @@
-@import "@/styles/responsive.scss";
+@import '@/styles/responsive.scss';
 
-.LogoSlider { 
-    @include respond-to('md','max') { 
-        img { 
-            height: 80px !important;
-            object-fit: cover;
-            border-radius: 20px;
-        }
+.LogoSlider {
+  @include respond-to('md', 'max') {
+    img {
+      border-radius: 20px;
+      height: 80px !important;
+      object-fit: cover;
     }
+  }
 }
 .logoCard {
-    // width: 300px;
-    height: 100px;
+  margin-right: 10px !important;
+  border: 1px solid #e9e9e9;
 
-    border-radius: 4px;
-    border: 1px solid #E9E9E9;
-    background: linear-gradient(180deg, #FFF 50%, rgba(73, 144, 226, 0.10) 276.77%);
-    margin-right: 10px !important;
-
+  border-radius: 4px;
+  background: linear-gradient(
+    180deg,
+    #fff 50%,
+    rgba(73, 144, 226, 0.1) 276.77%
+  );
+  // width: 300px;
+  height: 100px;
 }

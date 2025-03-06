@@ -1,21 +1,16 @@
-import React from "react";
-import style from "./index.module.scss";
-import clsx from "clsx";
-
+import clsx from 'clsx';
+import style from './index.module.scss';
 
 interface ProcessingFeeCardProps {
-    title?:String
-    description?:String
+  title?: String;
+  description?: String;
 }
 
-
-const ProcessingFeeCard = ({description,title}:ProcessingFeeCardProps) => {
+const ProcessingFeeCard = ({ description, title }: ProcessingFeeCardProps) => {
   return (
-    <div className={clsx(style.ProcessingFeeCard, "p-sm-4")}>
+    <div className={clsx(style.ProcessingFeeCard, 'p-sm-4')}>
       <h2 className="text-capitalize">{title}</h2>
-      <p className="para">
-        {description}
-      </p>
+      <p className="para">{description}</p>
       <h4 className="text-primary-100">Contact us For Custom Price</h4>
     </div>
   );

@@ -1,35 +1,29 @@
-@import "@/styles/responsive";
+@import '@/styles/responsive';
 
 .RapidPayment {
-    // max-width: 86%;
-    // margin: 0 auto;
-    background-color: transparent;
+  // max-width: 86%;
+  // margin: 0 auto;
+  background-color: transparent;
 
-    // @include respond-to('xxl') {
-    //     max-width: 90%;
-    // }
+  // @include respond-to('xxl') {
+  //     max-width: 90%;
+  // }
 }
-
 
 .paymentUniversityCard {
-    &>div {
-        background: linear-gradient(210deg, #FFF -9.83%, #4990E2 773.8%);
+  & > div {
+    mix-blend-mode: multiply;
+    background: linear-gradient(210deg, #fff -9.83%, #4990e2 773.8%);
+  }
 
-
-        mix-blend-mode: multiply;
-
-    }
-
-
-    img {
-        height       : 360px;
-        object-fit   : cover;
-        border-radius: 30px;
-    }
+  img {
+    border-radius: 30px;
+    height: 360px;
+    object-fit: cover;
+  }
 }
 
-
 .badge {
-    border-radius: 5px;
-    background   : #4990E2;
+  border-radius: 5px;
+  background: #4990e2;
 }

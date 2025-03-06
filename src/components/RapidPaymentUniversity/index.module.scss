@@ -1,23 +1,21 @@
-@import "@/styles/responsive";
+@import '@/styles/responsive';
 
 .RapidPayment {
-    // max-width: 86%;
-    // margin: 0 auto;
-    background-color: #ECF5FF;
+  // max-width: 86%;
+  // margin: 0 auto;
+  background-color: #ecf5ff;
 
-    // @include respond-to('xxl') {
-    //     max-width: 90%;
-    // }
+  // @include respond-to('xxl') {
+  //     max-width: 90%;
+  // }
 
-    overflow: hidden !important;
-
+  overflow: hidden !important;
 }
 
-
 .paymentUniversityCard {
-    img {
-        height: 360px;
-        object-fit: cover;
-        border-radius: 30px;
-    }
+  img {
+    border-radius: 30px;
+    height: 360px;
+    object-fit: cover;
+  }
 }

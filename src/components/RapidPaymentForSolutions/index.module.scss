@@ -1,35 +1,31 @@
-@import "@/styles/responsive";
+@import '@/styles/responsive';
 
 .RapidPayment {
-    // max-width: 86%;
-    // margin: 0 auto;
-    background-color: transparent;
+  // max-width: 86%;
+  // margin: 0 auto;
+  background-color: transparent;
 
-    // @include respond-to('xxl') {
-    //     max-width: 90%;
-    // }
+  // @include respond-to('xxl') {
+  //     max-width: 90%;
+  // }
 
-
-    @media (max-width:767px) {
-        overflow: hidden !important;
-    }
+  @media (max-width: 767px) {
+    overflow: hidden !important;
+  }
 }
-
 
 .paymentUniversityCard {
-    img {
-        height: 360px;
-        object-fit: cover;
-        border-radius: 30px;
-    }
+  img {
+    border-radius: 30px;
+    height: 360px;
+    object-fit: cover;
+  }
 }
 
+.paymentUniversityCard {
+  border-radius: 20px;
 
-.paymentUniversityCard { 
-    border-radius: 20px;
-    
-    & > div { 
-       background-color: #eff5fc;
-
-   }
+  & > div {
+    background-color: #eff5fc;
+  }
 }

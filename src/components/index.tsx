@@ -1,0 +1,20 @@
+export { default as IntegrationCard } from '@/common/Cards/IntegrationCard';
+export { default as PaymentCard } from '@/common/Cards/PaymentCard';
+export { default as ProcessingFeeCard } from '@/common/Cards/ProcessingFeeCard';
+export { default as Modal } from '@/common/Modal';
+
+export { default as Solutions } from './DescriptionSection';
+export { default as EmpactFullPayment } from './EmpactFullPayment';
+export { default as Footer } from './Footer';
+export { default as Header } from './Header';
+export { default as IntegratationOption } from './IntegrationOption';
+export { default as LogoSlider } from './LogoSlider';
+export { default as MainHero } from './MainHero';
+export { default as OtherSolutionCard } from './OtherSolutionCard';
+export { default as PaymentForm } from './PaymentForm';
+export { default as PaymentType } from './PaymentType';
+export { default as RapidPaymentForSolutions } from './RapidPaymentForSolutions';
+export { default as RapidPaymentUniversity } from './RapidPaymentUniversity';
+export { default as Services } from './Services';
+export { default as ServiceCard } from './Services/ServiceCard';
+export { default as Hero } from './ServicesSection/Hero';

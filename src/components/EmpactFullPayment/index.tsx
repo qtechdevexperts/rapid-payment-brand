@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import clsx from "clsx";
-import Slider from "react-slick";
-import style from "./index.module.scss";
-import useResponsive from "@/hooks/useResponsive";
+import useResponsive from '@/hooks/useResponsive';
+import clsx from 'clsx';
+import { useState } from 'react';
+import Slider from 'react-slick';
+import style from './index.module.scss';
 
 const slickSettings = {
   infinite: true,
@@ -34,34 +34,36 @@ const EmpactFullPayment = () => {
 
   const slides = [
     {
-      title: "Retail",
-      imgSrc: "/images/industries/Retail.png",
-      desc: "Simplify in-store payments with secure merchant account services and advanced POS solutions. Accept credit and debit card payments seamlessly while managing inventory, transactions, and customer insights efficiently.",
+      title: 'Retail',
+      imgSrc: '/images/industries/Retail.png',
+      desc: 'Simplify in-store payments with secure merchant account services and advanced POS solutions. Accept credit and debit card payments seamlessly while managing inventory, transactions, and customer insights efficiently.',
     },
     {
-      title: "Restaurant",
-      imgSrc: "/images/industries/resturant.png",
-      desc: "Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly.",
+      title: 'Restaurant',
+      imgSrc: '/images/industries/resturant.png',
+      desc: 'Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly.',
     },
     {
-      title: "eCommerce",
-      imgSrc: "/images/industries/ecommerce.png",
-      desc: "Secure your online transactions with a dedicated merchant account and reliable payment processing. Accept credit and debit cards with ease while protecting your business from fraud and chargebacks.",
+      title: 'eCommerce',
+      imgSrc: '/images/industries/ecommerce.png',
+      desc: 'Secure your online transactions with a dedicated merchant account and reliable payment processing. Accept credit and debit cards with ease while protecting your business from fraud and chargebacks.',
     },
     {
-      title: "Professional Services",
-      imgSrc: "/images/industries/professional-services.png",
-      desc: "Get paid on time with custom invoicing, recurring billing, and seamless card payment acceptance. Our merchant accounts and POS solutions help service professionals simplify transactions and improve cash flow.",
+      title: 'Professional Services',
+      imgSrc: '/images/industries/professional-services.png',
+      desc: 'Get paid on time with custom invoicing, recurring billing, and seamless card payment acceptance. Our merchant accounts and POS solutions help service professionals simplify transactions and improve cash flow.',
     },
   ];
 
   const totalSlides = slides.length;
   const progress = ((currentSlide + 1) / totalSlides) * 100;
 
-  const isBigScreen = useResponsive({ query: "(min-width: 1921px)" });
+  const isBigScreen = useResponsive({ query: '(min-width: 1921px)' });
 
   return (
-    <section className={clsx(style.RapidPayment, "container p-sm-4 p-3 rounded-3 ")}>
+    <section
+      className={clsx(style.RapidPayment, 'container p-sm-4 p-3 rounded-3 ')}
+    >
       <div className={clsx({ container: isBigScreen })}>
         <div className="row">
           <div className="col-md-8">
@@ -69,8 +71,8 @@ const EmpactFullPayment = () => {
               <h6 className="mb-0">Products</h6>
             </div>
             <h4 className="heading-3 fw-normal text-capitalize">
-              Rapid Payment <br />{" "}
-              <span className="fw-bold">Impactful Tech</span>{" "}
+              Rapid Payment <br />{' '}
+              <span className="fw-bold">Impactful Tech</span>{' '}
             </h4>
           </div>
           <div className="col-md-4">
@@ -112,7 +114,7 @@ const EmpactFullPayment = () => {
                             </p>
                             <button
                               className={`btn btn-feature ${
-                                !isBigScreen && "btn-lg"
+                                !isBigScreen && 'btn-lg'
                               } px-sm-5 py-2`}
                             >
                               Get Started
@@ -135,14 +137,14 @@ const EmpactFullPayment = () => {
           </div>
         </div>
 
-        <div className="progress mt-4" style={{ height: "8px" }}>
+        <div className="progress mt-4" style={{ height: '8px' }}>
           <div
             className="progress-bar"
             role="progressbar"
             style={{
               width: `${progress}%`,
-              backgroundColor: "#4990E2",
-              transition: "width 0.5s ease",
+              backgroundColor: '#4990E2',
+              transition: 'width 0.5s ease',
             }}
             aria-valuenow={progress}
             aria-valuemin={0}

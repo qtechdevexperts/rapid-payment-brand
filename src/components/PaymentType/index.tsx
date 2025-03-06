@@ -1,17 +1,13 @@
-import React from "react";
-import style from "./index.module.scss";
-import { Col, Container, Row } from "react-bootstrap";
-import PaymentCard from "@/common/Cards/PaymentCard";
-import { useMediaQuery } from "react-responsive";
+import PaymentCard from '@/common/Cards/PaymentCard';
+import { Col, Container, Row } from 'react-bootstrap';
 
 const PaymentType = () => {
-
   return (
     <Container className="py-md-9 py-3 overflow-x-hidden">
       <Row>
         <Col lg={8}>
           <h4 className="heading-3 fw-normal">
-            At <span className="fw-bold">Rapid Payment</span> , Accept <br />{" "}
+            At <span className="fw-bold">Rapid Payment</span> , Accept <br />{' '}
             Payments Anytime, Anywhere
           </h4>
         </Col>

@@ -1,26 +1,23 @@
 // _mixins.scss
 $breakpoints: (
-  'xs': 0,      
-  'sm': 576px,  
-  'md': 768px,  
-  'lg': 992px,  
-  'xl': 1200px, 
-  'laptop': 1500px, 
-  'xxl': 1550px 
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'laptop': 1500px,
+  'xxl': 1550px,
 ) !default;
 
 @mixin respond-to($breakpoint, $type: 'min') {
- 
   $value: map-get($breakpoints, $breakpoint);
-
 
   @if $value == null {
     @error "Breakpoint '#{$breakpoint}' not found in $breakpoints map";
   }
 
-  
   @if $type == 'max' {
-    $value: $value - 0.02px; 
+    $value: $value - 0.02px;
     @media (max-width: $value) {
       @content;
     }
@@ -31,7 +28,7 @@ $breakpoints: (
   } @else if $type == 'range' {
     $next-breakpoint: map-get($breakpoints, $breakpoint);
     $next-value: map-get($breakpoints, $breakpoint + 1);
-    
+
     @if $next-value {
       @media (min-width: $next-breakpoint) and (max-width: ($next-value - 0.02px)) {
         @content;

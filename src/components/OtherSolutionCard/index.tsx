@@ -1,18 +1,17 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
-import style from "./index.module.scss"
-
-
+import { Col, Row } from 'react-bootstrap';
+import style from './index.module.scss';
 
 const OtherSolutionCard = () => {
   return (
     <div className="container py-5">
       <h2 className="heading-2 fw-normal mb-md-6 mb-4">
-        Check Out Our Other <span className="fw-bold">Solutions</span>{" "}
+        Check Out Our Other <span className="fw-bold">Solutions</span>{' '}
       </h2>
       <Row>
         <Col md={4}>
-          <div className={`card p-3 h-100 position-relative  ${style.OtherSolutionCard}`}>
+          <div
+            className={`card p-3 h-100 position-relative  ${style.OtherSolutionCard}`}
+          >
             <img
               src="/images/solution/1.png"
               className="card-img-top"
@@ -33,7 +32,9 @@ const OtherSolutionCard = () => {
           </div>
         </Col>
         <Col md={4}>
-        <div className={`card p-3 h-100 position-relative  ${style.OtherSolutionCard}`}>
+          <div
+            className={`card p-3 h-100 position-relative  ${style.OtherSolutionCard}`}
+          >
             <img
               src="/images/solution/2.png"
               className="card-img-top"
@@ -54,7 +55,9 @@ const OtherSolutionCard = () => {
           </div>
         </Col>
         <Col md={4}>
-        <div className={`card p-3 h-100 position-relative  ${style.OtherSolutionCard}`}>
+          <div
+            className={`card p-3 h-100 position-relative  ${style.OtherSolutionCard}`}
+          >
             <img
               src="/images/solution/3.png"
               className="card-img-top"

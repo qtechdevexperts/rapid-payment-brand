@@ -1,25 +1,22 @@
-import React from 'react'
-import style from "./index.module.scss"
-import Hero from '@/components/ServicesSection/Hero'
-import PaymentForm from '@/components/PaymentForm'
+import { Hero, PaymentForm } from '@/components';
 
 const Contact = () => {
-    return (
-        <>
-            <Hero
-                title='Contact <span class="fw-bold">Rapid Payments</span> '
-                backgroundImage={"/images/contact.png"}
-                description={'Have questions or need assistance? Our payment experts are here to help! Whether you’re looking for a custom payment solution, a powerful POS system, or partnership opportunities, we’re just a message away.'}
-                isHideAllButton
-            />
+  return (
+    <>
+      <Hero
+        title='Contact <span class="fw-bold">Rapid Payments</span> '
+        backgroundImage={'/images/contact.png'}
+        description={
+          'Have questions or need assistance? Our payment experts are here to help! Whether you’re looking for a custom payment solution, a powerful POS system, or partnership opportunities, we’re just a message away.'
+        }
+        isHideAllButton
+      />
 
-            <section className='py-3'>
-                <PaymentForm />
-            </section>
+      <section className="py-3">
+        <PaymentForm />
+      </section>
+    </>
+  );
+};
 
-
-        </>
-    )
-}
-
-export default Contact
+export default Contact;

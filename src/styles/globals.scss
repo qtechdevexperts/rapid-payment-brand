@@ -1,17 +1,16 @@
-@import "bootstrap/scss/bootstrap.scss";
-@import "./bootstrap.scss";
+@import 'bootstrap/scss/bootstrap.scss';
+@import './bootstrap.scss';
 
-@import "./variable";
-@import "./typography";
-@import "./max-width";
-
+@import './variable';
+@import './typography';
+@import './max-width';
 
 body {
-  font-family: 'Inter Variable', sans-serif;
   box-sizing: border-box;
-  padding: 0px;
   margin: 0px;
+  padding: 0px;
   overflow-x: hidden;
+  font-family: 'Inter Variable', sans-serif;
 }
 
 .rapid-payment-slider {
@@ -34,63 +33,59 @@ button {
   border-radius: 7px !important;
 }
 
-
 .form-control {
-  @extend .py-3; 
+  @extend .py-3;
 
-  @media (max-width:1400px) {
+  @media (max-width: 1400px) {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
   }
-
 }
 
-div[role="dialog"] { 
+div[role='dialog'] {
   padding-left: 0px !important;
 }
 
-
-
-.react-multi-carousel-track  { 
+.react-multi-carousel-track {
   width: 100% !important;
 }
 
-.wrapper { 
-    position: relative;
-    overflow-x: auto !important;
+.wrapper {
+  position: relative;
+  overflow-x: auto !important;
 
-    & > * { 
-      position: relative;
-      z-index: 100;
-    }
+  & > * {
+    position: relative;
+    z-index: 100;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 50px;
+    z-index: -1;
+    background: url('/images/icons/vector-3.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 811.8px;
+    height: 876.066px;
+    content: '';
+  }
+
+  @media (max-width: 760px) {
+    overflow-x: hidden !important;
 
     &::before {
-        content:"";
-        position: absolute;
-        width: 811.8px;
-        height: 876.066px;
-        background: url('/images/icons/vector-3.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        bottom: 50px;
-        z-index: -1;
-
+      display: none;
+      width: 0px !important;
     }
-
-    @media (max-width:760px) {
-      overflow-x: hidden !important;
-
-      &::before { 
-        display: none;
-        width: 0px !important;
-      }
-    }
+  }
 }
 
-.rapid-payment-slider { 
+.rapid-payment-slider {
   .slick-slide {
     height: 100%;
-    & > div { 
+
+    & > div {
       height: 100%;
     }
   }

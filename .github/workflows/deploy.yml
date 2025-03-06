@@ -16,7 +16,7 @@ jobs:
       - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
 
       - name: Build Project
         run: |
@@ -30,8 +30,8 @@ jobs:
           username: ${{ secrets.GIT_CPANEL_USER }}
           password: ${{ secrets.GIT_CPANEL_PWD }}
           port: ${{ secrets.GIT_CPANEL_PROTOCOL }}
-          source: "./out/*"
-          target: "/home/${{ secrets.GIT_CPANEL_USER }}/public_html/"
+          source: './out/*'
+          target: '/home/${{ secrets.GIT_CPANEL_USER }}/public_html/'
 
       - name: Move Files After Upload
         uses: appleboy/ssh-action@master
