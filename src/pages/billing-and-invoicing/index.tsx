@@ -6,7 +6,7 @@ import {
   RapidPaymentUniversity,
   Services,
 } from '@/components';
-import { BilingAndInvoiceManagement, BillingInvoice, ChargeBackManagement, ChargebackServices } from '@/utils/data';
+import { BilingAndInvoiceManagement, BillingInvoice } from '@/utils/data';
 
 const OnlinePayments = () => {
   return (

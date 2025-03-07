@@ -6,7 +6,7 @@ import style from './index.module.scss';
 
 const slickSettings = {
   infinite: true,
-  slidesToShow: 2,
+  slidesToShow: 1.7,
   slidesToScroll: 1,
   dots: false,
 

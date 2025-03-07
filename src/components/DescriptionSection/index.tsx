@@ -13,7 +13,7 @@ interface SolutionsTabProps {
   image?: string;
 }
 
-const Solutions = ({
+const DescriptionSection = ({
   title,
   description,
   list,
@@ -77,4 +77,4 @@ const Solutions = ({
   );
 };
 
-export default Solutions;
+export default DescriptionSection;
