@@ -15,6 +15,7 @@
   p {
     color: white;
     font-size: 18px;
+    font-weight: 300;
   }
 
   &:hover {
@@ -37,7 +38,7 @@
   }
 
   @include respond-to('xxl', 'max') {
-    padding: 10px !important;
+    // padding: 10px !important;
 
     h5 {
       font-size: 22px;
@@ -51,4 +52,7 @@
   @media (max-width: 1199px) {
     background-image: none !important;
   }
+
+
+
 }

@@ -36,8 +36,8 @@ const OnlinePayments = () => {
 
       <section className='py-8'>
         <Container>
-          <h2 className='heading-2 text-center'>Why Partner with <span className="fw-bold">Rapid Payments?</span></h2>
-          <Row className='gy-4 mt-lg-8 mt-sm-6'>
+          <h2 className='text text-2 text-center'>Why Partner with <span className="fw-bold">Rapid Payments?</span></h2>
+          <Row className='gy-4 mt-lg-5 mt-sm-4'>
             <Col lg={4} md={6}>
               <IntegrationCard2
                 title='Lucrative Commissions'
@@ -84,13 +84,13 @@ const OnlinePayments = () => {
 
       <DescriptionSection
         title={
-          'Want to start taking payments for your <br /> <span class="fw-bold">small business?</span> '
+          'Want to start taking <br /> payments  for your  <span class="fw-bold"> <br /> small business?</span> '
         }
         description={
           'Empower your business with fast, secure, and reliable payment solutions from Rapid Payments. Whether you&apos;re a small business, professional service, or enterprise, we provide seamless payment processing, POS solutions, and next-day funding to keep your business moving forward.'
         }
 
-        image="/images/enterpise-banner-1.png"
+        image="/images/referel-partners.png"
       />
     </>
   );

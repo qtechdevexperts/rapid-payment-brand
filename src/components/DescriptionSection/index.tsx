@@ -39,7 +39,7 @@ const DescriptionSection = ({
   return (
     <>
       <section
-        className={clsx(style.solution, 'px-lg-10 px-sm-8 px-2 container bg-primary-light rounded-4 my-5')}
+        className={clsx(style.solution, 'px-lg-10 px-sm-8 px-4 container bg-primary-light rounded-4 my-5')}
         style={{
           backgroundImage: isTablet ? "none" : `url(${image})`,
           backgroundSize: 'cover',
@@ -52,7 +52,7 @@ const DescriptionSection = ({
             <Col lg={6} className="pb-8">
               <>
                 <h2
-                  className="heading-3 fw-normal mt-9 text-capitalize"
+                  className="text text-3 fw-normal mt-9 text-capitalize"
                   dangerouslySetInnerHTML={{ __html: title || '' }}
                 />
                 <Paragraph variant='sm' className='max-w-sm-90' style={{ fontWeight: 300 }}>{description}</Paragraph>

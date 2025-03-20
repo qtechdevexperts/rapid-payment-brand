@@ -3,6 +3,7 @@ import { Hero, PaymentForm, ProcessingFeeCard } from '@/components';
 import Head from 'next/head';
 import { Col, Container, Row } from 'react-bootstrap';
 import style from "./index.module.scss"
+import Section from '@/common/Section';
 
 const OurPricing = () => {
   return (
@@ -28,7 +29,7 @@ const OurPricing = () => {
 
       <section className="py-10">
         <Container className="d-flex flex-column justify-content-center align-items-center">
-          <h2 className="heading-3 fw-normal text-capitalize text-center">
+          <h2 className="text text-2 fw-normal text-capitalize text-center">
             From small businesses to enterprise <br className='d-none d-sm-block' /> empires, we{' '}
             <span className="fw-bold">lead the way.</span>
           </h2>
@@ -41,9 +42,9 @@ const OurPricing = () => {
         </Container>
       </section>
 
-      <section className="py-4 mt-sm-7 mt-2">
+      <Section className="">
         <Container>
-          <h2 className={`text-center fw-bold mb-5 mb-sm-0 ${style.heading}`}>Processing Fees</h2>
+          <h2 className={`text-center fw-bold mb-5 mb-sm-5 text text-2`}>Processing Fees</h2>
           <Row className=" gy-4">
             <Col lg={3} sm={6}>
               <ProcessingFeeCard
@@ -79,7 +80,7 @@ const OurPricing = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </Section>
 
       <section className="py-10">
         <PaymentForm />

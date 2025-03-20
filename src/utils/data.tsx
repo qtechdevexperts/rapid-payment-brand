@@ -197,7 +197,7 @@ export const ChargeBackManagement: ServiceProps[] = [
 
 export const BilingAndInvoiceManagement: ServiceProps[] = [
   {
-    title: 'Recurring Billing',
+    title: 'Recurring <br class="d-none d-lg-block" /> Billing',
     desc: 'Automate invoices for subscriptions and memberships.',
   },
   {

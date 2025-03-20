@@ -64,7 +64,7 @@ const IntegrationCard = ({ desc, title }: IntegrationCardProps) => {
       </div>
       <Paragraph
         className={` ${router.pathname.includes('referral-partner') ? 'text-start' : 'text-center'} max-w-sm-90  para`}
-        ref={paragraphRef}
+      ref={paragraphRef}
         dangerouslySetInnerHTML={{ __html: desc || '' }}
       />
     </div>

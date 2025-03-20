@@ -21,7 +21,7 @@ const SMB = () => {
 
 
             <Hero
-                title='Start Accepting <span class="fw-bold">Payments Now</span> '
+                title='Start Accepting  <br /><span class="fw-bold">Payments Now</span> '
                 backgroundImage={'/images/smb-product.png'}
                 description={
                     "Get your business up and running with fast, secure, and hassle-free payment processing. Whether you need POS systems, mobile payments, or online checkouts, we provide a seamless solution tailored to your business needs."

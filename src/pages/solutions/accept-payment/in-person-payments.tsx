@@ -27,7 +27,7 @@ const SolutionArray = [
     image: "/images/solution/online-payments.png",
     title: "Online Payments",
     desc: "Accept secure online payments with ease. Our payment gateway, hosted checkout, and invoicing solutions ensure a frictionless customer experience while keeping transactions fast and secure.",
-    href: "/solutions/accept-payment/in-person-payments/"
+    href: "/solutions/accept-payment/online-payments/"
   },
 
   {

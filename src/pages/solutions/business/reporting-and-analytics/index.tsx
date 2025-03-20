@@ -24,10 +24,10 @@ const OnlinePayments = () => {
 
 
       <Hero
-        title="Reporting & <span class='fw-bold'>Analytics</span> "
+        title="Reporting & <br /> <span class='fw-bold'>Analytics</span> "
         backgroundImage={'/images/reporting.png'}
         description={
-          '"Gain full visibility into your payments with detailed, real-time <br /> reporting and analytics."'
+          '"Gain full visibility into your payments with detailed, real-time <br class="d-none d-md-block" /> reporting and analytics."'
         }
       />
 

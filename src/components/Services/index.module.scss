@@ -23,6 +23,8 @@
 
 
 
+
+
 }
 
 
@@ -31,5 +33,9 @@
 
   @media (max-width:1500px) {
     font-size: 40px;
+  }
+
+  @media (max-width:767px) {
+    font-size: 30px;
   }
 }

@@ -66,7 +66,7 @@ const RapidPaymentForSolutions = ({ pos, title = " <span class='fw-bold'>POS Sol
             <div className={clsx({ container: isBigScreen })}>
                 <div className="row">
                     <div className="col-md-8">
-                        <h4 className={`heading-3 fw-normal text-capitalize`} dangerouslySetInnerHTML={{ __html: title || "" }} />
+                        <h4 className={` text text-3 fw-normal text-capitalize`} dangerouslySetInnerHTML={{ __html: title || "" }} />
                     </div>
 
                 </div>

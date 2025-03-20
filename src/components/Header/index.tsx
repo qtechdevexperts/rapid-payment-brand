@@ -329,7 +329,7 @@ const Header = () => {
                 'list-group-item  text-primary-100 d-flex justify-content-start align-items-center gap-3',
                 styles.mainListItem,
               )}
-              onClick={() => setMobileActiveMain('whoWeServe')}
+              onClick={() => router.push('/who-we-are/')}
             >
               Who We Are
             </li>
@@ -339,7 +339,7 @@ const Header = () => {
                 'list-group-item  text-primary-100 d-flex justify-content-start align-items-center gap-3',
                 styles.mainListItem,
               )}
-              onClick={() => { }}
+              onClick={() => router.push("/integrated-partners/")}
             >
               Integrated Partners
             </li>

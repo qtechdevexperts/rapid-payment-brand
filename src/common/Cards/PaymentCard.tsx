@@ -21,7 +21,7 @@ const PaymentCard = ({ title, description, icon, href = "" }: PaymentCardProps) 
   return (
     <div className={clsx(style.paymentCard, 'p-4 cursor-pointer h-100')} onClick={() => router.push(href)}>
       <div className={clsx(style.paymentIcon)}>{icon}</div>
-      <h5 className="heading-4 my-3">{title}</h5>
+      <h5 className="my-3">{title}</h5>
       <Paragraph >{description}</Paragraph>
     </div>
   );

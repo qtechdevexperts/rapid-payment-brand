@@ -12,11 +12,7 @@ const slickSettings = {
   dots: false,
 
 
-  autoplay: true, // Auto play enable
-  autoplaySpeed: 3000, // Slide change every 3 seconds
-  pauseOnHover: true, // Stop autoplay on hover
-  pauseOnFocus: true, // Stop autoplay when focused
-  cssEase: "linear", // Smooth animation
+
 
   focusOnSelect: true,
   responsive: [
@@ -47,22 +43,27 @@ const EmpactFullPayment = () => {
       title: 'Online',
       imgSrc: '/images/industries/online.png',
       desc: 'Accept secure online payments with ease. Our payment gateway, hosted checkout, and invoicing solutions ensure a frictionless customer experience while keeping transactions fast and secure.',
+      href: "/solutions/accept-payment/online-payments/"
     },
     {
       title: 'In-store Payments',
       imgSrc: '/images/industries/in-store.png',
       desc: 'From retail stores to restaurants, accept payments anywhere, anytime with mobile card readers, wireless terminals, and countertop solutions that integrate effortlessly into your business.',
+      href: "/solutions/accept-payment/in-person-payments/"
     },
     {
       title: 'Omnichannel Payments',
-      imgSrc: '/images/industries/ecommerce.png',
+      imgSrc: '/images/industries/omni-channel.png',
       desc: 'Rapid Payments, a leading merchant service provider, partners with top payment processors, gateways, and POS providers to deliver a truly unified payment experience. Accept payments in-store, online, or via mobile with a seamless and secure solution that connects all sales channels.',
+      href: "/solutions/accept-payment/omni-channel-payments/"
     },
-    // {
-    //   title: 'Professional Services',
-    //   imgSrc: '/images/industries/professional-services.png',
-    //   desc: 'Get paid on time with custom invoicing, recurring billing, and seamless card payment acceptance. Our merchant accounts and POS solutions help service professionals simplify transactions and improve cash flow.',
-    // },
+    {
+      title: 'Point Of Sale Solutions',
+      imgSrc: '/images/POS.png',
+      desc: 'At Rapid Payments, we’ve partnered with top POS providers to ensure you get the best system for your business needs. Whether you run a restaurant, retail store, or service business, we’ll match you with a secure, reliable, and feature-rich POS system designed to streamline transactions and enhance customer experience.',
+      href: "/solutions/accept-payment/point-of-sale-solution/"
+    },
+
   ];
 
 

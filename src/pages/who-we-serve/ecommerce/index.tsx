@@ -21,7 +21,7 @@ const Resturants = () => {
 
             <Hero
                 title='<span class="fw-bold">eCommerce</span>'
-                backgroundImage={'/images/resturant.png'}
+                backgroundImage={'/images/ecommerce-banner.png'}
                 description={
                     "Power your online store with seamless and secure payment processing. Rapid Payments ensures a smooth checkout experience, helping you increase conversions and grow your business effortlessly. Accept payments with ease, enhance security, and provide customers with a hassle-free shopping experience. With reliable support and easy integration, managing transactions has never been simpler. Simplify your payments and boost your sales today."
                 }

@@ -82,3 +82,16 @@
     padding-bottom: 2rem !important;
   }
 }
+
+
+.solutionHeading {
+  font-size: 66px;
+
+  @media (max-width:1500px) {
+    font-size: 50px;
+  }
+
+  @media (max-width:767px) {
+    font-size: 30px;
+  }
+}

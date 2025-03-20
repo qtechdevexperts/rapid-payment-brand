@@ -45,3 +45,38 @@
     font-size: 16px;
   }
 }
+
+
+
+.text {
+  color: #1C2630;
+  letter-spacing: -2.1px;
+
+
+  &-1 {
+    font-size: clamp(30px, 4vw, 70px);
+
+    @media (max-width:1500px) {
+      font-size: clamp(30px, 4vw, 40px);
+    }
+  }
+
+
+  &-2 {
+    font-size: clamp(28px, 4vw, 66px);
+
+    @media (max-width:1500px) {
+      font-size: clamp(28px, 4vw, 40px);
+    }
+  }
+
+  &-3 {
+    font-size: clamp(27px, 4vw, 56px);
+
+    @media (max-width:1500px) {
+      font-size: clamp(27px, 4vw, 40px);
+    }
+  }
+
+
+}

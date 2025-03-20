@@ -14,7 +14,7 @@ const Contact = () => {
       </Head>
 
       <Hero
-        title='Contact <span class="fw-bold">Rapid Payments</span> '
+        title='Contact <span class="fw-bold">Rapid <br /> Payments</span> '
         backgroundImage={'/images/contact.png'}
         description={
           'Have questions or need assistance? Our payment experts are here to help! Whether you’re looking for a custom payment solution, a powerful POS system, or partnership opportunities, we’re just a message away.'

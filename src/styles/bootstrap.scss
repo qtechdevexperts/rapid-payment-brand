@@ -6,6 +6,21 @@
 @import 'bootstrap/scss/mixins';
 @import 'bootstrap/scss/utilities';
 
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  large: 1600px,
+);
+
+
+
+
+
 $font-sizes: (
   1: $h1-font-size,
   2: $h2-font-size,

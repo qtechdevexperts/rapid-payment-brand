@@ -137,7 +137,7 @@ const Solutions = () => {
               {/* Dynamic Content */}
               {currentTab === 'small-business' ? (
                 <>
-                  <h2 className="heading-2 fw-normal mt-xxl-9 mt-4">
+                  <h2 className={` text text-2 fw-normal mt-large-9 mt-4 mt-lg-6`}>
                     Big Solutions for <br />
                     <span className="fw-bold">Small Businesses</span>
                   </h2>
@@ -171,15 +171,15 @@ const Solutions = () => {
                 </>
               ) : (
                 <>
-                  <h2 className="heading-2 fw-normal mt-9">
+                  <h2 className={`text text-2 fw-normal mt-large-9 mt-4 mt-lg-6`}>
                     Enterprise Payment <br />
                     <span className="fw-bold">Solutions</span>
                   </h2>
-                  <Paragraph >
-                    Power your business with scalable, secure, and seamless
-                    payment processing designed for high-volume transactions.
+                  <Paragraph className='max-w-lg-70'>
+                    Power your business with scalable, secure, and seamless <br />
+                    payment processing designed for high-volume transactions. <br />
                     Our enterprise-grade payment processing services ensure
-                    reliability, speed, and efficiency across all sales
+                    reliability <br />, speed, and  efficiency across all sales
                     channels.
                   </Paragraph>
 

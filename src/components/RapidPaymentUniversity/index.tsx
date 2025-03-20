@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import style from './index.module.scss';
 import Link from 'next/link';
 import Paragraph from '@/common/Paragraph';
+import Section from '@/common/Section';
 
 const slickSettings = {
   infinite: false,
@@ -67,7 +68,7 @@ const RapidPaymentUniversity = () => {
   const isBigScreen = useResponsive({ query: '(min-width: 1921px)' });
 
   return (
-    <section
+    <Section
       className={clsx(
         style.RapidPayment,
         ' p-xl-8 p-md-7 container p-3 rounded-3 ',
@@ -75,13 +76,13 @@ const RapidPaymentUniversity = () => {
     >
       <div className={clsx('')}>
         <div className="row">
-          <div className="col-md-8">
-            <h4 className="heading-3 fw-normal text-capitalize">
+          <div className="col-lg-8">
+            <h4 className="text text-3 fw-normal text-capitalize">
               At Rapid Payment, We <br /> Understand{' '}
               <span className="fw-bold">your Industry</span>{' '}
             </h4>
           </div>
-          <div className="col-md-4">
+          <div className="col-lg-4">
             <p>
               No matter where or how you do business—whether through a physical
               location or a digital platform—we offer fast, secure, and flexible
@@ -107,7 +108,7 @@ const RapidPaymentUniversity = () => {
                       <div className="row">
                         <div className="col-md-6 d-flex justify-content-center align-items-center">
                           <div className="card-body">
-                            <h5 className="card-title text-capitalize heading-4 text-black-1 fw-bold">
+                            <h5 className={`card-title ${style.CardTitle} } text-capitalize heading-4 text-black-1 fw-bold`}>
                               {slide.title}
                             </h5>
                             <Paragraph className="card-text para my-4">
@@ -149,7 +150,7 @@ const RapidPaymentUniversity = () => {
           ></div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

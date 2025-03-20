@@ -2,8 +2,18 @@
 
 
 .paymentHeading {
+    font-size: 56px;
 
-    @include font-size(56px);
+
+    @media (max-width:992px) {
+        font-size: 40px;
+    }
+
+    @media (max-width:767px) {
+        font-size: 28px;
+    }
+
+
 }
 
 
@@ -13,6 +23,10 @@
 
     @media (max-width:1500px) {
         font-size: 25px;
+    }
+
+    @media (max-width:767px) {
+        font-size: 23px;
     }
 }
 
@@ -28,6 +42,10 @@
 
     @media (max-width:1500px) {
         font-size: 20px;
+    }
+
+    @media (max-width:767px) {
+        font-size: 18px;
     }
 }
 

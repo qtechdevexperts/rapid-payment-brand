@@ -12,7 +12,7 @@ const PaymentType = () => {
     <Container className="py-md-9 py-3 overflow-x-hidden">
       <Row>
         <Col lg={8}>
-          <h4 className="heading-3 fw-normal">
+          <h4 className=" text text-3 fw-normal">
             At <span className="fw-bold">Rapid Payment</span> , Accept <br />{' '}
             Payments Anytime, Anywhere
           </h4>

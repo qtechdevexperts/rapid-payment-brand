@@ -32,15 +32,16 @@ const Resturants = () => {
                 <title>Point of Sale Solutions | Rapid Payments</title>
                 <meta
                     name="description"
-                    content="Rapid Payments offers secure and reliable online payment processing solutions for businesses of all sizes.  Accept payments easily and securely through our integrated platform."
+                    content="."
                 />
             </Head>
 
 
 
             <Hero
-                title="The Perfect <span class='fw-bold'>point of sale solution,</span>  Tailored For You"
+                title="The Perfect <span class='fw-bold'>point <br /> of sale solution<br /></span>  Tailored For You"
                 backgroundImage={'/images/point-of-sale-solution.png'}
+                headingCss={'text-capitalize'}
                 description={
                     "At Rapid Payments, we’ve partnered with top POS providers to ensure you get the best system for your business needs. Whether you run a restaurant, retail store, or service business, we’ll match you with a secure, reliable, and feature-rich POS system designed to streamline transactions and enhance customer experience."
                 }
@@ -50,7 +51,7 @@ const Resturants = () => {
 
             <DescriptionSection
                 title={
-                    'Get Started with the <br /> Perfect POS – <span class="fw-bold">Sign Up Today!</span> '
+                    'Get Started with the <br /> Perfect POS – <span class="fw-bold">Sign Up <br /> Today!</span> '
                 }
                 description={
                     'Get the right POS system for your business with Rapid Payments. We’ve partnered with top POS providers to bring you a seamless, secure, and efficient point-of-sale experience.'

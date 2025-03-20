@@ -72,8 +72,8 @@ const RapidPaymentForSolutions = () => {
       <div className={clsx({ container: isBigScreen })}>
         <div className="row">
           <div className="col-xl-8">
-            <h4 className="heading-3 fw-normal text-capitalize">
-              At Rapid Payment, We <br /> Understand{' '}
+            <h4 className={`text text-3 fw-normal text-capitalize`}>
+              At Rapid Payment, We <br className='d-none d-lg-block' /> Understand{' '}
               <span className="fw-bold">your Industry</span>{' '}
             </h4>
           </div>
@@ -103,7 +103,7 @@ const RapidPaymentForSolutions = () => {
                       <div className="row">
                         <div className="col-md-6 d-flex justify-content-center align-items-center">
                           <div className="card-body">
-                            <h5 className="card-title heading-4 text-black-1 fw-bold">
+                            <h5 className={` ${style.cardTitle}  card-title heading-4 text-black-1 fw-bold`}>
                               {slide.title}
                             </h5>
                             <Paragraph className="card-text para my-4">

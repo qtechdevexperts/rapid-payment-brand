@@ -20,11 +20,11 @@ const IntegratationOption = ({
   defaultColumm = 3 as number,
 }: IntegratationOptionProps) => {
   return (
-    <div className={`container ${style.IntegratationOption} py-7`}>
+    <div className={`container ${style.IntegratationOption} py-sm-7`}>
       <div className={`py-5 ${style.firstBox}`}>
         <h2
           dangerouslySetInnerHTML={{ __html: title || '' }}
-          className="text-capitalize heading-1"
+          className="text-capitalize text text-1"
         />
         <Paragraph className="text-center" dangerouslySetInnerHTML={{ __html: desc }} />
       </div>

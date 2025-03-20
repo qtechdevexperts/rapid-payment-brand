@@ -11,6 +11,7 @@ interface HeroProps {
   title?: string;
   backgroundImage?: String;
   description?: String;
+  headingCss?: String;
   discriptionClass?: String
   isShowContact?: boolean;
   isHideAllButton?: boolean;
@@ -19,6 +20,7 @@ interface HeroProps {
 const Hero = ({
   title,
   backgroundImage,
+  headingCss,
   discriptionClass,
   isShowContact = false,
   isHideAllButton = false,
@@ -49,13 +51,13 @@ const Hero = ({
               className={`mb-10 ${style.heroContent} h-100 d-flex flex-column justify-content-center align-items-start`}
             >
               <h2
-                className="heading-3 fw-normal mt-4  "
+                className={`text text-1 fw-normal mt-4  ${headingCss} `}
                 dangerouslySetInnerHTML={{ __html: title || '' }} // Handling undefined title
               />
               <p
 
                 dangerouslySetInnerHTML={{ __html: description || '' }}
-                className={clsx(discriptionClass, style.fontWeight)}
+                className={clsx(discriptionClass, 'para')}
               />
 
               {!isHideAllButton && (

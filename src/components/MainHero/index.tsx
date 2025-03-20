@@ -33,11 +33,11 @@ const MainHero = () => {
               md={12}
               className={`mb-10 ${style.heroContentSection} h-100 d-flex flex-column justify-content-center align-items-start`}
             >
-              <h1 className="fw-normal mt-4">
-                Rapid Payments Your Partner in{' '}
+              <h2 className="fw-normal text text-1  mt-4">
+                Rapid Payments <br className='d-none d-lg-block' /> Your  Partner in{' '} <br className='d-none d-lg-block' />
                 <span className="fw-bolder"> Payment Success</span>
-              </h1>
-              <Paragraph className="">
+              </h2>
+              <Paragraph className="para">
                 At <span className="fw-bold">Rapid Payments</span> , we empower
                 businesses of all sizes with flexible, secure, and efficient
                 payment processing solutions.
@@ -51,7 +51,7 @@ const MainHero = () => {
                       alt=""
                     />
                     <Paragraph className={clsx(style.heroParagraph)}>
-                      <span className="text-primary-100">Seamless</span> Payment{' '}
+                      <span className="text-primary-100 fw-bold">Seamless</span> Payment{' '}
                       <br /> processing solutions
                     </Paragraph>
                   </div>
@@ -63,7 +63,7 @@ const MainHero = () => {
                       alt=""
                     />
                     <Paragraph className={clsx(style.heroParagraph)}>
-                      <span className="text-primary-100">
+                      <span className="text-primary-100 fw-bold">
                         Secure & Reliable{' '}
                       </span>{' '}
                       Merchant payment Processing
@@ -77,7 +77,7 @@ const MainHero = () => {
                       alt=""
                     />
                     <Paragraph className={clsx(style.heroParagraph)}>
-                      <span className="text-primary-100">Lower Rates </span>{' '}
+                      <span className="text-primary-100 fw-bold">Lower Rates </span>{' '}
                       Transparent and competitive pricings
                     </Paragraph>
                   </div>
@@ -89,7 +89,7 @@ const MainHero = () => {
                       alt=""
                     />
                     <Paragraph className={clsx(style.heroParagraph)}>
-                      <span className="text-primary-100">POS </span> Streamlined
+                      <span className="text-primary-100 fw-bold">POS </span> Streamlined
                       Hardware & software for businesses
                     </Paragraph>
                   </div>

@@ -8,6 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
 import ServiceCard from './ServiceCard';
 import Paragraph from '@/common/Paragraph';
+import Section from '@/common/Section';
 
 interface ServicesProps {
   title?: string;
@@ -24,8 +25,8 @@ const Services = ({
   const isLaptop = useMediaQuery({ query: '(max-width: 1400px)' });
 
   return (
-    <div className={clsx(style.rapidbackground)}>
-      <Container className="py-md-7 py-2">
+    <Section className={clsx(style.rapidbackground)}>
+      <Container className="">
         <Row className="gy-3">
           <Col
             xl={6}
@@ -33,7 +34,7 @@ const Services = ({
           >
             <div>
               <h2
-                className={`${style.heading} fw-normal ${style.fontSizeHeading}`}
+                className={`text text-3 fw-normal ${style.fontSizeHeading}`}
                 dangerouslySetInnerHTML={{ __html: title }}
               />
               <Paragraph className="para fw-normal max-w-sm-70">
@@ -68,7 +69,7 @@ const Services = ({
         </Row>
       </Container>
       <Modal show={isshowModalModal} handleClose={() => setShowModal(false)} />
-    </div>
+    </Section>
   );
 };
 
