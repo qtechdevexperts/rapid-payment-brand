@@ -26,7 +26,7 @@ const PaymentType = () => {
           <PaymentCard
             title="Online Payments"
             description="Secure virtual terminal payment processing for cards, wallets & more."
-            href="/solutions/accept-payment/online-payments/"
+            href="/online-payments/"
             icon={
               <>
                 <svg
@@ -51,7 +51,7 @@ const PaymentType = () => {
           <PaymentCard
             title="In-Person Payments"
             description="Smart POS, mobile readers & contactless terminals for speed & convenience."
-            href="/solutions/accept-payment/in-person-payments/"
+            href="/in-person-payments/"
             icon={
               <>
                 <svg
@@ -78,7 +78,7 @@ const PaymentType = () => {
           <PaymentCard
             title="Omnichannel Payments"
             description="Seamlessly integrate online, in-store & mobile transactions"
-            href="/solutions/accept-payment/omni-channel-payments/"
+            href="/omni-channel-payments/"
             icon={
               <>
                 <svg

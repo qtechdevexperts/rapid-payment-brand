@@ -40,25 +40,25 @@ const EmpactFullPayment = () => {
       title: 'Online',
       imgSrc: '/images/industries/online.png',
       desc: 'Accept secure online payments with ease. Our payment gateway, hosted checkout, and invoicing solutions ensure a frictionless customer experience while keeping transactions fast and secure.',
-      href: '/solutions/accept-payment/online-payments/',
+      href: '/online-payments/',
     },
     {
       title: 'In-store Payments',
       imgSrc: '/images/industries/in-store.png',
       desc: 'From retail stores to restaurants, accept payments anywhere, anytime with mobile card readers, wireless terminals, and countertop solutions that integrate effortlessly into your business.',
-      href: '/solutions/accept-payment/in-person-payments/',
+      href: '/in-person-payments/',
     },
     {
       title: 'Omnichannel Payments',
       imgSrc: '/images/industries/omni-channel.png',
       desc: 'Rapid Payments, a leading merchant service provider, partners with top payment processors, gateways, and POS providers to deliver a truly unified payment experience. Accept payments in-store, online, or via mobile with a seamless and secure solution that connects all sales channels.',
-      href: '/solutions/accept-payment/omni-channel-payments/',
+      href: '/omni-channel-payments/',
     },
     {
       title: 'Point Of Sale Solutions',
       imgSrc: '/images/POS.png',
       desc: 'At Rapid Payments, we’ve partnered with top POS providers to ensure you get the best system for your business needs. Whether you run a restaurant, retail store, or service business, we’ll match you with a secure, reliable, and feature-rich POS system designed to streamline transactions and enhance customer experience.',
-      href: '/solutions/accept-payment/point-of-sale-solution/',
+      href: '/point-of-sale-solution/',
     },
   ];
 
@@ -119,9 +119,8 @@ const EmpactFullPayment = () => {
                             </Paragraph>
                             <Link
                               href={slide.href}
-                              className={`btn btn-feature ${
-                                !isBigScreen && 'btn-lg'
-                              } px-sm-5 py-2`}
+                              className={`btn btn-feature ${!isBigScreen && 'btn-lg'
+                                } px-sm-5 py-2`}
                             >
                               Get Started
                             </Link>

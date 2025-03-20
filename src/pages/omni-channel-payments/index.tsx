@@ -14,20 +14,20 @@ const SolutionArray = [
     image: '/images/solution/1.png',
     title: 'Point Of Sale Solutions',
     desc: 'From mobile card readers to full-featured POS terminals, we ensure you get the right solution to accept payments quickly, securely, and effortlessly',
-    href: '/solutions/accept-payment/point-of-sale-solution/',
+    href: '/point-of-sale-solution/',
   },
   {
     image: '/images/solution/online-payments.png',
     title: 'Online Payments',
     desc: 'Accept secure online payments with ease. Our payment gateway, hosted checkout, and invoicing solutions ensure a frictionless customer experience while keeping transactions fast and secure',
-    href: '/solutions/accept-payment/online-payments/',
+    href: '/online-payments/',
   },
 
   {
     image: '/images/solution/3.png',
     title: 'Omnichannel Payments',
     desc: 'Unify your payment experience with seamless integration across online, in-store, and mobile channels. Provide customers with a  consistent, secure, and flexible payment process',
-    href: '/solutions/accept-payment/omni-channel-payments/',
+    href: '/omni-channel-payments/',
   },
 ];
 

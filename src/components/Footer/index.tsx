@@ -91,7 +91,7 @@ const Footer = () => {
             >
               <li className="my-3">
                 <Link
-                  href={'/solutions/accept-payment/online-payments'}
+                  href={'/online-payments'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Online
@@ -99,7 +99,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'/solutions/accept-payment/in-person-payments'}
+                  href={'/in-person-payments'}
                   className={`text-white  ${style.footerLink} text-decoration-none `}
                 >
                   In-Person
@@ -107,7 +107,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'/solutions/accept-payment/omni-channel-payments'}
+                  href={'/omni-channel-payments'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   OmniChannel
@@ -115,7 +115,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'/solutions/accept-payment/point-of-sale-solution'}
+                  href={'/point-of-sale-solution'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Point of Sales
@@ -160,7 +160,7 @@ const Footer = () => {
             >
               <li className="my-3">
                 <Link
-                  href={'/solutions/business/payment-gateways'}
+                  href={'/payment-gateways'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Payment Gateways
@@ -168,7 +168,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'/solutions/business/virtual-terminals'}
+                  href={'/virtual-terminals'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Virtual Terminals
@@ -176,7 +176,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'/solutions/business/fraud-protection'}
+                  href={'/fraud-protection'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Fraud Protection
@@ -184,7 +184,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'/solutions/business/funding'}
+                  href={'/funding'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Funding
@@ -192,7 +192,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'/solutions/business/chargeback-management'}
+                  href={'/chargeback-management'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Chargeback Management

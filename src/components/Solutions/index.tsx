@@ -151,19 +151,19 @@ const Solutions = () => {
 
                   <div className="mt-4">
                     <LinkTag
-                      href="/solutions/accept-payment/online-payments/"
+                      href="/online-payments/"
                       className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
                     >
                       Online Payments
                     </LinkTag>
                     <LinkTag
-                      href="/solutions/accept-payment/in-person-payments/"
+                      href="/in-person-payments/"
                       className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
                     >
                       In-Person Payments
                     </LinkTag>
                     <LinkTag
-                      href="/solutions/accept-payment/point-of-sale-solution/"
+                      href="/point-of-sale-solution/"
                       className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
                     >
                       Point of sales Solutions
@@ -190,7 +190,7 @@ const Solutions = () => {
 
                   <div className="mt-4">
                     {/* <Link
-                      href={'/solutions/accept-payment/in-person-payments/'}
+                      href={'/in-person-payments/'}
                       className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
                     >
                       In Person{' '}
@@ -200,21 +200,21 @@ const Solutions = () => {
                       />
                     </Link> */}
                     <LinkTag
-                      href={'/solutions/accept-payment/in-person-payments/'}
+                      href={'/in-person-payments/'}
                       className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
                     >
                       In Person
                     </LinkTag>
 
                     <LinkTag
-                      href={'/solutions/accept-payment/online-payments/'}
+                      href={'/online-payments/'}
                       className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
                     >
                       Online
                     </LinkTag>
 
                     <LinkTag
-                      href={'/solutions/accept-payment/omni-channel-payments/'}
+                      href={'/omni-channel-payments/'}
                       className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
                     >
                       Omnichannel
