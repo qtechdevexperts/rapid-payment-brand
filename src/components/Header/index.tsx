@@ -288,7 +288,7 @@ const Header = () => {
               currentTab={currentTab ?? undefined}
               setCurrentTab={setCurrentTab}
               offcanvasView="menu" // not used on desktop
-              setOffcanvasView={() => {}}
+              setOffcanvasView={() => { }}
             />
           </Container>
         </div>
@@ -369,7 +369,7 @@ const Header = () => {
                   'list-group-item  text-primary-100 d-flex justify-content-start align-items-center gap-3',
                   styles.mainListItem,
                 )}
-                onClick={() => handleOpenSub(tab.id)}
+                onClick={() => tab?.lastTab ? router.push("/our-pricing") : handleOpenSub(tab.id)}
               >
                 {tab.label}
               </li>
