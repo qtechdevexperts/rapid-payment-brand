@@ -6,7 +6,6 @@
   background: #4990e2;
   padding: 16px !important;
 
-
   h5 {
     color: white;
     font-size: 26px;
@@ -14,8 +13,8 @@
 
   p {
     color: white;
-    font-size: 18px;
     font-weight: 300;
+    font-size: 18px;
   }
 
   &:hover {
@@ -52,7 +51,4 @@
   @media (max-width: 1199px) {
     background-image: none !important;
   }
-
-
-
 }

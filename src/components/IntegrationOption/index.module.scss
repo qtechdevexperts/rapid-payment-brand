@@ -3,7 +3,6 @@
     // font-size: 60px !important;
     text-align: center;
 
-
     // @media (max-width:1500px) {
     //   font-size: 48px !important;
     // }
@@ -13,20 +12,14 @@
 .IntegratationOption {
   .firstBox {
     p {
-
-      @media (max-width:1500px) {
-        max-width: 70%;
+      @media (max-width: 1500px) {
         margin: 0 auto;
+        max-width: 70%;
       }
 
-
-      @media (max-width:767px) {
+      @media (max-width: 767px) {
         max-width: 90%;
       }
-
-
-
-
     }
   }
 }

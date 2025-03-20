@@ -1,9 +1,9 @@
+import Paragraph from '@/common/Paragraph';
 import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
-import Paragraph from '@/common/Paragraph';
 
 const slickSettings = {
   infinite: false,
@@ -30,7 +30,6 @@ const slickSettings = {
   ],
 };
 
-
 const RapidPaymentForSolutions = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -39,25 +38,25 @@ const RapidPaymentForSolutions = () => {
       title: 'Retail',
       imgSrc: '/images/industries/Retail.png',
       desc: 'Simplify in-store payments with secure merchant account services and advanced POS solutions. Accept credit and debit card payments seamlessly while managing inventory, transactions, and customer insights efficiently.',
-      href: "/who-we-serve/retail/"
+      href: '/retail/',
     },
     {
       title: 'Restaurant',
       imgSrc: '/images/industries/resturant.png',
       desc: 'Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly.',
-      href: "/who-we-serve/restaurant/"
+      href: '/restaurant/',
     },
     {
       title: 'Ecommerce',
       imgSrc: '/images/industries/ecommerce.png',
       desc: 'Secure your online transactions with a dedicated merchant account and reliable payment processing. Accept credit and debit cards with ease while protecting your business from fraud and chargebacks.',
-      href: "/who-we-serve/ecommerce/"
+      href: '/ecommerce/',
     },
     {
       title: 'Professional Services',
       imgSrc: '/images/industries/professional-services.png',
       desc: 'Get paid on time with custom invoicing, recurring billing, and seamless card payment acceptance. Our merchant accounts and POS solutions help service professionals simplify transactions and improve cash flow.',
-      href: "/who-we-serve/professional-services/"
+      href: '/professional-services/',
     },
   ];
 
@@ -77,12 +76,12 @@ const RapidPaymentForSolutions = () => {
         <div className="row">
           <div className="col-xl-8">
             <h4 className={`text text-3 fw-normal text-capitalize`}>
-              At Rapid Payment, We <br className='d-none d-lg-block' /> Understand{' '}
-              <span className="fw-bold">your Industry</span>{' '}
+              At Rapid Payment, We <br className="d-none d-lg-block" />{' '}
+              Understand <span className="fw-bold">your Industry</span>{' '}
             </h4>
           </div>
           <div className="col-xl-4">
-            <p className='max-w-xxl-100'>
+            <p className="max-w-xxl-100">
               No matter where or how you do business—whether through a physical
               location or a digital platform—we offer fast, secure, and flexible
               payment options for every business.
@@ -107,7 +106,9 @@ const RapidPaymentForSolutions = () => {
                       <div className="row">
                         <div className="col-md-6 d-flex justify-content-center align-items-center">
                           <div className="card-body">
-                            <h5 className={` ${style.cardTitle}  card-title heading-4 text-black-1 fw-bold`}>
+                            <h5
+                              className={` ${style.cardTitle}  card-title heading-4 text-black-1 fw-bold`}
+                            >
                               {slide.title}
                             </h5>
                             <Paragraph className="card-text para my-4">

@@ -1,28 +1,25 @@
 .paragraph {
-    color: #4F4F4F;
+  color: #4f4f4f;
+  line-height: 26px;
+
+  letter-spacing: -0.54px;
+
+  &[data-variant='sm'] {
+    font-size: 17px;
+
+    @media (max-width: 1500px) {
+      font-size: 15px;
+    }
+  }
+
+  &[data-variant='md'] {
+    font-size: clamp(15px, 4vw, 19px);
     line-height: 26px;
+  }
 
-
-    &[data-variant="sm"] {
-        font-size: 17px;
-
-        @media (max-width:1500px) {
-            font-size: 15px;
-        }
+  @media (max-width: 1500px) {
+    br {
+      display: none !important;
     }
-
-    &[data-variant="md"] {
-        font-size: clamp(15px, 4vw, 19px);
-        line-height: 26px;
-    }
-
-
-    letter-spacing: -0.54px;
-
-
-    @media (max-width:1500px) {
-        br {
-            display: none !important;
-        }
-    }
+  }
 }

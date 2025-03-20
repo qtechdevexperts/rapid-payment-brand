@@ -1,4 +1,4 @@
-@import "@/styles/responsive-1.scss";
+@import '@/styles/responsive-1.scss';
 
 .OtherSolutionCard {
   p {
@@ -15,14 +15,10 @@
   }
 }
 
-
-
 .solutionTitle {
   font-size: 30px !important;
 
   @include laptop {
     font-size: 26px !important;
   }
-
-
 }

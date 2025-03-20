@@ -65,12 +65,10 @@
   }
 }
 
-
-
 .imageSection {
   height: 100%;
 
-  @media (max-width:1500px) {
+  @media (max-width: 1500px) {
     height: auto;
   }
 }

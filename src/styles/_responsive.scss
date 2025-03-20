@@ -8,38 +8,33 @@ $breakpoints: (
   'xl': 1400px,
   'laptop': 1500px,
   'xxl': 1550px,
-  ) !default;
+) !default;
 
 @mixin respond-to($breakpoint, $type: 'min') {
-  $value: map-get($breakpoints, $breakpoint
-  );
+  $value: map-get($breakpoints, $breakpoint);
 
-@if $value ==null {
-  @error "Breakpoint '#{$breakpoint}' not found in $breakpoints map";
-}
-
-@if $type =='max' {
-  $value: $value - 0.02px;
-
-  @media (max-width: $value) {
-    @content;
+  @if $value ==null {
+    @error "Breakpoint '#{$breakpoint}' not found in $breakpoints map";
   }
-}
 
-@else if $type =='min' {
-  @media (min-width: $value) {
-    @content;
-  }
-}
+  @if $type == 'max' {
+    $value: $value - 0.02px;
 
-@else if $type =='range' {
-  $next-breakpoint: map-get($breakpoints, $breakpoint);
-  $next-value: map-get($breakpoints, $breakpoint + 1);
-
-  @if $next-value {
-    @media (min-width: $next-breakpoint) and (max-width: ($next-value - 0.02px)) {
+    @media (max-width: $value) {
       @content;
     }
+  } @else if $type == 'min' {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else if $type == 'range' {
+    $next-breakpoint: map-get($breakpoints, $breakpoint);
+    $next-value: map-get($breakpoints, $breakpoint + 1);
+
+    @if $next-value {
+      @media (min-width: $next-breakpoint) and (max-width: ($next-value - 0.02px)) {
+        @content;
+      }
+    }
   }
-}
 }

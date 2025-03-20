@@ -20,12 +20,10 @@
   min-height: 85vh;
   overflow: hidden;
 
-  &>* {
+  & > * {
     position: relative;
     z-index: 10;
   }
-
-
 
   @media (min-width: 1921px) {
     background-image: none;
@@ -44,12 +42,9 @@
     }
   }
 
-  @media (max-width:1200px) {
-
+  @media (max-width: 1200px) {
     background-image: none !important;
   }
-
-
 
   // &::after {
   //   content: "";
@@ -86,15 +81,13 @@
     @include padding-bottom(40px);
   }
 
-
   @media (max-width: 767px) {
     margin-top: 20px;
   }
 }
 
-
 .heroContent {
-  @media (max-width:1500px) {
+  @media (max-width: 1500px) {
     padding: 30px;
 
     h2 {
@@ -102,19 +95,15 @@
     }
   }
 
-
-
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding: 20px;
   }
-
 }
-
 
 .fontWeight {
   font-weight: 400;
 }
 
 .discriptionClass {
-  color: #4F4F4F;
+  color: #4f4f4f;
 }

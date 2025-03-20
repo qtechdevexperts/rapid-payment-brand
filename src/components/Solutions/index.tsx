@@ -1,16 +1,15 @@
 import Modal from '@/common/Modal';
+import Paragraph from '@/common/Paragraph';
 import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import style from './index.module.scss';
 import LinkTag from '../LinkTag';
-import Paragraph from '@/common/Paragraph';
+import style from './index.module.scss';
 
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
@@ -72,7 +71,6 @@ const Solutions = () => {
                   <div>
                     <Button
                       className={clsx(
-
                         'px-md-5 px-sm-3 py-md-3 py-2 me-2 w-100',
                         { 'btn-lg': !isLaptop },
                         currentTab === 'small-business'
@@ -137,11 +135,13 @@ const Solutions = () => {
               {/* Dynamic Content */}
               {currentTab === 'small-business' ? (
                 <>
-                  <h2 className={` text text-2 fw-normal mt-large-9 mt-4 mt-lg-6`}>
+                  <h2
+                    className={` text text-2 fw-normal mt-large-9 mt-4 mt-lg-6`}
+                  >
                     Big Solutions for <br />
                     <span className="fw-bold">Small Businesses</span>
                   </h2>
-                  <Paragraph className='max-w-sm-70'>
+                  <Paragraph className="max-w-sm-70">
                     Smoothly running a small business is challenging, we
                     simplify payments with proven payment processing solutions.
                     Whether in-store, online, or on the go, our secure, fast,
@@ -151,35 +151,40 @@ const Solutions = () => {
 
                   <div className="mt-4">
                     <LinkTag
-                      href='/solutions/accept-payment/online-payments/'
-                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3">
+                      href="/solutions/accept-payment/online-payments/"
+                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                    >
                       Online Payments
                     </LinkTag>
                     <LinkTag
-                      href='/solutions/accept-payment/in-person-payments/'
-                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3">
+                      href="/solutions/accept-payment/in-person-payments/"
+                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                    >
                       In-Person Payments
                     </LinkTag>
                     <LinkTag
-                      href='/solutions/accept-payment/point-of-sale-solution/'
-                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3">
+                      href="/solutions/accept-payment/point-of-sale-solution/"
+                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                    >
                       Point of sales Solutions
                     </LinkTag>
-
-
                   </div>
                 </>
               ) : (
                 <>
-                  <h2 className={`text text-2 fw-normal mt-large-9 mt-4 mt-lg-6`}>
+                  <h2
+                    className={`text text-2 fw-normal mt-large-9 mt-4 mt-lg-6`}
+                  >
                     Enterprise Payment <br />
                     <span className="fw-bold">Solutions</span>
                   </h2>
-                  <Paragraph className='max-w-lg-70'>
-                    Power your business with scalable, secure, and seamless <br />
-                    payment processing designed for high-volume transactions. <br />
+                  <Paragraph className="max-w-lg-70">
+                    Power your business with scalable, secure, and seamless{' '}
+                    <br />
+                    payment processing designed for high-volume transactions.{' '}
+                    <br />
                     Our enterprise-grade payment processing services ensure
-                    reliability <br />, speed, and  efficiency across all sales
+                    reliability <br />, speed, and efficiency across all sales
                     channels.
                   </Paragraph>
 
@@ -208,16 +213,12 @@ const Solutions = () => {
                       Online
                     </LinkTag>
 
-
                     <LinkTag
                       href={'/solutions/accept-payment/omni-channel-payments/'}
                       className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
-
                     >
-
                       Omnichannel
                     </LinkTag>
-
                   </div>
                 </>
               )}

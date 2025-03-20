@@ -1,27 +1,23 @@
 import Paragraph from '@/common/Paragraph';
+import Section from '@/common/Section';
 import Form from '@/Form';
 import { Col, Container, Row } from 'react-bootstrap';
-import style from "./index.module.scss"
-import Section from '@/common/Section';
-
-
-
-
-
-
+import style from './index.module.scss';
 
 interface PaymentFormProps {
-  list?: string[]
+  list?: string[];
 }
 
-
-
-
-
-
-const PaymentForm = ({ list = ['Card devices (fixed and mobile)', 'Electronic Point of Sale solutions', 'Ecommerce solutions', ' FREE PLACEMENT* on eligible POS systems'] }: PaymentFormProps) => {
+const PaymentForm = ({
+  list = [
+    'Card devices (fixed and mobile)',
+    'Electronic Point of Sale solutions',
+    'Ecommerce solutions',
+    ' FREE PLACEMENT* on eligible POS systems',
+  ],
+}: PaymentFormProps) => {
   return (
-    <Section className=''>
+    <Section className="">
       <Container className="" id="ContactForm">
         <Row>
           <Col lg={6}>
@@ -38,15 +34,13 @@ const PaymentForm = ({ list = ['Card devices (fixed and mobile)', 'Electronic Po
               your business needs.
             </Paragraph>
             <ul>
-              {
-                list?.map((item, index) => {
-                  return (
-                    <li className={`text-primary-100 my-2 ${style.listHeading}`}>
-                      {item}
-                    </li>
-                  )
-                })
-              }
+              {list?.map((item, index) => {
+                return (
+                  <li className={`text-primary-100 my-2 ${style.listHeading}`}>
+                    {item}
+                  </li>
+                );
+              })}
             </ul>
 
             <Paragraph className={`${style.paymentParagraph2} fw-medium`}>

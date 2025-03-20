@@ -1,4 +1,5 @@
 import Modal from '@/common/Modal';
+import Paragraph from '@/common/Paragraph';
 import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
@@ -6,7 +7,6 @@ import { useState } from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
-import Paragraph from '@/common/Paragraph';
 
 const MainHero = () => {
   const router = useRouter();
@@ -34,7 +34,8 @@ const MainHero = () => {
               className={`mb-10 ${style.heroContentSection} h-100 d-flex flex-column justify-content-center align-items-start`}
             >
               <h2 className="fw-normal text text-1  mt-4">
-                Rapid Payments <br className='d-none d-lg-block' /> Your  Partner in{' '} <br className='d-none d-lg-block' />
+                Rapid Payments <br className="d-none d-lg-block" /> Your Partner
+                in <br className="d-none d-lg-block" />
                 <span className="fw-bolder"> Payment Success</span>
               </h2>
               <Paragraph className="para">
@@ -51,8 +52,8 @@ const MainHero = () => {
                       alt=""
                     />
                     <Paragraph className={clsx(style.heroParagraph)}>
-                      <span className="text-primary-100 fw-bold">Seamless</span> Payment{' '}
-                      <br /> processing solutions
+                      <span className="text-primary-100 fw-bold">Seamless</span>{' '}
+                      Payment <br /> processing solutions
                     </Paragraph>
                   </div>
                 </Col>
@@ -77,7 +78,9 @@ const MainHero = () => {
                       alt=""
                     />
                     <Paragraph className={clsx(style.heroParagraph)}>
-                      <span className="text-primary-100 fw-bold">Lower Rates </span>{' '}
+                      <span className="text-primary-100 fw-bold">
+                        Lower Rates{' '}
+                      </span>{' '}
                       Transparent and competitive pricings
                     </Paragraph>
                   </div>
@@ -89,8 +92,8 @@ const MainHero = () => {
                       alt=""
                     />
                     <Paragraph className={clsx(style.heroParagraph)}>
-                      <span className="text-primary-100 fw-bold">POS </span> Streamlined
-                      Hardware & software for businesses
+                      <span className="text-primary-100 fw-bold">POS </span>{' '}
+                      Streamlined Hardware & software for businesses
                     </Paragraph>
                   </div>
                 </Col>

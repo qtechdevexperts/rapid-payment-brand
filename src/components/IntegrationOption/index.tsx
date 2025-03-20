@@ -1,15 +1,15 @@
 import IntegrationCard from '@/common/Cards/IntegrationCard';
+import Paragraph from '@/common/Paragraph';
 import { OnlinePaymentService } from '@/utils/data';
 import { Col, Row } from 'react-bootstrap';
 import style from './index.module.scss';
-import Paragraph from '@/common/Paragraph';
 
 interface IntegratationOptionProps {
   title?: string;
   data?: OnlinePaymentService[];
   desc?: string;
   defaultColumm?: number;
-  headingClass?: string
+  headingClass?: string;
 }
 
 const IntegratationOption = ({
@@ -26,13 +26,16 @@ const IntegratationOption = ({
           dangerouslySetInnerHTML={{ __html: title || '' }}
           className="text-capitalize text text-1"
         />
-        <Paragraph className="text-center" dangerouslySetInnerHTML={{ __html: desc }} />
+        <Paragraph
+          className="text-center"
+          dangerouslySetInnerHTML={{ __html: desc }}
+        />
       </div>
 
       <Row className="gy-3">
         {data?.map((item, index) => {
           return (
-            <Col md={'6'} lg={3} >
+            <Col md={'6'} lg={3}>
               <IntegrationCard title={item?.title} desc={item?.desc} />
             </Col>
           );

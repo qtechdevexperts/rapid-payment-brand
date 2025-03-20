@@ -25,17 +25,14 @@
 .paymentUniversityCard {
   border-radius: 20px;
 
-  &>div {
+  & > div {
     background-color: #eff5fc;
   }
 }
 
-
-
 .cardTitle {
   font-size: 30px;
 }
-
 
 .PageHeading {
   font-size: clamp(20px, 4vw, 48px);

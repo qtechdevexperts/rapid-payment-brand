@@ -21,7 +21,7 @@
   min-height: 85vh;
   overflow: hidden;
 
-  &>* {
+  & > * {
     position: relative;
     z-index: 10;
   }
@@ -64,7 +64,6 @@
     background-image: none !important;
   }
 
-
   @media (max-width: 1750px) {
     min-height: auto !important;
     @include padding-top(80px);
@@ -77,26 +76,17 @@
   }
 }
 
-
-
-
 .heroParagraph {
-
-  @media (max-width:1480px) {
+  @media (max-width: 1480px) {
     font-size: 15px !important;
   }
-
-
-
 }
 
 .heroContentSection {
-
-  @media (max-width:1500px) {
+  @media (max-width: 1500px) {
     padding: 30px;
   }
 }
-
 
 // .container {
 //   h1 {

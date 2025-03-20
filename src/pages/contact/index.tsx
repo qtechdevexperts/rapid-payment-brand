@@ -4,13 +4,9 @@ import Head from 'next/head';
 const Contact = () => {
   return (
     <>
-
       <Head>
         <title>Contact Rapid Payments - Get in Touch</title>
-        <meta
-          name="description"
-          content=""
-        />
+        <meta name="description" content="" />
       </Head>
 
       <Hero

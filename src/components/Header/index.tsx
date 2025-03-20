@@ -10,59 +10,63 @@ import { FaArrowLeft } from 'react-icons/fa';
 import style from './index.module.scss';
 
 const solutionsTabs = [
-  { id: 'AcceptPayment', label: 'Accept Payments', lastTab: false, href: "" },
-  { id: 'business', label: 'Run Your Business', lastTab: false, href: "" },
-  { id: 'pricing', label: 'Pricing', lastTab: true, href: "/our-pricing" },
+  { id: 'AcceptPayment', label: 'Accept Payments', lastTab: false, href: '' },
+  { id: 'business', label: 'Run Your Business', lastTab: false, href: '' },
+  { id: 'pricing', label: 'Pricing', lastTab: true, href: '/our-pricing' },
 ];
 
 const solutionsContent = [
   {
     id: 'AcceptPayment',
     label: 'Online',
-    link: '/solutions/accept-payment/online-payments',
+    link: '/online-payments',
   },
   {
     id: 'AcceptPayment',
     label: 'In-Person',
-    link: '/solutions/accept-payment/in-person-payments',
+    link: '/in-person-payments',
   },
   {
     id: 'AcceptPayment',
     label: 'OmniChannel',
-    link: '/solutions/accept-payment/omni-channel-payments',
+    link: '/omni-channel-payments',
   },
   {
     id: 'AcceptPayment',
     label: 'Point of Sales Solutions',
-    link: '/solutions/accept-payment/point-of-sale-solution',
+    link: '/point-of-sale-solution',
   },
   {
     id: 'business',
     label: 'Payment Gateways',
-    link: '/solutions/business/payment-gateways',
+    link: '/payment-gateways',
   },
   {
     id: 'business',
     label: 'Virtual Terminals',
-    link: '/solutions/business/virtual-terminals',
+    link: '/virtual-terminals',
   },
   {
     id: 'business',
     label: 'Fraud Protection',
-    link: '/solutions/business/fraud-protection',
+    link: '/fraud-protection',
   },
-  { id: 'business', label: 'Funding', link: '/solutions/business/funding' },
+  { id: 'business', label: 'Funding', link: '/funding' },
   {
     id: 'business',
     label: 'Chargeback Management',
-    link: '/solutions/business/chargeback-management',
+    link: '/chargeback-management',
   },
   {
     id: 'business',
     label: 'Reporting',
-    link: '/solutions/business/reporting-and-analytics',
+    link: '/reporting-and-analytics',
   },
-  { id: 'business', label: 'Billing and Invoicing', link: '/solutions/business/billing-and-invoicing' },
+  {
+    id: 'business',
+    label: 'Billing and Invoicing',
+    link: '/billing-and-invoicing',
+  },
 ];
 
 const whoWeServeTabs = [
@@ -72,20 +76,24 @@ const whoWeServeTabs = [
 ];
 
 const whoWeServeContent = [
-  { id: 'type', label: 'Small Business', link: '/who-we-serve/smb' },
+  { id: 'type', label: 'Small Business', link: '/smb' },
   {
     id: 'type',
     label: 'Enterprise',
-    link: '/who-we-serve/enterprise-solution',
+    link: '/enterprise-solution',
   },
-  { id: 'industries', label: 'Retail', link: '/who-we-serve/retail' },
-  { id: 'industries', label: 'Restaurant', link: '/who-we-serve/restaurant' },
-  { id: 'industries', label: 'Professional Services', link: '/who-we-serve/professional-services' },
-  { id: 'industries', label: 'Ecommerce', link: '/who-we-serve/ecommerce' },
+  { id: 'industries', label: 'Retail', link: '/retail' },
+  { id: 'industries', label: 'Restaurant', link: '/restaurant' },
+  {
+    id: 'industries',
+    label: 'Professional Services',
+    link: '/professional-services',
+  },
+  { id: 'industries', label: 'Ecommerce', link: '/ecommerce' },
   {
     id: 'partnertype',
     label: 'Referral Partners',
-    link: '/who-we-serve/referral-partners',
+    link: '/referral-partners',
   },
 ];
 
@@ -171,22 +179,16 @@ const Header = () => {
     return () => window.removeEventListener('resize', updateClipPathPosition);
   }, [router.pathname]);
 
-
-
   const handleCloseDialog = () => {
     setLastMenu(false);
-    setOffcanvasView(false)
-    console.log(lastMenu)
-  }
-
-
-
+    setOffcanvasView(false);
+    console.log(lastMenu);
+  };
 
   const handleOpenSub = (key: string) => {
     console.log(key);
     setLastMenu(true);
     setMobileActiveSub(key);
-
   };
 
   return (
@@ -286,7 +288,7 @@ const Header = () => {
               currentTab={currentTab ?? undefined}
               setCurrentTab={setCurrentTab}
               offcanvasView="menu" // not used on desktop
-              setOffcanvasView={() => { }}
+              setOffcanvasView={() => {}}
             />
           </Container>
         </div>
@@ -339,7 +341,7 @@ const Header = () => {
                 'list-group-item  text-primary-100 d-flex justify-content-start align-items-center gap-3',
                 styles.mainListItem,
               )}
-              onClick={() => router.push("/integrated-partners/")}
+              onClick={() => router.push('/integrated-partners/')}
             >
               Integrated Partners
             </li>
@@ -378,7 +380,7 @@ const Header = () => {
             className={clsx(
               styles.subMenu2,
               'pl-0',
-              `${lastMenu && styles.innerLinks}`
+              `${lastMenu && styles.innerLinks}`,
             )}
             style={{
               paddingLeft: '0px',
@@ -455,7 +457,7 @@ const Header = () => {
           )} */}
         </Offcanvas.Body>
       </Offcanvas>
-    </div >
+    </div>
   );
 };
 

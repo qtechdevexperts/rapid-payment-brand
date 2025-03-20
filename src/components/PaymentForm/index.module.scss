@@ -1,62 +1,52 @@
-@import "rfs/scss";
-
+@import 'rfs/scss';
 
 .paymentHeading {
-    font-size: 56px;
+  font-size: 56px;
 
+  @media (max-width: 992px) {
+    font-size: 40px;
+  }
 
-    @media (max-width:992px) {
-        font-size: 40px;
-    }
-
-    @media (max-width:767px) {
-        font-size: 28px;
-    }
-
-
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
 }
-
 
 .subHeading {
-    font-size: 30px;
-    font-weight: 500;
+  font-weight: 500;
+  font-size: 30px;
 
-    @media (max-width:1500px) {
-        font-size: 25px;
-    }
+  @media (max-width: 1500px) {
+    font-size: 25px;
+  }
 
-    @media (max-width:767px) {
-        font-size: 23px;
-    }
+  @media (max-width: 767px) {
+    font-size: 23px;
+  }
 }
-
 
 .paymentParagraph {
-    font-size: 18px;
-    color: #4F4F4F;
+  color: #4f4f4f;
+  font-size: 18px;
 }
 
-
 .listHeading {
-    font-size: 24px;
+  font-size: 24px;
 
-    @media (max-width:1500px) {
-        font-size: 20px;
-    }
+  @media (max-width: 1500px) {
+    font-size: 20px;
+  }
 
-    @media (max-width:767px) {
-        font-size: 18px;
-    }
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
 }
 
 .paymentParagraph2 {
-    font-size: 24px !important;
-    color: #1C2630 !important;
+  color: #1c2630 !important;
+  font-size: 24px !important;
 
-
-    @media (max-width:1500px) {
-        font-size: 20px !important;
-    }
-
-
+  @media (max-width: 1500px) {
+    font-size: 20px !important;
+  }
 }

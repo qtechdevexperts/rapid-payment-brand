@@ -1,42 +1,43 @@
-@import "rfs/scss";
+@import 'rfs/scss';
 
 .card1 {
-    width: 100%;
-    height: 100%;
-    max-height: 306px;
-    border: 1px solid #4990E2;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    border-radius: 10px;
-    background-color: #F9FCFF;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: 1px solid #4990e2;
+  border-radius: 10px;
+  background-color: #f9fcff;
+  width: 100%;
+  height: 100%;
+  max-height: 306px;
 
-    @include padding(27px);
+  @include padding(27px);
 
-    // padding-top: 20px !important;
+  // padding-top: 20px !important;
 
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: flex-start;
+
+  // gap: 10px;
+
+  .diamondIcon {
     display: flex;
-    flex-direction: column;
-    // justify-content: center;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: multiply;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #fff -32.14%, #4990e2 84.9%);
+    width: 80px;
+    height: 80px;
+  }
 
-    // gap: 10px;
+  h3 {
+    font-size: clamp(20px, 4vw, 28px);
 
-
-    .diamondIcon {
-        width: 80px;
-        height: 80px;
-        border-radius: 5px;
-        background: linear-gradient(180deg, #FFF -32.14%, #4990E2 84.9%);
-        mix-blend-mode: multiply;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @media (max-width: 1400px) {
+      font-size: clamp(20px, 4vw, 23px);
     }
-
-    h3 {
-        font-size: clamp(20px, 4vw, 28px);
-
-        @media (max-width:1400px) {
-            font-size: clamp(20px, 4vw, 23px);
-        }
-    }
+  }
 }

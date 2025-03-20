@@ -1,13 +1,13 @@
 @import './responsive';
-@import "rfs/scss";
+@import 'rfs/scss';
 
 .heading-large {
   font-size: clamp(24px, 3vw, 76px) !important;
 }
 
 .heading-1 {
-  font-size: clamp(36px, 4vw, 66px);
   font-weight: 300;
+  font-size: clamp(36px, 4vw, 66px);
 }
 
 .heading-2 {
@@ -17,13 +17,10 @@
 .heading-3 {
   font-size: clamp(28px, 4vw, 56px);
 
-  @media (max-width:1500px) {
+  @media (max-width: 1500px) {
     font-size: clamp(28px, 4vw, 50px);
   }
-
-
 }
-
 
 .heading-4 {
   font-size: clamp(17px, 2.5vw, 30px);
@@ -46,26 +43,22 @@
   }
 }
 
-
-
 .text {
-  color: #1C2630;
+  color: #1c2630;
   letter-spacing: -2.1px;
-
 
   &-1 {
     font-size: clamp(30px, 4vw, 70px);
 
-    @media (max-width:1500px) {
+    @media (max-width: 1500px) {
       font-size: clamp(30px, 4vw, 40px);
     }
   }
 
-
   &-2 {
     font-size: clamp(28px, 4vw, 66px);
 
-    @media (max-width:1500px) {
+    @media (max-width: 1500px) {
       font-size: clamp(28px, 4vw, 40px);
     }
   }
@@ -73,20 +66,16 @@
   &-3 {
     font-size: clamp(27px, 4vw, 56px);
 
-    @media (max-width:1500px) {
+    @media (max-width: 1500px) {
       font-size: clamp(27px, 4vw, 40px);
     }
   }
 
-
   &-4 {
     font-size: clamp(25px, 4vw, 40px);
 
-    @media (max-width:1500px) {
+    @media (max-width: 1500px) {
       font-size: clamp(25px, 4vw, 35px);
     }
   }
-
-
-
 }

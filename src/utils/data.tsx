@@ -252,9 +252,6 @@ export const ChargebackServices: ServiceProps[] = [
   },
 ];
 
-
-
-
 export const ReportingAnalytics: ServiceProps[] = [
   {
     title: 'Improve Financial Planning',
@@ -273,9 +270,6 @@ export const ReportingAnalytics: ServiceProps[] = [
     description: 'Export reports for accounting and tax purposes',
   },
 ];
-
-
-
 
 export const BillingInvoice: ServiceProps[] = [
   {
@@ -430,8 +424,6 @@ export const ResturantServices: ServiceProps[] = [
   },
 ];
 
-
-
 export const whoWeServePosData = [
   {
     title: 'Smart Point Of Sales',
@@ -443,5 +435,4 @@ export const whoWeServePosData = [
     imgSrc: '/images/smart-point-of-sale.png',
     desc: 'Experience fast, secure, and all-in-one smart terminals designed for on-the-go and in-store transactions, ensuring flexibility and ease of use.',
   },
-
 ];

@@ -1,20 +1,14 @@
 import { Hero } from '@/components';
 import Head from 'next/head';
-import style from "./index.module.scss"
+import style from './index.module.scss';
 
 const Integrated = () => {
   return (
     <>
-
       <Head>
         <title>Integrated Partners | Rapid Payments</title>
-        <meta
-          name="description"
-          content=""
-        />
+        <meta name="description" content="" />
       </Head>
-
-
 
       <Hero
         title='Integrated <span class="fw-bold">Partners</span>'

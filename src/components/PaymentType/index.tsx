@@ -3,11 +3,6 @@ import Paragraph from '@/common/Paragraph';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const PaymentType = () => {
-
-
-
-
-
   return (
     <Container className="py-md-9 py-3 overflow-x-hidden">
       <Row>
@@ -18,7 +13,7 @@ const PaymentType = () => {
           </h4>
         </Col>
         <Col lg={4}>
-          <Paragraph >
+          <Paragraph>
             We offer secure, efficient, and scalable payment solutions designed
             to streamline transactions, reduce costs, and support your business
             growth.
@@ -31,7 +26,7 @@ const PaymentType = () => {
           <PaymentCard
             title="Online Payments"
             description="Secure virtual terminal payment processing for cards, wallets & more."
-            href='/solutions/accept-payment/online-payments/'
+            href="/solutions/accept-payment/online-payments/"
             icon={
               <>
                 <svg
@@ -56,7 +51,7 @@ const PaymentType = () => {
           <PaymentCard
             title="In-Person Payments"
             description="Smart POS, mobile readers & contactless terminals for speed & convenience."
-            href='/solutions/accept-payment/in-person-payments/'
+            href="/solutions/accept-payment/in-person-payments/"
             icon={
               <>
                 <svg
@@ -83,7 +78,7 @@ const PaymentType = () => {
           <PaymentCard
             title="Omnichannel Payments"
             description="Seamlessly integrate online, in-store & mobile transactions"
-            href='/solutions/accept-payment/omni-channel-payments/'
+            href="/solutions/accept-payment/omni-channel-payments/"
             icon={
               <>
                 <svg

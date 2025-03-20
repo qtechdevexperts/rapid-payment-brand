@@ -1,9 +1,6 @@
-@import "rfs/scss";
+@import 'rfs/scss';
 
 .section {
-
-    padding-top: clamp(2rem, 4vw, 8rem) !important;
-    padding-bottom: clamp(2rem, 4vw, 8rem) !important;
-
-
+  padding-top: clamp(2rem, 4vw, 8rem) !important;
+  padding-bottom: clamp(2rem, 4vw, 8rem) !important;
 }

@@ -29,16 +29,9 @@ const Footer = () => {
               { 'pb-sm-5': isBigScreen },
             )}
           >
-            
             <img src="/images/logo-dark.png" className="img-fluid" alt="" />
 
-            <div
-              className={clsx(
-                'py-5',
-                style.notInclude,
-                style.lastBox,
-              )}
-            >
+            <div className={clsx('py-5', style.notInclude, style.lastBox)}>
               <div className="mb-3">
                 <h4 className="text-white fs-11">Sales</h4>
                 <div
@@ -243,7 +236,7 @@ const Footer = () => {
             >
               <li className="my-3">
                 <Link
-                  href={'/who-we-serve/smb'}
+                  href={'/smb'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Small Business
@@ -251,7 +244,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'/who-we-serve/enterprise-solution'}
+                  href={'/enterprise-solution'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Enterprise
@@ -259,7 +252,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'/who-we-serve/retail'}
+                  href={'/retail'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Retail
@@ -267,7 +260,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'/who-we-serve/restaurant'}
+                  href={'/restaurant'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Restaurant
@@ -283,13 +276,12 @@ const Footer = () => {
               </li> */}
               <li className="my-3">
                 <Link
-                  href={'/who-we-serve/referral-partners'}
+                  href={'/referral-partners'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Refferal Partners
                 </Link>
               </li>
-
             </ul>
           </div>
         </div>

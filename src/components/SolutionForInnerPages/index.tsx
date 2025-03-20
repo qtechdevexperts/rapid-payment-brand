@@ -1,16 +1,15 @@
 import Modal from '@/common/Modal';
+import Paragraph from '@/common/Paragraph';
 import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import style from './index.module.scss';
 import LinkTag from '../LinkTag';
-import Paragraph from '@/common/Paragraph';
+import style from './index.module.scss';
 
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
@@ -67,43 +66,39 @@ const SolutionForInnerPages = () => {
         >
           <Row>
             <Col lg={6} className="pb-xxl-8 pb-5">
-
-
-
               <div>
                 <h2 className="heading-2 fw-normal mt-xxl-9 mt-4">
                   Big Solutions for <br />
                   <span className="fw-bold">Small Businesses</span>
                 </h2>
-                <Paragraph className='max-w-sm-65'>
-                  Smoothly running a small business is challenging, we
-                  simplify payments with proven payment processing solutions.
-                  Whether in-store, online, or on the go, our secure, fast,
-                  and flexible solutions let you focus on business growth and
-                  succeed.
+                <Paragraph className="max-w-sm-65">
+                  Smoothly running a small business is challenging, we simplify
+                  payments with proven payment processing solutions. Whether
+                  in-store, online, or on the go, our secure, fast, and flexible
+                  solutions let you focus on business growth and succeed.
                 </Paragraph>
 
                 <div className="mt-4">
                   <LinkTag
-                    href='/solutions/accept-payment/online-payments/'
-                    className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3">
+                    href="/solutions/accept-payment/online-payments/"
+                    className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                  >
                     Online Payments
                   </LinkTag>
                   <LinkTag
-                    href='/solutions/accept-payment/in-person-payments/'
-                    className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3">
+                    href="/solutions/accept-payment/in-person-payments/"
+                    className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                  >
                     In-Person Payments
                   </LinkTag>
                   <LinkTag
-                    href='/solutions/accept-payment/point-of-sale-solution/'
-                    className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3">
+                    href="/solutions/accept-payment/point-of-sale-solution/"
+                    className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                  >
                     Point of sales Solutions
                   </LinkTag>
-
-
                 </div>
               </div>
-
 
               <div className="d-flex flex-column flex-sm-row mt-8 justify-content-start align-items-sm-center gap-3">
                 <Button

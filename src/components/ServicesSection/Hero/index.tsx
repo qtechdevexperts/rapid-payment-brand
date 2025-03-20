@@ -12,7 +12,7 @@ interface HeroProps {
   backgroundImage?: String;
   description?: String;
   headingCss?: String;
-  discriptionClass?: String
+  discriptionClass?: String;
   isShowContact?: boolean;
   isHideAllButton?: boolean;
 }
@@ -55,9 +55,11 @@ const Hero = ({
                 dangerouslySetInnerHTML={{ __html: title || '' }} // Handling undefined title
               />
               <p
-
                 dangerouslySetInnerHTML={{ __html: description || '' }}
-                className={clsx(discriptionClass, 'para max-w-md-70 max-w-xl-100')}
+                className={clsx(
+                  discriptionClass,
+                  'para max-w-md-70 max-w-xl-100',
+                )}
               />
 
               {!isHideAllButton && (

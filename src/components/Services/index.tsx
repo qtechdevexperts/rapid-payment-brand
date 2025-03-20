@@ -1,4 +1,6 @@
 import Modal from '@/common/Modal';
+import Paragraph from '@/common/Paragraph';
+import Section from '@/common/Section';
 import { ServiceProps } from '@/utils/data';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
@@ -7,8 +9,6 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
 import ServiceCard from './ServiceCard';
-import Paragraph from '@/common/Paragraph';
-import Section from '@/common/Section';
 
 interface ServicesProps {
   title?: string;
@@ -38,10 +38,10 @@ const Services = ({
                 dangerouslySetInnerHTML={{ __html: title }}
               />
               <Paragraph className="para fw-normal max-w-sm-70">
-                At  <span className='text-light fw-bold'>Rapid Payments</span> , we do more than just payment
-                processing—we empower businesses with innovative
-                solutions that drive efficiency, increase revenue, and
-                enhance customer experience.
+                At <span className="text-light fw-bold">Rapid Payments</span> ,
+                we do more than just payment processing—we empower businesses
+                with innovative solutions that drive efficiency, increase
+                revenue, and enhance customer experience.
               </Paragraph>
             </div>
 

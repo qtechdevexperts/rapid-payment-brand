@@ -1,4 +1,3 @@
-
 import Form2 from '@/Form/Form2';
 import { Modal as ReactModal } from 'react-bootstrap';
 

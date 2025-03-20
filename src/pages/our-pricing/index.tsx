@@ -1,23 +1,16 @@
 import Paragraph from '@/common/Paragraph';
+import Section from '@/common/Section';
 import { Hero, PaymentForm, ProcessingFeeCard } from '@/components';
 import Head from 'next/head';
 import { Col, Container, Row } from 'react-bootstrap';
-import style from "./index.module.scss"
-import Section from '@/common/Section';
 
 const OurPricing = () => {
   return (
     <>
-
       <Head>
         <title>Our Pricing | Rapid Payments</title> {/* Add the title tag */}
-        <meta
-          name="description"
-          content=""
-        /> {/* Add a meta description */}
+        <meta name="description" content="" /> {/* Add a meta description */}
       </Head>
-
-
 
       <Hero
         title='Our <span class="fw-bold">Pricing</span> '
@@ -30,12 +23,16 @@ const OurPricing = () => {
       <section className="py-10">
         <Container className="d-flex flex-column justify-content-center align-items-center">
           <h2 className="text text-2 fw-normal text-capitalize text-center">
-            From small businesses to enterprise <br className='d-none d-sm-block' /> empires, we{' '}
+            From small businesses to enterprise{' '}
+            <br className="d-none d-sm-block" /> empires, we{' '}
             <span className="fw-bold">lead the way.</span>
           </h2>
           <Paragraph className=" max-w-lg-65 text-center mx-auto">
-            We empower businesses of all sizes with cutting-edge payment solutions, seamless integrations, and reliable support. Whether you're just starting out or scaling to new heights, our expertise and partnerships with top payment processors, gateways, and POS providers ensure a smooth and secure transaction experience.
-
+            We empower businesses of all sizes with cutting-edge payment
+            solutions, seamless integrations, and reliable support. Whether
+            you're just starting out or scaling to new heights, our expertise
+            and partnerships with top payment processors, gateways, and POS
+            providers ensure a smooth and secure transaction experience.
           </Paragraph>
 
           <img src="/images/pricing.png" className="img-fluid mt-4" alt="" />
@@ -44,7 +41,9 @@ const OurPricing = () => {
 
       <Section className="">
         <Container>
-          <h2 className={`text-center fw-bold mb-5 mb-sm-5 text text-2`}>Processing Fees</h2>
+          <h2 className={`text-center fw-bold mb-5 mb-sm-5 text text-2`}>
+            Processing Fees
+          </h2>
           <Row className=" gy-4">
             <Col lg={3} sm={6}>
               <ProcessingFeeCard

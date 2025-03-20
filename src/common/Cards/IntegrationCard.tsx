@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
-import style from './index.module.scss';
-import Paragraph from '../Paragraph';
 import { useEffect, useRef, useState } from 'react';
+import Paragraph from '../Paragraph';
+import style from './index.module.scss';
 
 interface IntegrationCardProps {
   title?: String;
@@ -12,10 +12,8 @@ interface IntegrationCardProps {
 const IntegrationCard = ({ desc, title }: IntegrationCardProps) => {
   const router = useRouter();
 
-
   const paragraphRef = useRef<HTMLDivElement>(null);
   const [formattedDesc, setFormattedDesc] = useState(desc);
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,20 +32,14 @@ const IntegrationCard = ({ desc, title }: IntegrationCardProps) => {
     };
   }, [desc]);
 
-
-
-
-
   return (
     <div
       className={clsx(style.IntegratationCard, {
         'align-items-start p-4': router.pathname.includes('referral-partner'),
       })}
     >
-
-
-      <div className='d-flex flex-column justify-content-around align-items-center gap-2'>
-        <div className='d-flex flex-column justify-content-center align-items-center gap-2'>
+      <div className="d-flex flex-column justify-content-around align-items-center gap-2">
+        <div className="d-flex flex-column justify-content-center align-items-center gap-2">
           <div
             className={clsx(
               style.integrationIcon,
@@ -64,7 +56,7 @@ const IntegrationCard = ({ desc, title }: IntegrationCardProps) => {
       </div>
       <Paragraph
         className={` ${router.pathname.includes('referral-partner') ? 'text-start' : 'text-center'} max-w-sm-90  para`}
-      ref={paragraphRef}
+        ref={paragraphRef}
         dangerouslySetInnerHTML={{ __html: desc || '' }}
       />
     </div>
