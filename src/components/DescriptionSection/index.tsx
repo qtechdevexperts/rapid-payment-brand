@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import style from './index.module.scss';
+import Paragraph from '@/common/Paragraph';
 
 interface SolutionsTabProps {
   title?: string;
@@ -28,6 +29,9 @@ const DescriptionSection = ({
   const isBigScreen = useResponsive({ query: '(min-width: 1921px)' });
   const isLaptop = useResponsive({ query: '(max-width: 1400px)' });
 
+
+  const isTablet = useResponsive({ query: "(max-width: 992px)" })
+
   const handleTabClick = (tab: string) => {
     setCurrentTab(tab);
   };
@@ -35,14 +39,15 @@ const DescriptionSection = ({
   return (
     <>
       <section
-        className={clsx(style.solution, 'bg-primary-light rounded-4 my-5')}
+        className={clsx(style.solution, 'px-lg-10 px-sm-8 px-2 container bg-primary-light rounded-4 my-5')}
         style={{
-          backgroundImage: `url(${image})`,
+          backgroundImage: isTablet ? "none" : `url(${image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
+
       >
-        <Container className={` ${isBigScreen ? '' : 'me-lg-0 pe-lg-0'} `}>
+        <div className={` ${isBigScreen ? '' : 'me-lg-0 pe-lg-0'} `}>
           <Row>
             <Col lg={6} className="pb-8">
               <>
@@ -50,11 +55,11 @@ const DescriptionSection = ({
                   className="heading-3 fw-normal mt-9 text-capitalize"
                   dangerouslySetInnerHTML={{ __html: title || '' }}
                 />
-                <p className="para">{description}</p>
+                <Paragraph variant='sm' className='max-w-sm-90' style={{ fontWeight: 300 }}>{description}</Paragraph>
 
                 <div className="mt-4">
                   {list?.map((item, index) => {
-                    return <h6 className="heading-4 mt-3 mb-3">{item} </h6>;
+                    return <h6 className="heading-4 mt-3 mb-3 fw-medium">{item} </h6>;
                   })}
                 </div>
               </>
@@ -69,7 +74,7 @@ const DescriptionSection = ({
               </div>
             </Col>
           </Row>
-        </Container>
+        </div>
       </section>
 
       <Modal show={isshowModal} handleClose={() => setShowModal(false)} />

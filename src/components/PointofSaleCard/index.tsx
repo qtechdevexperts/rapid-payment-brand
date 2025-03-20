@@ -1,6 +1,7 @@
 import React from 'react'
 import style from "./index.module.scss"
 import { Button, Card } from 'react-bootstrap'
+import Paragraph from '@/common/Paragraph'
 
 
 interface PointofSaleCardProps {
@@ -16,9 +17,9 @@ const PointofSaleCard = ({ title, desc }: PointofSaleCardProps) => {
             <Card.Body>
                 <div className='badge bg-primary-100'>Solutions</div>
                 <Card.Title className='fs-xxl-17 my-2 text-dark'>{title}</Card.Title>
-                <p className='text-gray-100'>
+                <Paragraph className='text-gray-100'>
                     {desc}
-                </p>
+                </Paragraph>
                 <div className='d-flex align-items-center gap-3'>
                     <Button className='btn btn-feature'>Talk to an expert</Button>
                     <Button className='btn btn-outline-feature'>Talk to an expert</Button>

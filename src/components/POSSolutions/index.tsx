@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
+import Paragraph from '@/common/Paragraph';
 
 const slickSettings = {
     infinite: false,
@@ -15,7 +16,7 @@ const slickSettings = {
         {
             breakpoint: 1500,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 1.8,
                 slidesToScroll: 1,
             },
         },
@@ -32,27 +33,25 @@ const slickSettings = {
 
 interface RapidPaymentForSolutionsProps {
     title?: String
+    pos?: {
+        title: string
+        imgSrc: string
+        desc: string
+    }[]
 }
 
 
-const RapidPaymentForSolutions = ({ title = " <span className='fw-bold'>POS Solutions</span>    for Every Business" }: RapidPaymentForSolutionsProps) => {
+
+
+
+
+
+const RapidPaymentForSolutions = ({ pos, title = " <span class='fw-bold'>POS Solutions</span>    for Every Business" }: RapidPaymentForSolutionsProps) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    const slides = [
-        {
-            title: 'Smart Point Of Sales',
-            imgSrc: '/images/smart-point-of-sale.png',
-            desc: 'Upgrade your business with a modern, intuitive POS system that supports contactless, chip, and mobile payments, while also managing inventory and sales insights seamlessly.',
-        },
-        {
-            title: 'Smart Terminal',
-            imgSrc: '/images/smart-point-of-sale.png',
-            desc: 'Experience fast, secure, and all-in-one smart terminals designed for on-the-go and in-store transactions, ensuring flexibility and ease of use.',
-        },
 
-    ];
 
-    const totalSlides = slides.length;
+    const totalSlides = pos?.length ?? 0;
     const progress = ((currentSlide + 1) / totalSlides) * 100;
 
     const isBigScreen = useResponsive({ query: '(min-width: 1921px)' });
@@ -67,7 +66,7 @@ const RapidPaymentForSolutions = ({ title = " <span className='fw-bold'>POS Solu
             <div className={clsx({ container: isBigScreen })}>
                 <div className="row">
                     <div className="col-md-8">
-                        <h4 className="heading-3 fw-normal text-capitalize" dangerouslySetInnerHTML={{ __html: title || "" }} />
+                        <h4 className={`heading-3 fw-normal text-capitalize`} dangerouslySetInnerHTML={{ __html: title || "" }} />
                     </div>
 
                 </div>
@@ -79,7 +78,7 @@ const RapidPaymentForSolutions = ({ title = " <span className='fw-bold'>POS Solu
                             afterChange={(index) => setCurrentSlide(index)}
                             className="rapid-payment-slider"
                         >
-                            {slides.map((slide, index) => (
+                            {pos?.map((slide, index) => (
                                 <div className="px-1">
                                     <div
                                         key={index}
@@ -89,16 +88,12 @@ const RapidPaymentForSolutions = ({ title = " <span className='fw-bold'>POS Solu
                                             <div className="row">
                                                 <div className="col-md-6 d-flex justify-content-center align-items-center">
                                                     <div className="card-body">
-                                                        <h5 className="card-title heading-4 text-black-1 fw-bold">
+                                                        <h5 className={`card-title ${style.cardHeading} text-black-1 fw-bold`}>
                                                             {slide.title}
                                                         </h5>
-                                                        <p className="card-text para my-4">
-                                                            Enhance service speed with our restaurant-focused
-                                                            POS systems and merchant accounts. Accept card
-                                                            payments at the counter, tableside, or via mobile
-                                                            terminals, manage tips and tabs, and streamline
-                                                            operations effortlessly.
-                                                        </p>
+                                                        <Paragraph className="card-text para my-4">
+                                                            {slide?.desc}
+                                                        </Paragraph>
                                                         <button className={`btn btn-feature  px-sm-5 py-2`}>
                                                             Get Started
                                                         </button>

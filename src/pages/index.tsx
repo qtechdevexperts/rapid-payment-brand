@@ -14,7 +14,8 @@ const Home = () => {
     <>
       <MainHero />
       {/* <LogoSlider /> */}
-      <Solutions />
+      <Solutions
+      />
 
       <section className={`wrapper ${isLaptop && 'container'}`}>
         <Services services={services} />

@@ -1,26 +1,34 @@
 import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
+import Paragraph from '@/common/Paragraph';
 
 const slickSettings = {
-  infinite: true,
-  slidesToShow: 2,
+  infinite: false,
+  slidesToShow: 1.8,
   slidesToScroll: 1,
   dots: false,
+
+
+  autoplay: true, // Auto play enable
+  autoplaySpeed: 3000, // Slide change every 3 seconds
+  pauseOnHover: true, // Stop autoplay on hover
+  pauseOnFocus: true, // Stop autoplay when focused
+  cssEase: "linear", // Smooth animation
 
   focusOnSelect: true,
   responsive: [
     {
-      breakpoint: 1500,
+      breakpoint: 1300,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: 992,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -29,31 +37,36 @@ const slickSettings = {
   ],
 };
 
+
 const EmpactFullPayment = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef<Slider | null>(null);
 
   const slides = [
     {
-      title: 'Retail',
-      imgSrc: '/images/industries/Retail.png',
-      desc: 'Simplify in-store payments with secure merchant account services and advanced POS solutions. Accept credit and debit card payments seamlessly while managing inventory, transactions, and customer insights efficiently.',
+      title: 'Online',
+      imgSrc: '/images/industries/online.png',
+      desc: 'Accept secure online payments with ease. Our payment gateway, hosted checkout, and invoicing solutions ensure a frictionless customer experience while keeping transactions fast and secure.',
     },
     {
-      title: 'Restaurant',
-      imgSrc: '/images/industries/resturant.png',
-      desc: 'Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly.',
+      title: 'In-store Payments',
+      imgSrc: '/images/industries/in-store.png',
+      desc: 'From retail stores to restaurants, accept payments anywhere, anytime with mobile card readers, wireless terminals, and countertop solutions that integrate effortlessly into your business.',
     },
     {
-      title: 'eCommerce',
+      title: 'Omnichannel Payments',
       imgSrc: '/images/industries/ecommerce.png',
-      desc: 'Secure your online transactions with a dedicated merchant account and reliable payment processing. Accept credit and debit cards with ease while protecting your business from fraud and chargebacks.',
+      desc: 'Rapid Payments, a leading merchant service provider, partners with top payment processors, gateways, and POS providers to deliver a truly unified payment experience. Accept payments in-store, online, or via mobile with a seamless and secure solution that connects all sales channels.',
     },
-    {
-      title: 'Professional Services',
-      imgSrc: '/images/industries/professional-services.png',
-      desc: 'Get paid on time with custom invoicing, recurring billing, and seamless card payment acceptance. Our merchant accounts and POS solutions help service professionals simplify transactions and improve cash flow.',
-    },
+    // {
+    //   title: 'Professional Services',
+    //   imgSrc: '/images/industries/professional-services.png',
+    //   desc: 'Get paid on time with custom invoicing, recurring billing, and seamless card payment acceptance. Our merchant accounts and POS solutions help service professionals simplify transactions and improve cash flow.',
+    // },
   ];
+
+
+
 
   const totalSlides = slides.length;
   const progress = ((currentSlide + 1) / totalSlides) * 100;
@@ -66,7 +79,7 @@ const EmpactFullPayment = () => {
     >
       <div className={clsx({ container: isBigScreen })}>
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-xl-8">
             <div className={`badge  ${style.badge}`}>
               <h6 className="mb-0">Products</h6>
             </div>
@@ -75,12 +88,9 @@ const EmpactFullPayment = () => {
               <span className="fw-bold">Impactful Tech</span>{' '}
             </h4>
           </div>
-          <div className="col-md-4">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+          <div className="col-xl-4">
+            <p className='max-w-xxl-100 max-w-md-90'>
+              We power seamless transactions with cutting-edge payment solutions designed to meet the needs of modern businesses. Whether you operate online or in-store, our technology ensures speed, security, and convenience.
             </p>
           </div>
         </div>
@@ -102,20 +112,15 @@ const EmpactFullPayment = () => {
                       <div className="row">
                         <div className="col-md-6 d-flex justify-content-center align-items-center">
                           <div className="card-body">
-                            <h5 className="card-title heading-4 text-black-1 fw-bold">
+                            <h5 className={`card-title ${style.empactTitle}  text-black-1 fw-bold`}>
                               {slide.title}
                             </h5>
-                            <p className="card-text para my-4">
-                              Enhance service speed with our restaurant-focused
-                              POS systems and merchant accounts. Accept card
-                              payments at the counter, tableside, or via mobile
-                              terminals, manage tips and tabs, and streamline
-                              operations effortlessly.
-                            </p>
+                            <Paragraph className="card-text para my-2">
+                              {slide.desc}
+                            </Paragraph>
                             <button
-                              className={`btn btn-feature ${
-                                !isBigScreen && 'btn-lg'
-                              } px-sm-5 py-2`}
+                              className={`btn btn-feature ${!isBigScreen && 'btn-lg'
+                                } px-sm-5 py-2`}
                             >
                               Get Started
                             </button>

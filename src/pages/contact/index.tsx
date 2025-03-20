@@ -1,8 +1,18 @@
 import { Hero, PaymentForm } from '@/components';
+import Head from 'next/head';
 
 const Contact = () => {
   return (
     <>
+
+      <Head>
+        <title>Contact Rapid Payments - Get in Touch</title>
+        <meta
+          name="description"
+          content=""
+        />
+      </Head>
+
       <Hero
         title='Contact <span class="fw-bold">Rapid Payments</span> '
         backgroundImage={'/images/contact.png'}

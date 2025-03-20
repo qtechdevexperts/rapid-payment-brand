@@ -8,7 +8,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description }: ServiceCardProps) => {
   return (
-    <div className={clsx(style.ServiceCard, 'p-4 rounded-4 h-100')}>
+    <div className={clsx(style.ServiceCard, 'rounded-4 h-100')}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="39"

@@ -7,6 +7,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
 import ServiceCard from './ServiceCard';
+import Paragraph from '@/common/Paragraph';
 
 interface ServicesProps {
   title?: string;
@@ -15,7 +16,7 @@ interface ServicesProps {
 }
 
 const Services = ({
-  title = 'Rapid Payments <br /> Elevate Your Business <br />  <span className="fw-bold">Next-Level</span> <br />  <span className="fw-bold"> Merchant</span> Services',
+  title = 'Rapid Payments  <br /> Elevate Your Business <br /> with <b>Next-Level  <br /> Merchant</b>  Services',
   services,
 }: ServicesProps) => {
   const router = useRouter();
@@ -27,20 +28,20 @@ const Services = ({
       <Container className="py-md-7 py-2">
         <Row className="gy-3">
           <Col
-            lg={6}
+            xl={6}
             className="d-flex justify-content-center align-items-start flex-col flex-column"
           >
             <div>
               <h2
-                className={`heading-large fw-normal ${style.fontSizeHeading}`}
+                className={`${style.heading} fw-normal ${style.fontSizeHeading}`}
                 dangerouslySetInnerHTML={{ __html: title }}
               />
-              <p className="para fw-normal">
-                At Rapid Payments, we do more than just payment <br />
+              <Paragraph className="para fw-normal max-w-sm-70">
+                At  <span className='text-light fw-bold'>Rapid Payments</span> , we do more than just payment <br />
                 processing—we empower businesses with innovative <br />
                 solutions that drive efficiency, increase revenue, and <br />
                 enhance customer experience.
-              </p>
+              </Paragraph>
             </div>
 
             <Button
@@ -52,7 +53,7 @@ const Services = ({
           </Col>
 
           {/* Services Section */}
-          <Col lg={6}>
+          <Col xl={6}>
             <Row className="gy-4">
               {services?.map((service, index) => (
                 <Col key={index} md={6}>

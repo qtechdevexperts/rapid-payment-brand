@@ -252,6 +252,31 @@ export const ChargebackServices: ServiceProps[] = [
   },
 ];
 
+
+
+
+export const ReportingAnalytics: ServiceProps[] = [
+  {
+    title: 'Improve Financial Planning',
+    description: 'Make data-driven business decisions.',
+  },
+  {
+    title: 'Reduce Errors & Reconciliation Time',
+    description: 'No more manual transaction tracking.',
+  },
+  {
+    title: 'Optimize Sales & Revenue',
+    description: 'Identify peak business hours and trends.',
+  },
+  {
+    title: 'Compliance Reports',
+    description: 'Export reports for accounting and tax purposes',
+  },
+];
+
+
+
+
 export const BillingInvoice: ServiceProps[] = [
   {
     title: 'Faster Payments',
@@ -403,4 +428,20 @@ export const ResturantServices: ServiceProps[] = [
     title: 'Top-Tier <br /> Partnerships',
     desc: 'We’ve partnered with leading payment processors, gateways, and POS providers to bring you the best solutions.',
   },
+];
+
+
+
+export const whoWeServePosData = [
+  {
+    title: 'Smart Point Of Sales',
+    imgSrc: '/images/smart-point-of-sale.png',
+    desc: 'Upgrade your business with a modern, intuitive POS system that supports contactless, chip, and mobile payments, while also managing inventory and sales insights seamlessly.',
+  },
+  {
+    title: 'Smart Terminal Flex',
+    imgSrc: '/images/smart-point-of-sale.png',
+    desc: 'Experience fast, secure, and all-in-one smart terminals designed for on-the-go and in-store transactions, ensuring flexibility and ease of use.',
+  },
+
 ];

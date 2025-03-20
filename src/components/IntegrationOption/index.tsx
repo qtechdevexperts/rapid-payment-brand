@@ -2,34 +2,37 @@ import IntegrationCard from '@/common/Cards/IntegrationCard';
 import { OnlinePaymentService } from '@/utils/data';
 import { Col, Row } from 'react-bootstrap';
 import style from './index.module.scss';
+import Paragraph from '@/common/Paragraph';
 
 interface IntegratationOptionProps {
   title?: string;
   data?: OnlinePaymentService[];
   desc?: string;
   defaultColumm?: number;
+  headingClass?: string
 }
 
 const IntegratationOption = ({
   title,
   data,
   desc = '',
+  headingClass = '',
   defaultColumm = 3 as number,
 }: IntegratationOptionProps) => {
   return (
     <div className={`container ${style.IntegratationOption} py-7`}>
-      <div className="py-5">
+      <div className={`py-5 ${style.firstBox}`}>
         <h2
           dangerouslySetInnerHTML={{ __html: title || '' }}
-          className="text-capitalize"
+          className="text-capitalize heading-1"
         />
-        <p className="text-center" dangerouslySetInnerHTML={{ __html: desc }} />
+        <Paragraph className="text-center" dangerouslySetInnerHTML={{ __html: desc }} />
       </div>
 
       <Row className="gy-3">
         {data?.map((item, index) => {
           return (
-            <Col md={defaultColumm}>
+            <Col md={'6'} lg={3} >
               <IntegrationCard title={item?.title} desc={item?.desc} />
             </Col>
           );

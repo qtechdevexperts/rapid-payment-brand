@@ -29,11 +29,12 @@ const Footer = () => {
               { 'pb-sm-5': isBigScreen },
             )}
           >
+            
             <img src="/images/logo-dark.png" className="img-fluid" alt="" />
 
             <div
               className={clsx(
-                'ps-xxl-5 ps-sm-4 ps-2 py-5',
+                'py-5',
                 style.notInclude,
                 style.lastBox,
               )}
@@ -97,7 +98,7 @@ const Footer = () => {
             >
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/solutions/accept-payment/online-payments'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Online
@@ -105,7 +106,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/solutions/accept-payment/in-person-payments'}
                   className={`text-white  ${style.footerLink} text-decoration-none `}
                 >
                   In-Person
@@ -113,7 +114,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/solutions/accept-payment/omni-channel-payments'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   OmniChannel
@@ -121,8 +122,8 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'#!'}
-                  className={`text-white ${style.footerLink} fs-11 text-decoration-none `}
+                  href={'/solutions/accept-payment/point-of-sale-solution'}
+                  className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Point of Sales
                 </Link>
@@ -166,7 +167,7 @@ const Footer = () => {
             >
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/solutions/business/payment-gateways'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Payment Gateways
@@ -174,7 +175,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/solutions/business/virtual-terminals'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Virtual Terminals
@@ -182,7 +183,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/solutions/business/fraud-protection'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Fraud Protection
@@ -190,7 +191,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/solutions/business/funding'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Funding
@@ -198,7 +199,7 @@ const Footer = () => {
               </li>
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/solutions/business/chargeback-management'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
                   Chargeback Management
@@ -242,44 +243,53 @@ const Footer = () => {
             >
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/who-we-serve/smb'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
-                  Payment Gateways
+                  Small Business
                 </Link>
               </li>
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/who-we-serve/enterprise-solution'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
-                  Virtual Terminals
+                  Enterprise
                 </Link>
               </li>
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/who-we-serve/retail'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
-                  Fraud Protection
+                  Retail
                 </Link>
               </li>
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/who-we-serve/restaurant'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
-                  Funding
+                  Restaurant
                 </Link>
               </li>
+              {/* <li className="my-3">
+                <Link
+                  href={''}
+                  className={`text-white ${style.footerLink} text-decoration-none `}
+                >
+                  Professional Services
+                </Link>
+              </li> */}
               <li className="my-3">
                 <Link
-                  href={'#!'}
+                  href={'/who-we-serve/referral-partners'}
                   className={`text-white ${style.footerLink} text-decoration-none `}
                 >
-                  Chargeback Management
+                  Refferal Partners
                 </Link>
               </li>
+
             </ul>
           </div>
         </div>

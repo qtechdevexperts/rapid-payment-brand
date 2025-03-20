@@ -3,9 +3,10 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
+import Paragraph from '@/common/Paragraph';
 
 const slickSettings = {
-  infinite: true,
+  infinite: false,
   slidesToShow: 1.7,
   slidesToScroll: 1,
   dots: false,
@@ -13,14 +14,14 @@ const slickSettings = {
   focusOnSelect: true,
   responsive: [
     {
-      breakpoint: 1500,
+      breakpoint: 1300,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 1.4,
         slidesToScroll: 1,
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: 992,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -28,6 +29,7 @@ const slickSettings = {
     },
   ],
 };
+
 
 const RapidPaymentForSolutions = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -69,14 +71,14 @@ const RapidPaymentForSolutions = () => {
     >
       <div className={clsx({ container: isBigScreen })}>
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-xl-8">
             <h4 className="heading-3 fw-normal text-capitalize">
               At Rapid Payment, We <br /> Understand{' '}
               <span className="fw-bold">your Industry</span>{' '}
             </h4>
           </div>
-          <div className="col-md-4">
-            <p>
+          <div className="col-xl-4">
+            <p className='max-w-xxl-100'>
               No matter where or how you do business—whether through a physical
               location or a digital platform—we offer fast, secure, and flexible
               payment options for every business.
@@ -104,13 +106,9 @@ const RapidPaymentForSolutions = () => {
                             <h5 className="card-title heading-4 text-black-1 fw-bold">
                               {slide.title}
                             </h5>
-                            <p className="card-text para my-4">
-                              Enhance service speed with our restaurant-focused
-                              POS systems and merchant accounts. Accept card
-                              payments at the counter, tableside, or via mobile
-                              terminals, manage tips and tabs, and streamline
-                              operations effortlessly.
-                            </p>
+                            <Paragraph className="card-text para my-4">
+                              {slide?.desc}
+                            </Paragraph>
                             <button className={`btn btn-feature  px-sm-5 py-2`}>
                               Get Started
                             </button>

@@ -86,161 +86,118 @@ $spacers: (
   30: $spacer * 15.5,
 );
 
-$utilities: map-merge(
-  $utilities,
-  (
-    'cursor': (
-      property: cursor,
-      class: cursor,
-      values: auto pointer grab,
-    ),
-    'margin': (
-      responsive: true,
-      property: margin,
-      class: m,
-      values: map-merge(
-          $spacers,
-          (
-            auto: auto,
-          )
-        ),
-    ),
-    'font-size': (
-      rfs: true,
-      responsive: true,
-      property: font-size,
-      class: fs,
-      values: $font-sizes,
-    ),
-    'margin-x': (
-      responsive: true,
-      property: margin-right margin-left,
-      class: mx,
-      values: map-merge(
-          $spacers,
-          (
-            auto: auto,
-          )
-        ),
-    ),
-    'margin-y': (
-      responsive: true,
-      property: margin-top margin-bottom,
-      class: my,
-      values: map-merge(
-          $spacers,
-          (
-            auto: auto,
-          )
-        ),
-    ),
-    'margin-top': (
-      responsive: true,
-      property: margin-top,
-      class: mt,
-      values: map-merge(
-          $spacers,
-          (
-            auto: auto,
-          )
-        ),
-    ),
-    'margin-end': (
-      responsive: true,
-      property: margin-right,
-      class: me,
-      values: map-merge(
-          $spacers,
-          (
-            auto: auto,
-          )
-        ),
-    ),
-    'margin-bottom': (
-      responsive: true,
-      property: margin-bottom,
-      class: mb,
-      values: map-merge(
-          $spacers,
-          (
-            auto: auto,
-          )
-        ),
-    ),
-    'margin-start': (
-      responsive: true,
-      property: margin-left,
-      class: ms,
-      values: map-merge(
-          $spacers,
-          (
-            auto: auto,
-          )
-        ),
-    ),
-    'padding': (
-      responsive: true,
-      property: padding,
-      class: p,
-      values: $spacers,
-    ),
-    'padding-x': (
-      responsive: true,
-      property: padding-right padding-left,
-      class: px,
-      values: $spacers,
-    ),
-    'padding-y': (
-      responsive: true,
-      property: padding-top padding-bottom,
-      class: py,
-      values: $spacers,
-    ),
-    'padding-top': (
-      responsive: true,
-      property: padding-top,
-      class: pt,
-      values: $spacers,
-    ),
-    'padding-end': (
-      responsive: true,
-      property: padding-right,
-      class: pe,
-      values: $spacers,
-    ),
-    'padding-bottom': (
-      responsive: true,
-      property: padding-bottom,
-      class: pb,
-      values: $spacers,
-    ),
-    'padding-start': (
-      responsive: true,
-      property: padding-left,
-      class: ps,
-      values: $spacers,
-    ),
-    // Gap utility
-    'gap': (
+$utilities: map-merge($utilities,
+    ('cursor': (property: cursor,
+        class: cursor,
+        values: auto pointer grab,
+      ),
+      'margin': (responsive: true,
+        property: margin,
+        class: m,
+        values: map-merge($spacers,
+          (auto: auto,
+          )),
+      ),
+      'font-size': (rfs: true,
         responsive: true,
+        property: font-size,
+        class: fs,
+        values: $font-sizes,
+      ),
+      'margin-x': (responsive: true,
+        property: margin-right margin-left,
+        class: mx,
+        values: map-merge($spacers,
+          (auto: auto,
+          )),
+      ),
+      'margin-y': (responsive: true,
+        property: margin-top margin-bottom,
+        class: my,
+        values: map-merge($spacers,
+          (auto: auto,
+          )),
+      ),
+      'margin-top': (responsive: true,
+        property: margin-top,
+        class: mt,
+        values: map-merge($spacers,
+          (auto: auto,
+          )),
+      ),
+      'margin-end': (responsive: true,
+        property: margin-right,
+        class: me,
+        values: map-merge($spacers,
+          (auto: auto,
+          )),
+      ),
+      'margin-bottom': (responsive: true,
+        property: margin-bottom,
+        class: mb,
+        values: map-merge($spacers,
+          (auto: auto,
+          )),
+      ),
+      'margin-start': (responsive: true,
+        property: margin-left,
+        class: ms,
+        values: map-merge($spacers,
+          (auto: auto,
+          )),
+      ),
+      'padding': (responsive: true,
+        property: padding,
+        class: p,
+        values: $spacers,
+      ),
+      'padding-x': (responsive: true,
+        property: padding-right padding-left,
+        class: px,
+        values: $spacers,
+      ),
+      'padding-y': (responsive: true,
+        property: padding-top padding-bottom,
+        class: py,
+        values: $spacers,
+      ),
+      'padding-top': (responsive: true,
+        property: padding-top,
+        class: pt,
+        values: $spacers,
+      ),
+      'padding-end': (responsive: true,
+        property: padding-right,
+        class: pe,
+        values: $spacers,
+      ),
+      'padding-bottom': (responsive: true,
+        property: padding-bottom,
+        class: pb,
+        values: $spacers,
+      ),
+      'padding-start': (responsive: true,
+        property: padding-left,
+        class: ps,
+        values: $spacers,
+      ),
+      // Gap utility
+      'gap': (responsive: true,
         property: gap,
         class: gap,
         values: $spacers,
       ),
-    'row-gap': (
-      responsive: true,
-      property: row-gap,
-      class: row-gap,
-      values: $spacers,
-    ),
-    'column-gap': (
-      responsive: true,
-      property: column-gap,
-      class: column-gap,
-      values: $spacers,
-    ),
-  )
-);
+      'row-gap': (responsive: true,
+        property: row-gap,
+        class: row-gap,
+        values: $spacers,
+      ),
+      'column-gap': (responsive: true,
+        property: column-gap,
+        class: column-gap,
+        values: $spacers,
+      ),
+    ));
 
 $container-max-widths: (
   sm: 540px,
@@ -277,26 +234,23 @@ $feature-bg: #4990e2;
 }
 
 .btn-feature {
-  @include button-variant(
-    $background: $feature-bg,
+  @include button-variant($background: $feature-bg,
     $border: darken($feature-bg, 3%),
     $hover-background: darken($feature-bg, 5%),
     $hover-border: darken($feature-bg, 8%),
     $active-background: darken($feature-bg, 10%),
-    $active-border: darken($feature-bg, 13%)
-  );
+    $active-border: darken($feature-bg, 13%));
+
+
+  opacity: 0.9;
+  border-color: darken($feature-bg, 3%);
+  background-color: $feature-bg;
 
   color: #fff !important;
 
-  &:hover {
-    border-color: $feature-bg !important;
-    background-color: transparent !important;
-    color: $feature-bg !important;
-  }
-
   @media (min-width: 1400px) {
-    padding: 0.75rem 1.5rem; // Add necessary padding
-    font-size: 1.25rem; // Adjust the size to match the `.btn-lg` class, or apply other appropriate styles
+    padding: 0.75rem 0.8rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 450px) {
@@ -305,26 +259,37 @@ $feature-bg: #4990e2;
   }
 }
 
+
+
 .btn-outline-feature {
-  @include button-variant(
-    $background: transparent,
+  @include button-variant($background: transparent,
     $border: $feature-bg,
-    $hover-background: $feature-bg,
+    $hover-background: transparent,
     $hover-border: darken($feature-bg, 5%),
     $active-background: darken($feature-bg, 10%),
-    $active-border: darken($feature-bg, 15%)
-  );
+    $active-border: darken($feature-bg, 15%));
+
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
   color: $feature-bg !important;
 
   &:hover {
-    color: #fff !important;
+    // transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba($feature-bg, 0.1);
+  }
+
+  &:active {
+    // transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
 
   @media (min-width: 1400px) {
-    padding: 0.75rem 1.5rem; // Add necessary padding
-    font-size: 1.25rem; // Adjust the size to match the `.btn-lg` class, or apply other appropriate styles
+    padding: 0.75rem 0.8rem;
+    font-size: 1rem;
   }
+
   @media (max-width: 450px) {
     padding: 7px !important;
     font-size: 12px !important;

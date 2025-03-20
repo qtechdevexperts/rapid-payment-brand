@@ -42,6 +42,7 @@
     li {
       width: 100% !important;
       max-width: calc(100% / 2) !important;
+
       button {
         width: 100% !important;
       }
@@ -61,5 +62,23 @@
         display: flex;
       }
     }
+  }
+}
+
+
+
+.imageSection {
+  height: 100%;
+
+  @media (max-width:1500px) {
+    height: auto;
+  }
+}
+
+
+
+.leftSide {
+  @media (min-width:1500px) {
+    padding-bottom: 2rem !important;
   }
 }

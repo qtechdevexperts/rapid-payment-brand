@@ -1,0 +1,24 @@
+@import "rfs/scss";
+
+.ProcessingFeeCard {
+    border: 1px solid #4990e2;
+
+    border-radius: 10px;
+    background-color: #f9fcff;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    .processingHeader {
+        @include font-size(30px);
+    }
+
+    .processingBottom {
+        @include font-size(22px);
+    }
+}

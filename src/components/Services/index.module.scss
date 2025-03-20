@@ -1,3 +1,4 @@
+@import "rfs/scss";
 // .rapidbackground {
 //     position: relative;
 //     overflow-x: auto !important;
@@ -18,5 +19,17 @@
 .fontSizeHeading {
   @media (min-width: 1921px) {
     font-size: 60px;
+  }
+
+
+
+}
+
+
+.heading {
+  font-size: 56px;
+
+  @media (max-width:1500px) {
+    font-size: 40px;
   }
 }

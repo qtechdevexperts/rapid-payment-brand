@@ -2,12 +2,15 @@ import Modal from '@/common/Modal';
 import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import style from './index.module.scss';
+import LinkTag from '../LinkTag';
+import Paragraph from '@/common/Paragraph';
 
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
@@ -63,12 +66,13 @@ const Solutions = () => {
           className={` ${isBigScreen ? '' : 'me-lg-0 pe-lg-0'} ${style.SolutionContainer} `}
         >
           <Row>
-            <Col lg={6} className="pb-8">
+            <Col lg={6} className={`  ${style.leftSide} pb-3`}>
               <div className={`${style.carouselTab}`}>
                 <Slider {...sliderSettings}>
                   <div>
                     <Button
                       className={clsx(
+
                         'px-md-5 px-sm-3 py-md-3 py-2 me-2 w-100',
                         { 'btn-lg': !isLaptop },
                         currentTab === 'small-business'
@@ -133,40 +137,36 @@ const Solutions = () => {
               {/* Dynamic Content */}
               {currentTab === 'small-business' ? (
                 <>
-                  <h2 className="heading-2 fw-normal mt-9">
+                  <h2 className="heading-2 fw-normal mt-xxl-9 mt-4">
                     Big Solutions for <br />
                     <span className="fw-bold">Small Businesses</span>
                   </h2>
-                  <p className="para">
+                  <Paragraph className='max-w-sm-70'>
                     Smoothly running a small business is challenging, we
                     simplify payments with proven payment processing solutions.
                     Whether in-store, online, or on the go, our secure, fast,
                     and flexible solutions let you focus on business growth and
                     succeed.
-                  </p>
+                  </Paragraph>
 
                   <div className="mt-4">
-                    <h6 className="heading-4 mt-3 mb-3">
-                      Online Payments{' '}
-                      <img
-                        src="/images/icons/outline-interface-arrow-right.png"
-                        alt=""
-                      />
-                    </h6>
-                    <h6 className="heading-4 mt-3 mb-3">
-                      In-Person Payments{' '}
-                      <img
-                        src="/images/icons/outline-interface-arrow-right.png"
-                        alt=""
-                      />
-                    </h6>
-                    <h6 className="heading-4 mt-3 mb-3">
-                      Point of sales Solutions{' '}
-                      <img
-                        src="/images/icons/outline-interface-arrow-right.png"
-                        alt=""
-                      />
-                    </h6>
+                    <LinkTag
+                      href='/solutions/accept-payment/online-payments/'
+                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3">
+                      Online Payments
+                    </LinkTag>
+                    <LinkTag
+                      href='/solutions/accept-payment/in-person-payments/'
+                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3">
+                      In-Person Payments
+                    </LinkTag>
+                    <LinkTag
+                      href='/solutions/accept-payment/point-of-sale-solution/'
+                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3">
+                      Point of sales Solutions
+                    </LinkTag>
+
+
                   </div>
                 </>
               ) : (
@@ -175,36 +175,49 @@ const Solutions = () => {
                     Enterprise Payment <br />
                     <span className="fw-bold">Solutions</span>
                   </h2>
-                  <p className="para">
+                  <Paragraph >
                     Power your business with scalable, secure, and seamless
                     payment processing designed for high-volume transactions.
                     Our enterprise-grade payment processing services ensure
                     reliability, speed, and efficiency across all sales
                     channels.
-                  </p>
+                  </Paragraph>
 
                   <div className="mt-4">
-                    <h6 className="heading-4 mt-3 mb-3">
+                    {/* <Link
+                      href={'/solutions/accept-payment/in-person-payments/'}
+                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                    >
                       In Person{' '}
                       <img
                         src="/images/icons/outline-interface-arrow-right.png"
                         alt=""
                       />
-                    </h6>
-                    <h6 className="heading-4 mt-3 mb-3">
+                    </Link> */}
+                    <LinkTag
+                      href={'/solutions/accept-payment/in-person-payments/'}
+                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                    >
+                      In Person
+                    </LinkTag>
+
+                    <LinkTag
+                      href={'/solutions/accept-payment/online-payments/'}
+                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                    >
                       Online
-                      <img
-                        src="/images/icons/outline-interface-arrow-right.png"
-                        alt=""
-                      />
-                    </h6>
-                    <h6 className="heading-4 mt-3 mb-3">
+                    </LinkTag>
+
+
+                    <LinkTag
+                      href={'/solutions/accept-payment/omni-channel-payments/'}
+                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+
+                    >
+
                       Omnichannel
-                      <img
-                        src="/images/icons/outline-interface-arrow-right.png"
-                        alt=""
-                      />
-                    </h6>
+                    </LinkTag>
+
                   </div>
                 </>
               )}
@@ -231,7 +244,7 @@ const Solutions = () => {
                 <>
                   <img
                     src="/images/solution-image-right.png"
-                    className="img-fluid h-100"
+                    className={`img-fluid object-cover h-100`}
                     alt="Solutions"
                   />
                 </>
@@ -239,7 +252,7 @@ const Solutions = () => {
                 <>
                   <img
                     src="/images/Enterprises.png"
-                    className="img-fluid h-100"
+                    className={`img-fluid object-cover h-100`}
                     alt="Solutions"
                   />
                 </>

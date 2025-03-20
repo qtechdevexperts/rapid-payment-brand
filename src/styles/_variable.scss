@@ -2,8 +2,16 @@ $gray-1: #4f4f4f;
 $gray-2: #626262;
 $primary-100: #4990e2;
 
+$light: #777;
+
 $black-1: #1c2630;
 $primary-light: #ecf5ff;
+
+
+.text-light {
+  color: $light !important;
+}
+
 
 .text-black-1 {
   color: $black-1;
@@ -30,5 +38,5 @@ $primary-light: #ecf5ff;
 }
 
 .bg-primary-100 {
-  background: $primary-100;
+  background: $primary-100 !important;
 }

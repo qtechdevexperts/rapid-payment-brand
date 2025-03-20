@@ -3,6 +3,8 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
+import Link from 'next/link';
+import Paragraph from '@/common/Paragraph';
 
 const slickSettings = {
   infinite: false,
@@ -15,7 +17,7 @@ const slickSettings = {
     {
       breakpoint: 1300,
       settings: {
-        slidesToShow: 1.4,
+        slidesToShow: 1,
         slidesToScroll: 1,
       },
     },
@@ -37,21 +39,25 @@ const RapidPaymentUniversity = () => {
       title: 'Retail',
       imgSrc: '/images/industries/Retail.png',
       desc: 'Simplify in-store payments with secure merchant account services and advanced POS solutions. Accept credit and debit card payments seamlessly while managing inventory, transactions, and customer insights efficiently.',
+      href: "/who-we-serve/retail/"
     },
     {
       title: 'Restaurant',
       imgSrc: '/images/industries/resturant.png',
       desc: 'Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly.',
+      href: "/who-we-serve/restaurant/"
     },
     {
       title: 'eCommerce',
       imgSrc: '/images/industries/ecommerce.png',
       desc: 'Secure your online transactions with a dedicated merchant account and reliable payment processing. Accept credit and debit cards with ease while protecting your business from fraud and chargebacks.',
+      href: "#!"
     },
     {
       title: 'Professional Services',
       imgSrc: '/images/industries/professional-services.png',
       desc: 'Get paid on time with custom invoicing, recurring billing, and seamless card payment acceptance. Our merchant accounts and POS solutions help service professionals simplify transactions and improve cash flow.',
+      href: "/who-we-serve/professional-services/"
     },
   ];
 
@@ -101,19 +107,15 @@ const RapidPaymentUniversity = () => {
                       <div className="row">
                         <div className="col-md-6 d-flex justify-content-center align-items-center">
                           <div className="card-body">
-                            <h5 className="card-title heading-4 text-black-1 fw-bold">
+                            <h5 className="card-title text-capitalize heading-4 text-black-1 fw-bold">
                               {slide.title}
                             </h5>
-                            <p className="card-text para my-4">
-                              Enhance service speed with our restaurant-focused
-                              POS systems and merchant accounts. Accept card
-                              payments at the counter, tableside, or via mobile
-                              terminals, manage tips and tabs, and streamline
-                              operations effortlessly.
-                            </p>
-                            <button className={`btn btn-feature  px-sm-5 py-2`}>
+                            <Paragraph className="card-text para my-4">
+                              {slide?.desc}
+                            </Paragraph>
+                            <Link href={slide?.href} className={`btn btn-feature  px-sm-5 py-2`}>
                               Get Started
-                            </button>
+                            </Link>
                           </div>
                         </div>
                         <div className="col-md-6">

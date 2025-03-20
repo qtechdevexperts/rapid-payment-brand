@@ -1,0 +1,44 @@
+@import "rfs/scss";
+
+
+.paymentHeading {
+
+    @include font-size(56px);
+}
+
+
+.subHeading {
+    font-size: 30px;
+    font-weight: 500;
+
+    @media (max-width:1500px) {
+        font-size: 25px;
+    }
+}
+
+
+.paymentParagraph {
+    font-size: 18px;
+    color: #4F4F4F;
+}
+
+
+.listHeading {
+    font-size: 24px;
+
+    @media (max-width:1500px) {
+        font-size: 20px;
+    }
+}
+
+.paymentParagraph2 {
+    font-size: 24px !important;
+    color: #1C2630 !important;
+
+
+    @media (max-width:1500px) {
+        font-size: 20px !important;
+    }
+
+
+}

@@ -1,9 +1,28 @@
+@import "@/styles/responsive-1.scss";
+
 .OtherSolutionCard {
   p {
     margin-bottom: 30px;
+
+    @include laptop {
+      margin-bottom: 10px;
+    }
   }
+
   a {
-    position: absolute;
+    // position: absolute;
     bottom: 10px;
   }
+}
+
+
+
+.solutionTitle {
+  font-size: 30px !important;
+
+  @include laptop {
+    font-size: 26px !important;
+  }
+
+
 }

@@ -11,6 +11,7 @@ interface HeroProps {
   title?: string;
   backgroundImage?: String;
   description?: String;
+  discriptionClass?: String
   isShowContact?: boolean;
   isHideAllButton?: boolean;
 }
@@ -18,6 +19,7 @@ interface HeroProps {
 const Hero = ({
   title,
   backgroundImage,
+  discriptionClass,
   isShowContact = false,
   isHideAllButton = false,
   description = ' Rapid Payments, a trusted merchant service provider, partners                                with top payment processors to deliver secure, seamless, and                                scalable online payment solutions. Whether you operate an                                eCommerce store, subscription service, or professional business,                                our solutions ensure smooth transactions, fraud protection, and                                quick payouts.',
@@ -44,15 +46,16 @@ const Hero = ({
             <Col
               lg={5}
               md={12}
-              className="mb-10 h-100 d-flex flex-column justify-content-center align-items-start"
+              className={`mb-10 ${style.heroContent} h-100 d-flex flex-column justify-content-center align-items-start`}
             >
-              <h1
-                className="heading-1 fw-normal mt-4 text-capitalize"
+              <h2
+                className="heading-3 fw-normal mt-4  "
                 dangerouslySetInnerHTML={{ __html: title || '' }} // Handling undefined title
               />
               <p
-                className="para"
+
                 dangerouslySetInnerHTML={{ __html: description || '' }}
+                className={clsx(discriptionClass, style.fontWeight)}
               />
 
               {!isHideAllButton && (

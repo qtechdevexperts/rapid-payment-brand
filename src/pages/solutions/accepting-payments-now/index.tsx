@@ -5,10 +5,22 @@ import Solutions from '@/components/Solutions';
 import DescriptionSection from '@/components/DescriptionSection';
 import { Container, Row } from 'react-bootstrap';
 import PointofSaleCard from '@/components/PointofSaleCard';
+import Head from 'next/head';
 
 const Resturants = () => {
     return (
         <>
+
+            <Head>
+                <title>Resturants | Rapid Payments</title>
+                <meta
+                    name="description"
+                    content=""
+                />
+            </Head>
+
+
+
             <Hero
                 title="Start Accepting <span class='fw-bold'>Payments Now</span> "
                 backgroundImage={'/images/resturant.png'}
