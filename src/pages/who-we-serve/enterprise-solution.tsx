@@ -33,7 +33,7 @@ const OnlinePayments = () => {
 
       <DescriptionSection
         title={
-          'Want to start taking payments for your <br /> <span class="fw-bold">small business?</span> '
+          'Want to start taking  <br class="d-none d-lg-block" />  payments for your <br class="d-none d-lg-block" />  <span class="fw-bold">small business?</span> '
         }
         description={
           'Get paid quickly, securely, and hassle-free with Rapid Payments. Whether you need in-store, online, or mobile payment solutions, we’ve got you covered.'

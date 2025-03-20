@@ -23,10 +23,10 @@ const OnlinePayments = () => {
 
 
       <Hero
-        title='Virtual <br /> <span class="fw-bold">Terminals</span>  '
+        title='Virtual <br class="d-none d-lg-block" /> <span class="fw-bold">Terminals</span>  '
         backgroundImage={'/images/virtual-terminal.png'}
         description={
-          '"Process secure payments remotely without the need for <br /> hardware. Perfect for businesses accepting phone, email, <br /> and mail-order payments."'
+          '"Process secure payments remotely without the need for <br class="d-none d-lg-block" /> hardware. Perfect for businesses accepting phone, email, <br class="d-none d-lg-block" /> and mail-order payments."'
         }
       />
 

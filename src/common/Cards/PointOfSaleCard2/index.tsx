@@ -41,7 +41,7 @@ const PointOfSaleCard2 = ({ title, description, solutionBadge = "Solutions", hre
                     )
                 }
                 <div className='d-flex flex-column justify-content-start align-items-start'>
-                    <Card.Title className='fs-22'>{title}</Card.Title>
+                    <Card.Title className='text text-4'>{title}</Card.Title>
                     <Card.Text className={`text-light ${style.text} `} style={{ fontWeight: 300 }}>
                         {description}
                     </Card.Text>

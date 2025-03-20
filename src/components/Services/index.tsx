@@ -38,9 +38,9 @@ const Services = ({
                 dangerouslySetInnerHTML={{ __html: title }}
               />
               <Paragraph className="para fw-normal max-w-sm-70">
-                At  <span className='text-light fw-bold'>Rapid Payments</span> , we do more than just payment <br />
-                processing—we empower businesses with innovative <br />
-                solutions that drive efficiency, increase revenue, and <br />
+                At  <span className='text-light fw-bold'>Rapid Payments</span> , we do more than just payment
+                processing—we empower businesses with innovative
+                solutions that drive efficiency, increase revenue, and
                 enhance customer experience.
               </Paragraph>
             </div>

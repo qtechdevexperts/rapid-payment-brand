@@ -44,9 +44,12 @@
     }
   }
 
-  @include respond-to('lg', 'max') {
+  @media (max-width:1200px) {
+
     background-image: none !important;
   }
+
+
 
   // &::after {
   //   content: "";

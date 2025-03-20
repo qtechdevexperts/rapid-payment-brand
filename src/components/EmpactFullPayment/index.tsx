@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
 import Paragraph from '@/common/Paragraph';
+import Link from 'next/link';
 
 const slickSettings = {
   infinite: false,
@@ -119,12 +120,13 @@ const EmpactFullPayment = () => {
                             <Paragraph className="card-text para my-2">
                               {slide.desc}
                             </Paragraph>
-                            <button
+                            <Link
+                              href={slide.href}
                               className={`btn btn-feature ${!isBigScreen && 'btn-lg'
                                 } px-sm-5 py-2`}
                             >
                               Get Started
-                            </button>
+                            </Link>
                           </div>
                         </div>
                         <div className="col-md-6">

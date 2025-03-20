@@ -39,21 +39,25 @@ const RapidPaymentForSolutions = () => {
       title: 'Retail',
       imgSrc: '/images/industries/Retail.png',
       desc: 'Simplify in-store payments with secure merchant account services and advanced POS solutions. Accept credit and debit card payments seamlessly while managing inventory, transactions, and customer insights efficiently.',
+      href: "/who-we-serve/retail/"
     },
     {
       title: 'Restaurant',
       imgSrc: '/images/industries/resturant.png',
       desc: 'Enhance service speed with our restaurant-focused POS systems and merchant accounts. Accept card payments at the counter, tableside, or via mobile terminals, manage tips and tabs, and streamline operations effortlessly.',
+      href: "/who-we-serve/restaurant/"
     },
     {
       title: 'Ecommerce',
       imgSrc: '/images/industries/ecommerce.png',
       desc: 'Secure your online transactions with a dedicated merchant account and reliable payment processing. Accept credit and debit cards with ease while protecting your business from fraud and chargebacks.',
+      href: "/who-we-serve/ecommerce/"
     },
     {
       title: 'Professional Services',
       imgSrc: '/images/industries/professional-services.png',
       desc: 'Get paid on time with custom invoicing, recurring billing, and seamless card payment acceptance. Our merchant accounts and POS solutions help service professionals simplify transactions and improve cash flow.',
+      href: "/who-we-serve/professional-services/"
     },
   ];
 

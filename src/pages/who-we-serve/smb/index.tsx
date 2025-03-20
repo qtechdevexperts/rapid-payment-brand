@@ -4,9 +4,20 @@ import { Hero, OtherSolutionCard, PaymentForm, RapidPaymentForSolutions, RapidPa
 import DescriptionSection from '@/components/DescriptionSection'
 import SaleCard from '@/components/SaleCard'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 const SMB = () => {
+
+
+
+
+    const router = useRouter()
+
+
+
+
+
     return (
         <>
 
@@ -44,14 +55,16 @@ const SMB = () => {
                             title='Smart Point of sale'
                             description='Upgrade to a modern, intuitive POS system that accepts EMV chip, contactless, and mobile payments while offering inventory tracking and business insights.'
                             solutionBadge="Product"
+                            onProductClick={() => router.push("/contact/")}
                         />
                     </div>
                     <div className="col-md-6">
                         <PointOfSaleCard2
                             image='/images/smb/point-3.png'
-                            title='Smart Point of sale'
+                            title='Smart Terminals'
                             description='Enjoy flexibility with all-in-one smart terminals that allow fast, secure, and mobile transactions, keeping your business running smoothly anywhere.'
                             isShowSolution
+                            onProductClick={() => router.push("/contact/")}
                         />
                     </div>
                     <div className="col-md-6">
@@ -60,6 +73,7 @@ const SMB = () => {
                             title='Mobile readers'
                             description='Turn any device into a payment powerhouse with compact, wireless mobile readers—perfect for on-the-go businesses and remote transactions.'
                             isShowSolution
+                            onProductClick={() => router.push("/contact/")}
                         />
                     </div>
 

@@ -10,7 +10,7 @@ interface ModalProps {
 const Modal = ({ handleClose, show }: ModalProps) => {
   return (
     <ReactModal show={show} size="lg" centered onHide={handleClose}>
-      <ReactModal.Body className="p-xxl-5 p-sm-4 ">
+      <ReactModal.Body className="p-large-5 p-sm-4 ">
         <Form2 onCloseModal={handleClose} />
       </ReactModal.Body>
     </ReactModal>

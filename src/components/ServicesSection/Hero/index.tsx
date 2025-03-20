@@ -46,7 +46,7 @@ const Hero = ({
         <div className={`container ${style.container} h-100`}>
           <Row className="h-100">
             <Col
-              lg={5}
+              xl={5}
               md={12}
               className={`mb-10 ${style.heroContent} h-100 d-flex flex-column justify-content-center align-items-start`}
             >
@@ -57,14 +57,14 @@ const Hero = ({
               <p
 
                 dangerouslySetInnerHTML={{ __html: description || '' }}
-                className={clsx(discriptionClass, 'para')}
+                className={clsx(discriptionClass, 'para max-w-md-70 max-w-xl-100')}
               />
 
               {!isHideAllButton && (
-                <div className="d-flex flex-column flex-sm-row gap-3 mt-3 justify-content-start align-items-sm-center">
+                <div className="d-flex flex-column flex-xl-row gap-3 mt-3 justify-content-start align-items-xl-center">
                   <Button
                     onClick={() => setContactModal(true)}
-                    className={`${isLaptop ? '' : 'btn-lg'} btn-feature`}
+                    className={`${isLaptop ? '' : 'btn-lg'}  ${style.Hero}   btn-feature`}
                   >
                     Talk To an Expert
                   </Button>
@@ -72,7 +72,7 @@ const Hero = ({
                     <>
                       <Button
                         onClick={() => router.push('tel:012-3456-789')}
-                        className={`${isLaptop ? '' : 'btn-lg'} btn-outline-feature`}
+                        className={`  ${style.Hero}  ${isLaptop ? '' : 'btn-lg'} btn-outline-feature`}
                       >
                         Call Us: 012-3456-789
                       </Button>

@@ -74,7 +74,7 @@ const OnlinePayments = () => {
       />
 
       <Hero
-        title='Get Paid Anywhere, Anytime with Seamless <span class="fw-bold">In-Person Payments!</span> '
+        title='Get Paid Anywhere, <br class="d-none d-lg-block" /> Anytime with Seamless <br  class="d-none d-lg-block" /> <span class="fw-bold">In-Person Payments!</span> '
         backgroundImage={'/images/in-person-payment.png'}
         description="Make transactions seamless with secure, fast, and flexible in-person payment solutions from Rapid Payments. Whether you run a retail store, restaurant, or service-based business, we provide POS systems, mobile payment solutions, and contactless terminals tailored to your needs.
 Accept payments your way: credit, debit, contactless, and more ensuring smooth and secure checkouts for every customer..
