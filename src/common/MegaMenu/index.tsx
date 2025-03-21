@@ -127,7 +127,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
                                     item?.lastTab && router.push(item?.href ?? '');
                                 }}
                             >
-                                {item.label}s
+                                {item.label}
                             </div>
                         ))}
                     </div>
