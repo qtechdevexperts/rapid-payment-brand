@@ -51,7 +51,7 @@ const Hero = ({
               className={`mb-10 ${style.heroContent} h-100 d-flex flex-column justify-content-center align-items-start`}
             >
               <h2
-                className={`text text-1 fw-normal mt-4  ${headingCss} `}
+                className={`text text-2 fw-normal mt-4 ${style.herocss}  ${headingCss} `}
                 dangerouslySetInnerHTML={{ __html: title || '' }} // Handling undefined title
               />
               <p
