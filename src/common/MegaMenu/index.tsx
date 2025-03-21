@@ -120,6 +120,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
                                 className={clsx(
                                     item.lastTab ? style.lastTab : '',
                                     currentTab === item.id ? style.active : '',
+                                    `${currentTab === item?.id && style.activeLabel}`
                                 )}
                                 onMouseEnter={() => handleTabClick(item)}
                                 onClick={() => {

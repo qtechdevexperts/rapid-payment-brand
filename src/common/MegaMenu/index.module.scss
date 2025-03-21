@@ -80,10 +80,10 @@
     }
   }
 
-  & > div {
+  &>div {
     height: 100%;
 
-    & > div {
+    &>div {
       height: 100%;
     }
   }
@@ -158,20 +158,23 @@
 }
 
 .anchorTab {
-  & > div {
+  &>div {
     cursor: pointer;
     border-bottom: 1px solid #dddcdc;
     padding: 20px;
     color: #4990e2;
 
     &:not(.lastTab) {
-      transition: all 0.4s ease-in;
-      height: 100%;
-      max-height: 90px;
       font-size: 20px;
 
-      &:hover {
+      &.activeLabel {
+        transition: all 0.4s ease-in;
+        height: 100%;
+        max-height: 90px;
         background-color: #e5f0fb;
+
+        &:hover {}
+
       }
     }
   }
@@ -390,8 +393,7 @@
 .offcanvasLink {
   position: relative;
 
-  a {
-  }
+  a {}
 }
 
 .subMenu {
