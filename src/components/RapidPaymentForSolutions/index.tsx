@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
+import { useRouter } from 'next/router';
 
 const slickSettings = {
   infinite: false,
@@ -60,6 +61,9 @@ const RapidPaymentForSolutions = () => {
     },
   ];
 
+
+  const router = useRouter();
+
   const totalSlides = slides.length;
   const progress = ((currentSlide + 1) / totalSlides) * 100;
 
@@ -114,7 +118,7 @@ const RapidPaymentForSolutions = () => {
                             <Paragraph className="card-text para my-4">
                               {slide?.desc}
                             </Paragraph>
-                            <button className={`btn btn-feature  px-sm-5 py-2`}>
+                            <button onClick={() => router.push(slide.href)} className={`btn btn-feature  px-sm-5 py-2`}>
                               Get Started
                             </button>
                           </div>
