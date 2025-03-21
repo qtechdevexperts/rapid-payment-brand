@@ -71,7 +71,7 @@ const solutionsContent = [
 
 const whoWeServeTabs = [
   { id: 'type', label: 'By business type', lastTab: false, href: '' },
-  { id: 'industries', label: 'By industry', lastTab: false, href: '' },
+  { id: 'industries', label: 'By industries', lastTab: false, href: '' },
   { id: 'partnertype', label: 'By partner type', lastTab: false, href: '' },
 ];
 

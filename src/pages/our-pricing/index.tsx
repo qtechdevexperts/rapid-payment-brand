@@ -20,7 +20,7 @@ const OurPricing = () => {
         }
       />
 
-      <section className="py-10">
+      <section className="py-sm-10 py-2">
         <Container className="d-flex flex-column justify-content-center align-items-center">
           <h2 className="text text-2 fw-normal text-capitalize text-center">
             From small businesses to enterprise{' '}
@@ -81,7 +81,7 @@ const OurPricing = () => {
         </Container>
       </Section>
 
-      <section className="py-10">
+      <section className="py-sm-10 py-3">
         <PaymentForm />
       </section>
     </>

@@ -81,19 +81,19 @@ const SolutionForInnerPages = () => {
                 <div className="mt-4">
                   <LinkTag
                     href="/online-payments/"
-                    className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                    className="heading-4 d-block text-reset text-decoration-none mt-sm-3 mt-2 mb-3"
                   >
                     Online Payments
                   </LinkTag>
                   <LinkTag
                     href="/in-person-payments/"
-                    className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                    className="heading-4 d-block text-reset text-decoration-none mt-sm-3 mt-2 mb-3"
                   >
                     In-Person Payments
                   </LinkTag>
                   <LinkTag
                     href="/point-of-sale-solution/"
-                    className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                    className="heading-4 d-block text-reset text-decoration-none mt-sm-3 mt-2 mb-3"
                   >
                     Point of sales Solutions
                   </LinkTag>
