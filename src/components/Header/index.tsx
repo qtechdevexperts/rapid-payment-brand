@@ -213,7 +213,7 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav
               ref={navRef}
-              className="m-auto gap-md-4 position-relative gap-1"
+              className="m-auto gap-md-5 position-relative gap-1"
             >
               <div
                 className={`${style.navItem} navItem`}
@@ -221,7 +221,7 @@ const Header = () => {
               >
                 <Link
                   href="#!"
-                  className={`${style.dropdownToggle} ${activeMegaMenu === 'solutions' ? `${style.active} active` : ''} text-decoration-none mb-0`}
+                  className={`${style.dropdownToggle} px-0 ${activeMegaMenu === 'solutions' ? `${style.active} active` : ''} text-decoration-none mb-0`}
                 >
                   Solutions
                 </Link>
@@ -232,7 +232,7 @@ const Header = () => {
               >
                 <Link
                   href="#!"
-                  className={`${style.dropdownToggle} text-decoration-none`}
+                  className={`${style.dropdownToggle} px-0 text-decoration-none ${activeMegaMenu === 'whoWeServe' ? `${style.active} active` : ''} text-decoration-none mb-0`}
                 >
                   Who We Serve
                 </Link>
@@ -241,7 +241,7 @@ const Header = () => {
               <div className={style.navItem} onMouseEnter={handleMouseLeave}>
                 <Link
                   href="/who-we-are"
-                  className={`${style.dropdownToggle} text-decoration-none`}
+                  className={`${style.dropdownToggle} px-0 text-decoration-none`}
                 >
                   Who we Are
                 </Link>
@@ -249,7 +249,7 @@ const Header = () => {
               <div className={style.navItem} onMouseEnter={handleMouseLeave}>
                 <Link
                   href="/integrated-partners"
-                  className={`${style.dropdownToggle} text-decoration-none`}
+                  className={`${style.dropdownToggle} px-0 text-decoration-none`}
                 >
                   Integrated Partner
                 </Link>
@@ -424,37 +424,6 @@ const Header = () => {
                   </li>
                 ))}
           </ul>
-
-          {/* // ) : mobileActiveMain && mobileActiveSub === null ? (
-
-      
-          // ) : mobileActiveMain && mobileActiveSub && (
-
-          //   <ul className={clsx(styles.subMenu, 'pl-0', { active: mobileActiveMain !== null })} style={{
-          //     left: mobileActiveMain ? "0px" : "-100%",
-          //     paddingLeft: "0px",
-          //     transition: "all 0.5s ease-in-out"
-          //   }}>
-          //     <li
-          //       className={clsx(
-          //         "list-group-item px-3 pb-3 text-black d-flex justify-content-start align-items-center gap-3",
-          //         styles.subMenuTitle
-          //       )}
-          //       onClick={() => setMobileActiveSub(null)}
-          //     >
-          //       <FaArrowLeft /> {megaMenuDataMap[mobileActiveMain as keyof typeof megaMenuDataMap].tabs.find(tab => tab.id === mobileActiveSub)?.label}
-          //     </li>
-          //     {mobileActiveMain && mobileActiveMain in megaMenuDataMap && megaMenuDataMap[mobileActiveMain as keyof typeof megaMenuDataMap].tabContents
-          //       .filter((item) => item.id === mobileActiveSub)
-          //       .map((item, index) => (
-          //         <li key={index} className={`list-group-item  px-3  text-primary-100 ${styles.mainListItem}`}>
-          //           <Link href={item.link || "#!"} className={clsx(style.megaMenuLink, "d-flex gap-2 align-items-center text-decoration-none")}>
-          //             <span className="text-primary-100">{item.label}</span>
-          //           </Link>
-          //         </li>
-          //       ))}
-          //   </ul>
-          )} */}
         </Offcanvas.Body>
       </Offcanvas>
     </div>

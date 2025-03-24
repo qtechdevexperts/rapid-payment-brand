@@ -3,9 +3,14 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
-import { FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa';
+import { FaFacebook, FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
+import { TfiEmail } from "react-icons/tfi";
+import { FaPhone } from "react-icons/fa";
+import { SiTrustpilot } from "react-icons/si";
+
+
 
 const Footer = () => {
   const [acceptPaymentFooter, setPaymentFooter] = useState<boolean>(false);
@@ -31,9 +36,11 @@ const Footer = () => {
           >
             <img src="/images/logo-dark.png" className="img-fluid" alt="" />
 
-            <div className={clsx('py-5', style.notInclude, style.lastBox)}>
-              <div className="mb-3">
-                <h4 className="text-white fs-11">Sales</h4>
+            <div className={clsx('pt-5', style.notInclude, style.lastBox)}>
+              <div className="mb-3 d-flex gap-2 justify-content-start align-items-center">
+                <div className={`${style.iconBox} `}>
+                  <FaPhone size={20} color='#4990e2' />
+                </div>
                 <div
                   onClick={() => router.push('tel:012-3456-789')}
                   className={`text-primary-100 cursor-pointer ${style.footerBottomText}  fw-bold`}
@@ -41,16 +48,31 @@ const Footer = () => {
                   012-3456-789
                 </div>
               </div>
-              <div className="mb-3">
-                <h4 className="text-white fs-11">Email</h4>
+              <div className="mb-3 d-flex gap-2 justify-content-start align-items-center">
+                <div className={`${style.iconBox} `}>
+                  <TfiEmail size={20} color='#4990e2' />
+                </div>
                 <div
-                  onClick={() => router.push('mailto:sales@rapidpayments.io')}
-                  className={`text-primary-100 ${style.footerBottomText} cursor-pointer fw-bold`}
+                  onClick={() => router.push('tel:012-3456-789')}
+                  className={`text-primary-100 cursor-pointer ${style.footerBottomText}  fw-bold`}
                 >
                   sales@rapidpayments.io
                 </div>
               </div>
               <div className="mb-3"></div>
+            </div>
+
+            <div className={clsx(style.socialIcon, 'pb-3 pt-4')}>
+              <h2 className={``}>Social:</h2>
+              <div className='d-flex justify-content-start align-items-center gap-2'>
+                <Link href={'#!'} className={`${style.iconBox} `}>
+                  <FaFacebook size={20} color='#4990e2' />
+                </Link>
+                <Link href={'#!'} className={`${style.iconBox} `}>
+                  <SiTrustpilot size={20} color='#4990e2' />
+                </Link>
+
+              </div>
             </div>
           </div>
           <div
@@ -286,11 +308,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="d-flex py-4 flex-column flex-sm-row gap-3 justify-content-between align-items-center">
-          <h3 className={`text-white ${style.footerBottomText} mb-0`}>
+          <h3 className={`text-white ${style.footerLink} mb-0`}>
             ©2025, RapidPayment. All Rights Reserved
           </h3>
-          <h6 className={`${style.footerBottomText} text-white`}>
-            <Link href={'#!'} className="text-white text-decoration-none">
+          <h6 className={`${style.footerLink} text-white`}>
+            <Link href={'/privacy-policy'} className="text-white text-decoration-none">
               {' '}
               Privacy Policy
             </Link>{' '}

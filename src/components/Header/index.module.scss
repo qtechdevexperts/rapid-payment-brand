@@ -3,9 +3,38 @@
   padding: 0.5rem 1rem;
   color: #333;
   font-weight: 600;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #1c2630;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+  }
 
   &:hover {
     color: #4990e2;
+
+    &::after {
+      width: 100%;
+
+    }
+  }
+
+  &.active {
+    color: #4990e2;
+  }
+
+  &.active {
+    &::after {
+      width: 100%;
+
+    }
   }
 
   @media (max-width: 1200px) {
@@ -17,6 +46,7 @@
     text-align: start !important;
   }
 }
+
 
 .headerWrapper {
   position: relative;

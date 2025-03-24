@@ -52,7 +52,7 @@ const Hero = ({
             >
               <h2
                 className={`text text-2 fw-normal mt-4 ${style.herocss}  ${headingCss} `}
-                dangerouslySetInnerHTML={{ __html: title || '' }} // Handling undefined title
+                dangerouslySetInnerHTML={{ __html: title || '' }}
               />
               <p
                 dangerouslySetInnerHTML={{ __html: description || '' }}

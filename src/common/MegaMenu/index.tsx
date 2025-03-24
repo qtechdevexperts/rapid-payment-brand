@@ -168,10 +168,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
                 <Col md={4} className={`p-4 ${style.lastComponent}`}>
                     <img src="/images/icon/Favicon.svg" alt="" />
                     <h4 className={`mt-3 ${style.RapidHeading}`}>Rapid Payment</h4>
-                    <p>
-                        Read how our customers have solved their most pressing problems with
-                        Worldpay products
-                    </p>
+
                 </Col>
             </Row>
         </Container>
@@ -257,27 +254,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
             {isOpen && (
                 <div className={clsx(style.megaMenu)}>{renderDesktopContent()}</div>
             )}
-            {/* If needed, you can uncomment and use Offcanvas for mobile */}
-            {/*
-            {isTablet && (
-                <Offcanvas
-                    show={isOpen}
-                    onHide={() => {
-                        onClose?.();
-                        setOffcanvasView?.('menu');
-                    }}
-                    placement="end"
-                    className={style.offcanvasCustom}
-                >
-                    <Offcanvas.Header closeButton>
-                        <Offcanvas.Title>Menu</Offcanvas.Title>
-                    </Offcanvas.Header>
-                    <Offcanvas.Body className={`px-0 ${style.offcanvasBody} pt-0`}>
-                        {renderOffcanvasContent()}
-                    </Offcanvas.Body>
-                </Offcanvas>
-            )}
-            */}
+
         </div>
     );
 };
