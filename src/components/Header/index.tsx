@@ -143,6 +143,11 @@ const Header = () => {
     }
   };
 
+
+  const handleMouseOut = () => {
+    setActiveMegaMenu(null);
+  }
+
   useEffect(() => {
     if (router && router.events) {
       const handleRouteChange = () => {
@@ -218,6 +223,7 @@ const Header = () => {
               <div
                 className={`${style.navItem} navItem`}
                 onMouseEnter={(e) => handleMouseEnter('solutions', e)}
+              // onMouseLeave={(e) => handleMouseOut()}
               >
                 <Link
                   href="#!"
@@ -229,6 +235,7 @@ const Header = () => {
               <div
                 className={style.navItem}
                 onMouseEnter={(e) => handleMouseEnter('whoWeServe', e)}
+              // onMouseLeave={(e) => handleMouseOut()}
               >
                 <Link
                   href="#!"
@@ -238,7 +245,7 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div className={style.navItem} onMouseEnter={handleMouseLeave}>
+              <div className={style.navItem} onMouseEnter={handleMouseLeave} >
                 <Link
                   href="/who-we-are"
                   className={`${style.dropdownToggle} px-0 text-decoration-none`}

@@ -43,13 +43,15 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
 }) => {
     const router = useRouter();
     const dropdownRef = useRef<HTMLDivElement>(null);
-    // We'll use this ref for the list container
+
     const listWrapperRef = useRef<HTMLUListElement>(null);
     const [containerHeight, setContainerHeight] = useState<number>(0);
+
+
     const isTablet =
         typeof window !== 'undefined' ? window.innerWidth < 992 : false;
 
-    // Update height when currentTab or tabContents change
+
     useEffect(() => {
         if (listWrapperRef.current) {
             const computedStyle = window.getComputedStyle(listWrapperRef.current);
@@ -100,7 +102,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
         if (!item.lastTab) {
             console.log(item);
             if (item?.id !== 'business') {
-                setContainerHeight(299);
+                setContainerHeight(212);
             }
             setCurrentTab?.(item.id);
             if (isTablet) {
