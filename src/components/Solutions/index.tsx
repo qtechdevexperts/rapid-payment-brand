@@ -5,11 +5,13 @@ import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import LinkTag from '../LinkTag';
 import style from './index.module.scss';
+import { ArrowRightIcon, CallIcon } from '@/utils/Icon';
+import Button from '@/common/Button';
 
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
@@ -71,7 +73,7 @@ const Solutions = () => {
                   <div>
                     <Button
                       className={clsx(
-                        'px-md-5 px-sm-3 py-md-3 py-2 me-2 w-100',
+                        'px-md-5 px-sm-3 btn py-md-3 py-2 me-2 w-100',
                         { 'btn-lg': !isLaptop },
                         currentTab === 'small-business'
                           ? 'btn-feature'
@@ -86,7 +88,7 @@ const Solutions = () => {
                   <div>
                     <Button
                       className={clsx(
-                        'px-md-5 px-sm-3 py-md-3 py-2 me-2 w-100',
+                        'px-md-5 px-sm-3 btn py-md-3 py-2 me-2 w-100',
                         { 'btn-lg': !isLaptop },
                         currentTab === 'enterprises'
                           ? 'btn-feature'
@@ -105,11 +107,11 @@ const Solutions = () => {
               >
                 <Button
                   className={clsx(
-                    'px-md-5 px-3 py-md-3 py-2',
+                    'px-md-5  px-3 py-md-3 btn py-2 rounded-0',
                     { 'btn-lg': !isLaptop },
                     currentTab === 'small-business'
-                      ? 'btn-feature'
-                      : 'btn-outline-feature',
+                      ? 'btn-dark-feature'
+                      : 'btn-outline-dark-feature',
                   )}
                   onClick={() => handleTabClick('small-business')}
                 >
@@ -119,11 +121,11 @@ const Solutions = () => {
                 {/* Enterprises Tab */}
                 <Button
                   className={clsx(
-                    'px-md-5 px-3 py-md-3 py-2',
+                    'px-md-5 px-3 btn py-md-3 rounded-0 py-2',
                     { 'btn-lg': !isLaptop },
                     currentTab === 'enterprises'
-                      ? 'btn-feature'
-                      : 'btn-outline-feature',
+                      ? 'btn-dark-feature'
+                      : 'btn-outline-dark-feature',
                   )}
                   onClick={() => handleTabClick('enterprises')}
                 >
@@ -132,14 +134,14 @@ const Solutions = () => {
                 {/* Small Business Tab */}
               </div>
 
-              {/* Dynamic Content */}
+
               {currentTab === 'small-business' ? (
                 <>
                   <h2
-                    className={` text text-2 fw-normal mt-large-9 mt-4 mt-lg-6`}
+                    className={` text fw-bold text-secondary-standard text-2  mt-large-9 mt-4 mt-lg-6`}
                   >
                     Big Solutions for <br />
-                    <span className="fw-bold">Small Businesses</span>
+                    <span className="text-primary-standard">Small Businesses</span>
                   </h2>
                   <Paragraph className="max-w-sm-70">
                     Smoothly running a small business is challenging, we
@@ -173,10 +175,11 @@ const Solutions = () => {
               ) : (
                 <>
                   <h2
-                    className={`text text-2 fw-normal mt-large-9 mt-4 mt-lg-6`}
+                    className={`text  text-secondary-standard  fw-bold text-2  mt-large-9 mt-4 mt-lg-6`}
                   >
-                    Enterprise Payment <br />
-                    <span className="fw-bold">Solutions</span>
+                    Enterprise <br />  {" "}
+                    <span className="text-primary-standard">
+                      Payment Solutions</span>
                   </h2>
                   <Paragraph className="max-w-lg-70">
                     Power your business with scalable, secure, and seamless{' '}
@@ -184,7 +187,7 @@ const Solutions = () => {
                     payment processing designed for high-volume transactions.{' '}
                     <br />
                     Our enterprise-grade payment processing services ensure
-                    reliability <br />, speed, and efficiency across all sales
+                    reliability <br /> speed, and efficiency across all sales
                     channels.
                   </Paragraph>
 
@@ -226,13 +229,15 @@ const Solutions = () => {
               <div className="d-flex flex-column flex-sm-row mt-8 justify-content-start align-items-sm-center gap-3">
                 <Button
                   onClick={() => setShowModal(true)}
-                  className={`${!isLaptop && 'btn-lg'} btn-feature`}
+                  className={`${!isLaptop && 'btn-lg'} btn btn-feature`}
+                  iconRight={<ArrowRightIcon />}
                 >
-                  Talk to Sales
+                  Talk To an Expert
                 </Button>
                 <Button
                   onClick={() => router.push('tel:012-3456-789')}
-                  className={`${!isLaptop && 'btn-lg'} btn-outline-feature`}
+                  className={`${!isLaptop && 'btn-lg'} btn btn-outline-feature`}
+                  iconLeft={<CallIcon />}
                 >
                   Call Us: 012-3456-789
                 </Button>

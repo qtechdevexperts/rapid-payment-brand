@@ -6,6 +6,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
+import { useRouter } from 'next/router';
+import Button from '@/common/Button';
+import { ArrowRightIcon } from '@/utils/Icon';
 
 const slickSettings = {
   infinite: false,
@@ -34,6 +37,11 @@ const slickSettings = {
 
 const RapidPaymentUniversity = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+
+  const router = useRouter();
+
+
 
   const slides = [
     {
@@ -77,9 +85,12 @@ const RapidPaymentUniversity = () => {
       <div className={clsx('')}>
         <div className="row">
           <div className="col-lg-8">
-            <h4 className="text text-3 fw-normal text-capitalize">
-              At Rapid Payment, We <br /> Understand{' '}
-              <span className="fw-bold">your Industry</span>{' '}
+            <h4 className="text text-secondary-standard fw-bold text-3 text-capitalize">
+              At Rapid Payment,
+              <span className='text-primary-standard'>
+                We <br /> Understand{' '}
+              </span>
+              <span className="">your Industry</span>{' '}
             </h4>
           </div>
           <div className="col-lg-4">
@@ -116,12 +127,18 @@ const RapidPaymentUniversity = () => {
                             <Paragraph className="card-text para my-4">
                               {slide?.desc}
                             </Paragraph>
-                            <Link
+                            {/* <Link
                               href={slide?.href}
                               className={`btn btn-feature  px-sm-5 py-2`}
                             >
                               Get Started
-                            </Link>
+                            </Link> */}
+
+                            <Button
+                              iconRight={<ArrowRightIcon />}
+                              onClick={() => router.push(slide.href)}
+                              className='btn btn-feature'>Get Started
+                            </Button>
                           </div>
                         </div>
                         <div className="col-md-6">
