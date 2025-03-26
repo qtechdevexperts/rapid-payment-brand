@@ -1,7 +1,7 @@
 @import '@/styles/responsive.scss';
 
 .footer {
-  background-color: #1A2E5B;
+  background-color: #1c2630;
 }
 
 .border-footer {
@@ -181,10 +181,6 @@
       /* Adjust this value to suit your content */
     }
   }
-
-  li {
-    list-style-type: none;
-  }
 }
 
 .footerAccordian {
@@ -212,7 +208,7 @@
 }
 
 .footerBottomText {
-  font-size: clamp(16px, 4vw, 18px);
+  font-size: clamp(16px, 4vw, 17px);
 
   @media (max-width: 1500px) {
     font-size: clamp(16px, 4vw, 18px);
@@ -225,9 +221,9 @@
 
 
 .iconBox {
-  width: 35px;
-  height: 35px;
-  border: 1px solid #FF1F3E;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #4990e2;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -237,7 +233,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #FF1F3E;
+    background-color: #4990e2;
 
     svg {
       color: white !important;

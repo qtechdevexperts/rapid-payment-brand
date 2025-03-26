@@ -17,7 +17,7 @@ interface ServicesProps {
 }
 
 const Services = ({
-  title = 'Rapid Payments  <br /> Elevate Your Business <br /> with <span class="text-primary-standard"> Next-Level  <br /> Merchant</span>   Services',
+  title = 'Rapid Payments  <br /> Elevate Your Business <br /> with <b>Next-Level  <br /> Merchant</b>  Services',
   services,
 }: ServicesProps) => {
   const router = useRouter();
@@ -34,11 +34,11 @@ const Services = ({
           >
             <div>
               <h2
-                className={`text text-3 text-secondary-standard fw-bold ${style.fontSizeHeading}`}
+                className={`text text-3 fw-normal ${style.fontSizeHeading}`}
                 dangerouslySetInnerHTML={{ __html: title }}
               />
               <Paragraph className="para fw-normal max-w-sm-70">
-                At <span className=" fw-bold text-secondary-standard">Rapid Payments</span> ,
+                At <span className="text-light fw-bold">Rapid Payments</span> ,
                 we do more than just payment processing—we empower businesses
                 with innovative solutions that drive efficiency, increase
                 revenue, and enhance customer experience.
@@ -61,9 +61,7 @@ const Services = ({
                   <ServiceCard
                     title={service.title}
                     description={service.description}
-                    id={index}
                   />
-
                 </Col>
               ))}
             </Row>

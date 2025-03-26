@@ -3,8 +3,8 @@
   align-items: center;
   gap: 8px;
   transition: color 0.3s ease;
-  color: #1A2E5B;
-  font-weight: 700;
+  color: #333;
+  font-weight: 500;
   font-size: clamp(16px, 4vw, 25px);
 
   svg {
@@ -13,15 +13,13 @@
   }
 
   &:hover {
-    color: #1A2E5B !important;
-    opacity: 0.9;
+    color: #4990e2 !important;
 
     svg {
       transform: translateX(8px);
-      opacity: 0.9;
 
       path {
-        fill: #1A2E5B;
+        fill: #4990e2;
       }
     }
   }

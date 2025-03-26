@@ -4,13 +4,9 @@ import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
-import Button from '@/common/Button';
-import { ArrowRightIcon, CallIcon, UtilIcon } from '@/utils/Icon';
-
-
 
 const MainHero = () => {
   const router = useRouter();
@@ -37,10 +33,10 @@ const MainHero = () => {
               md={12}
               className={`mb-10 ${style.heroContentSection} h-100 d-flex flex-column justify-content-center align-items-start`}
             >
-              <h2 className=" fw-bold text-secondary-standard text text-1  mt-4">
+              <h2 className="fw-normal text text-1  mt-4">
                 Rapid Payments <br className="d-none d-lg-block" /> Your Partner
                 in <br className="d-none d-lg-block" />
-                <span className="text-primary-standard"> Payment Success</span>
+                <span className="fw-bolder"> Payment Success</span>
               </h2>
               <Paragraph className="para">
                 At <span className="fw-bold">Rapid Payments</span> , we empower
@@ -49,18 +45,24 @@ const MainHero = () => {
               </Paragraph>
 
               <Row>
-                <Col md={12}>
-                  <div className="d-flex justify-content-start align-items-center gap-2">
-                    <UtilIcon />
-                    <Paragraph className={clsx('text-secondary-standard mb-0')}>
-                      <span className=" fw-bold">Seamless</span>{' '}
-                      Payment  processing solutions
+                <Col md={6}>
+                  <div className="d-flex justify-content-start align-items-start gap-2">
+                    <img
+                      src="/images/icons/outline-status-checked-box.png"
+                      alt=""
+                    />
+                    <Paragraph className={clsx(style.heroParagraph)}>
+                      <span className="text-primary-100 fw-bold">Seamless</span>{' '}
+                      Payment <br /> processing solutions
                     </Paragraph>
                   </div>
                 </Col>
-                <Col md={12}>
+                <Col md={6}>
                   <div className="d-flex justify-content-start align-items-start gap-2">
-                    <UtilIcon />
+                    <img
+                      src="/images/icons/outline-status-checked-box.png"
+                      alt=""
+                    />
                     <Paragraph className={clsx(style.heroParagraph)}>
                       <span className="text-primary-100 fw-bold">
                         Secure & Reliable{' '}
@@ -69,20 +71,44 @@ const MainHero = () => {
                     </Paragraph>
                   </div>
                 </Col>
+                <Col md={6}>
+                  <div className="d-flex justify-content-start align-items-start gap-2">
+                    <img
+                      src="/images/icons/outline-status-checked-box.png"
+                      alt=""
+                    />
+                    <Paragraph className={clsx(style.heroParagraph)}>
+                      <span className="text-primary-100 fw-bold">
+                        Lower Rates{' '}
+                      </span>{' '}
+                      Transparent and competitive pricings
+                    </Paragraph>
+                  </div>
+                </Col>
+                <Col md={6}>
+                  <div className="d-flex justify-content-start align-items-start gap-2">
+                    <img
+                      src="/images/icons/outline-status-checked-box.png"
+                      alt=""
+                    />
+                    <Paragraph className={clsx(style.heroParagraph)}>
+                      <span className="text-primary-100 fw-bold">POS </span>{' '}
+                      Streamlined Hardware & software for businesses
+                    </Paragraph>
+                  </div>
+                </Col>
               </Row>
 
               <div className="d-flex flex-column flex-sm-row gap-3 mt-3 justify-content-start align-items-sm-center">
-                <Button
+                <button
                   onClick={() => setContactModal(true)}
                   className={` btn btn-feature `}
-                  iconRight={<ArrowRightIcon />}
                 >
                   Talk To an Expert
-                </Button>
+                </button>
                 <Button
                   onClick={() => router.push('tel:012-3456-789')}
-                  className={` btn btn-outline-feature `}
-                  iconLeft={<CallIcon />}
+                  className={`  btn-outline-feature `}
                 >
                   Call Us: 012-3456-789
                 </Button>
