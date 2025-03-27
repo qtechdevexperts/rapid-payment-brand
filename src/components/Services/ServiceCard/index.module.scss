@@ -6,39 +6,28 @@
   background: #4990e2;
   padding: 16px !important;
 
+  background-color: #F1F8FF !important; // Use 
+
+
+
+
+  &.first,
+  &.third {
+    background-color: #FFEFF2 !important; // Use 
+  }
+
   h5 {
     color: white;
     font-size: 26px;
   }
 
   p {
-    color: white;
+    color: #1E1E1E;
     font-weight: 300;
     font-size: 18px;
   }
 
-  &:hover {
-    border: 1px solid #4990e2;
-    background: transparent;
-
-    h5 {
-      color: #4990e2;
-    }
-
-    p {
-      color: #4990e2;
-    }
-
-    svg {
-      path {
-        fill: #4990e2;
-      }
-    }
-  }
-
   @include respond-to('xxl', 'max') {
-    // padding: 10px !important;
-
     h5 {
       font-size: 22px;
     }

@@ -116,3 +116,20 @@ div[role='dialog'] {
   min-height: 100px; // set according to your design needs
   overflow: hidden;
 }
+
+
+// service section button css
+.service-sct{
+  .btn-outline-feature{
+    &:hover {
+      background: #ff1f3e;
+      color: #fff !important;
+      path {
+        fill: #fff;
+     }
+    }
+    path {
+      fill: gray;
+   }
+  }
+}

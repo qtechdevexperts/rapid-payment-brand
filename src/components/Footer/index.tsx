@@ -39,22 +39,22 @@ const Footer = () => {
             <div className={clsx('pt-5', style.notInclude, style.lastBox)}>
               <div className="mb-3 d-flex gap-2 justify-content-start align-items-center">
                 <div className={`${style.iconBox} `}>
-                  <FaPhone size={20} color='#4990e2' />
+                  <FaPhone size={16} color='#FF1F3E' />
                 </div>
                 <div
                   onClick={() => router.push('tel:012-3456-789')}
-                  className={`text-primary-100 cursor-pointer ${style.footerBottomText}  fw-bold`}
+                  className={`text-white cursor-pointer ${style.footerBottomText}  fw-bold`}
                 >
                   012-3456-789
                 </div>
               </div>
               <div className="mb-3 d-flex gap-2 justify-content-start align-items-center">
                 <div className={`${style.iconBox} `}>
-                  <TfiEmail size={20} color='#4990e2' />
+                  <TfiEmail size={16} color='#FF1F3E' />
                 </div>
                 <div
                   onClick={() => router.push('tel:012-3456-789')}
-                  className={`text-primary-100 cursor-pointer ${style.footerBottomText}  fw-bold`}
+                  className={`text-white cursor-pointer ${style.footerBottomText}  fw-bold`}
                 >
                   sales@rapidpayments.io
                 </div>
@@ -66,10 +66,10 @@ const Footer = () => {
               <h2 className={``}>Social:</h2>
               <div className='d-flex justify-content-start align-items-center gap-2'>
                 <Link href={'#!'} className={`${style.iconBox} `}>
-                  <FaFacebook size={20} color='#4990e2' />
+                  <FaFacebook size={16} color='#FF1F3E' />
                 </Link>
                 <Link href={'#!'} className={`${style.iconBox} `}>
-                  <SiTrustpilot size={20} color='#4990e2' />
+                  <SiTrustpilot size={16} color='#FF1F3E' />
                 </Link>
 
               </div>
@@ -312,7 +312,7 @@ const Footer = () => {
             ©2025, RapidPayment. All Rights Reserved
           </h3>
           <h6 className={`${style.footerLink} text-white`}>
-            <Link href={'/privacy-policy'} className="text-white text-decoration-none">
+            <Link href={'#!'} className="text-white text-decoration-none">
               {' '}
               Privacy Policy
             </Link>{' '}

@@ -41,7 +41,7 @@ const OnlinePayments = () => {
 
       <Hero
         title='Online <br /> <span class="fw-bold">Payments</span> '
-        backgroundImage={'/images/online-payment.png'}
+        backgroundImage={'/images/online-bg.png'}
       />
 
       <IntegratationOption

@@ -1,0 +1,30 @@
+@import "rfs/scss";
+
+.paymentBox {
+    width: 100%;
+    @include padding(30px);
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(48, 100, 197, 0.30);
+    background: linear-gradient(180deg, #FFF 57.79%, #F1F8FF 101.39%);
+
+    gap: 20px;
+
+    img {
+        width: 60px;
+        height: 60px
+    }
+
+    h2 {
+        color: #1A2E5B;
+        font-size: clamp(20px, 4vw, 32px);
+    }
+
+
+
+    p {
+        font-size: 18px;
+        color: #1E1E1E;
+    }
+
+}
