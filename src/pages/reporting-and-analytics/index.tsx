@@ -18,7 +18,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title="Reporting & <br /> <span class='fw-bold'>Analytics</span> "
+        title="<span class='text-secondary-standard'> Reporting & </span> <br /> <span class='fw-bold text-primary-standard'>Analytics</span> "
         backgroundImage={'/images/reporting.png'}
         description={
           '"Gain full visibility into your payments with detailed, real-time <br class="d-none d-md-block" /> reporting and analytics."'
@@ -27,7 +27,7 @@ const OnlinePayments = () => {
 
       <IntegratationOption
         title={
-          'Why Choose Our <span class="fw-bold">Payment Reporting?</span> '
+          '<Why class="text-secondary-standard"> Why Choose Our </span><span class="fw-bold text-primary-standard">Payment Reporting?</span> '
         }
         desc={
           'Get instant access to transaction data, trends, and business insights to make smarter financial decisions.'

@@ -18,7 +18,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title="Billing <br /> <span class='fw-bold'>& Invoicing</span> "
+        title="<Billing class='text-secondary-standard'> Billing </span> <br /> <span class='fw-bold text-primary-standard'>& Invoicing</span> "
         backgroundImage={'/images/biling.png'}
         description={
           '"Automate billing and invoicing for seamless customer payments."'
@@ -28,7 +28,7 @@ const OnlinePayments = () => {
 
       <IntegratationOption
         title={
-          'Why Choose Our <span class="fw-bold">Billing & Invoicing Solution?</span> '
+          '<Why class="text-secondary-standard"> Why Choose Our </span> <span class="fw-bold text-primary-standard">Billing & Invoicing Solution?</span> '
         }
         desc={
           'Eliminate manual billing errors and streamline your invoicing with automation to ensure on-time payments and better customer experience.'
