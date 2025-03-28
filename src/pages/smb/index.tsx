@@ -15,7 +15,7 @@ const SMB = () => {
       </Head>
 
       <Hero
-        title='Start Accepting  <br /><span class="fw-bold">Payments Now</span> '
+        title='<span class="text-secondary-standard"> Start Accepting </span>  <br /><span class="fw-bold text-primary-standard">Payments Now</span> '
         backgroundImage={'/images/smb-product.png'}
         description={
           'Get your business up and running with fast, secure, and hassle-free payment processing. Whether you need POS systems, mobile payments, or online checkouts, we provide a seamless solution tailored to your business needs.'
@@ -63,7 +63,7 @@ const SMB = () => {
 
       <DescriptionSection
         title={
-          'Want to start taking payments for your <br /> <span class="fw-bold">small business?</span> '
+          '<Want class="text-secondary-standard"> Want to start taking payments for your </span> <br /> <span class="fw-bold text-primary-standard ">small business?</span> '
         }
         description={
           'Get paid quickly, securely, and hassle-free with Rapid Payments. Whether you need in-store, online, or mobile payment solutions, we’ve got you covered.'

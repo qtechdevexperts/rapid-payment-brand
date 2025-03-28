@@ -2,15 +2,11 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import { FaFacebook, FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa';
+import { Button, Col, Container, Row } from 'react-bootstrap';
+import { FaLongArrowAltDown, FaLongArrowAltUp, FaPhone } from 'react-icons/fa';
+import { TfiEmail } from 'react-icons/tfi';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
-import { TfiEmail } from "react-icons/tfi";
-import { FaPhone } from "react-icons/fa";
-import { SiTrustpilot } from "react-icons/si";
-
-
 
 const Footer = () => {
   const [acceptPaymentFooter, setPaymentFooter] = useState<boolean>(false);
@@ -24,37 +20,53 @@ const Footer = () => {
   return (
     <div className={clsx(style.footer, 'pt-9')}>
       <Container>
+        <Row>
+          <Col lg="12">
+            <div className="d-flex justify-content-between align-center mb-3">
+              <img src="/images/logo-dark.png" className="img-fluid" alt="" />
+              <Button
+                className="btn-feature"
+                onClick={() => router.push('/contact')}
+              >
+                Contact Us
+              </Button>
+            </div>
+          </Col>
+        </Row>
         <div className={clsx(style['border-footer'], style.footerRow, '')}>
+        
           <div
             className={clsx(
               style.borderright,
               style.notInclude,
               style.firstBox,
-              ' pe-3 pt-5',
+              ' pe-3',
               { 'pb-sm-5': isBigScreen },
             )}
           >
-            <img src="/images/logo-dark.png" className="img-fluid" alt="" />
-
             <div className={clsx('pt-5', style.notInclude, style.lastBox)}>
-              <div className="mb-3 d-flex gap-2 justify-content-start align-items-center">
-                <div className={`${style.iconBox} `}>
-                  <FaPhone size={16} color='#FF1F3E' />
+            <h2 className={`footer-lbl`}>Sales:</h2>
+              <div className="mb-3">
+                <div>
+                  {/* <FaPhone size={16} color="#1C2630" /> */}
                 </div>
                 <div
-                  onClick={() => router.push('tel:012-3456-789')}
-                  className={`text-white cursor-pointer ${style.footerBottomText}  fw-bold`}
+                  onClick={() => router.push('tel:888-562-4060')}
+                  className={`text-white cursor-pointer ${style.footerBottomText}  fw-reguler`}
                 >
-                  012-3456-789
+                  888-562-4060
+                  {/* 888-562-4060 */}
                 </div>
               </div>
-              <div className="mb-3 d-flex gap-2 justify-content-start align-items-center">
-                <div className={`${style.iconBox} `}>
-                  <TfiEmail size={16} color='#FF1F3E' />
+              <h2 className={`footer-lbl`}>Email:</h2>
+              <div className="mb-3">
+    
+                <div>
+                  {/* <TfiEmail size={16} color="#1c2630" /> */}
                 </div>
                 <div
-                  onClick={() => router.push('tel:012-3456-789')}
-                  className={`text-white cursor-pointer ${style.footerBottomText}  fw-bold`}
+                  onClick={() => router.push('mailto:sales@rapidpayments.io')}
+                  className={`text-white cursor-pointer ${style.footerBottomText}  fw-reguler`}
                 >
                   sales@rapidpayments.io
                 </div>
@@ -64,14 +76,27 @@ const Footer = () => {
 
             <div className={clsx(style.socialIcon, 'pb-3 pt-4')}>
               <h2 className={``}>Social:</h2>
-              <div className='d-flex justify-content-start align-items-center gap-2'>
-                <Link href={'#!'} className={`${style.iconBox} `}>
+              <div className="d-flex justify-content-start align-items-center gap-2">
+                {/* <Link href={'#!'} className={`${style.iconBox} `}>
+                <img src="/images/facbook.png" alt="" />
                   <FaFacebook size={16} color='#FF1F3E' />
+                </Link> */}
+                <Link href={'#!'}>
+                  <img src="/images/facbook.png" alt="" />
+                  {/* <FaFacebook size={16} color='#FF1F3E' /> */}
                 </Link>
-                <Link href={'#!'} className={`${style.iconBox} `}>
-                  <SiTrustpilot size={16} color='#FF1F3E' />
+                <Link href={'#!'}>
+                  <img src="/images/instagrames.png" alt="" />
+                  {/* <SiTrustpilot size={16} color='#FF1F3E' /> */}
                 </Link>
-
+                <Link href={'#!'}>
+                  <img src="/images/twitter.png" alt="" />
+                  {/* <SiTrustpilot size={16} color='#FF1F3E' /> */}
+                </Link>
+                <Link href={'#!'}>
+                  {/* <img src="/images/instagrames.png" alt="" /> */}
+                  {/* <SiTrustpilot size={16} color='#FF1F3E' /> */}
+                </Link>
               </div>
             </div>
           </div>
@@ -87,7 +112,7 @@ const Footer = () => {
             <div
               className={`d-flex justify-content-between align-items-center ${style.footerAccordian}`}
             >
-              <h4 className={`text-primary-100 mb-0 ${style.footerBottomText}`}>
+              <h4 className={`text-white-100 mb-0 ${style.footerBottomText}`}>
                 Accept Payments
               </h4>
               <div
@@ -156,7 +181,7 @@ const Footer = () => {
             <div
               className={`d-flex justify-content-between align-items-center ${style.footerAccordian}`}
             >
-              <h4 className={`text-primary-100 mb-0 ${style.footerBottomText}`}>
+              <h4 className={`text-white-100 mb-0 ${style.footerBottomText}`}>
                 Run Your Buinsess
               </h4>
               <div
@@ -232,7 +257,7 @@ const Footer = () => {
             <div
               className={`d-flex justify-content-between align-items-center ${style.footerAccordian}`}
             >
-              <h4 className={`text-primary-100 mb-0 ${style.footerBottomText}`}>
+              <h4 className={`text-white-100 mb-0 ${style.footerBottomText}`}>
                 Who we Serve
               </h4>
               <div
@@ -307,11 +332,11 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="d-flex py-4 flex-column flex-sm-row gap-3 justify-content-between align-items-center">
+        <div className="d-flex py-4 flex-column flex-sm-row gap-3 justify-content-between align-items-center copyright">
           <h3 className={`text-white ${style.footerLink} mb-0`}>
             ©2025, RapidPayment. All Rights Reserved
           </h3>
-          <h6 className={`${style.footerLink} text-white`}>
+          <h6 className={`${style.footerLink} text-white `}>
             <Link href={'#!'} className="text-white text-decoration-none">
               {' '}
               Privacy Policy

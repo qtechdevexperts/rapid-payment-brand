@@ -13,7 +13,7 @@ const Resturants = () => {
       </Head>
 
       <Hero
-        title='<span class="fw-bold">eCommerce</span>'
+        title='<span class="fw-bold text-secondary-standard">eCommerce</span>'
         backgroundImage={'/images/ecommerce-banner.png'}
         description={
           'Power your online store with seamless and secure payment processing. Rapid Payments ensures a smooth checkout experience, helping you increase conversions and grow your business effortlessly. Accept payments with ease, enhance security, and provide customers with a hassle-free shopping experience. With reliable support and easy integration, managing transactions has never been simpler. Simplify your payments and boost your sales today.'
@@ -21,12 +21,12 @@ const Resturants = () => {
       />
 
       <IntegratationOption
-        title={'Why <span class="fw-bold">Rapid Payments?</span> '}
+        title={'<Why class="text-secondary-standard"> Why </span> <span class="fw-bold text-primary-standard">Rapid Payments?</span> '}
         data={ResturantServices}
       />
 
       <POSSolutions
-        title={"Commerce 360 <span class='fw-bold'>Options</span> "}
+        title={"<Commerce class='text-secondary-standard'> Commerce 360 </span> <span class='fw-bold text-primary-standard'>Options</span> "}
         pos={whoWeServePosData}
       />
 

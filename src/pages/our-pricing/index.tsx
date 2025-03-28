@@ -13,7 +13,7 @@ const OurPricing = () => {
       </Head>
 
       <Hero
-        title='Our <span class="fw-bold">Pricing</span> '
+        title='<span class ="text-secondary-standard"> Our </span> <span class="fw-bold text-primary-standard">Pricing</span> '
         backgroundImage={'/images/our-pricing.png'}
         description={
           'We provide flexible and transparent pricing tailored to your business needs. Through our partnerships with leading payment processors, gateways, and POS providers, we ensure seamless transactions and a reliable payment experience. Our solutions are designed to enhance efficiency, security, and convenience for businesses of all sizes.'
@@ -22,10 +22,10 @@ const OurPricing = () => {
 
       <section className="py-sm-10 py-2">
         <Container className="d-flex flex-column justify-content-center align-items-center">
-          <h2 className="text text-2 fw-normal text-capitalize text-center">
+          <h2 className="text text-2 fw-normal text-capitalize text-center text-secondary-standard">
             From small businesses to enterprise{' '}
             <br className="d-none d-sm-block" /> empires, we{' '}
-            <span className="fw-bold">lead the way.</span>
+            <span className="fw-bold text-primary-standard">lead the way.</span>
           </h2>
           <Paragraph className=" max-w-lg-65 text-center mx-auto">
             We empower businesses of all sizes with cutting-edge payment
@@ -41,7 +41,7 @@ const OurPricing = () => {
 
       <Section className="">
         <Container>
-          <h2 className={`text-center fw-bold mb-5 mb-sm-5 text text-2`}>
+          <h2 className={`text-center fw-bold mb-5 mb-sm-5 text text-2 text-secondary-standard`}>
             Processing Fees
           </h2>
           <Row className=" gy-4">

@@ -18,7 +18,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title='<span class="fw-bold">Funding</span>'
+        title='<span class="fw-bold text-secondary-standard">Funding</span>'
         backgroundImage={'/images/funding.png'}
         description={
           '"Get faster access to your revenue with next-day and same-<br/>day settlement options."'
@@ -27,7 +27,7 @@ const OnlinePayments = () => {
 
       <IntegratationOption
         title={
-          'Why Choose Our <span class="fw-bold">Funding Solutions?</span> '
+          '<span class="text-secondary-standard"> Why Choose Our </span> <span class="fw-bold text-primary-standard">Funding Solutions?</span> '
         }
         desc={
           "With Rapid Payments' quick funding solutions, you no longer have to wait days for your money to clear. Get paid when you need it."

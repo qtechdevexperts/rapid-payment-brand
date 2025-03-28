@@ -11,7 +11,7 @@ const WhoWeAre = () => {
   return (
     <>
       <Hero
-        title='Who We <span class="fw-bold">Are</span>'
+        title='<Who class="text-secondary-standard"> Who We </span> <span class="fw-bold text-primary-standard ">Are</span>'
         backgroundImage={'/images/who-we-are.png'}
         description={
           'Rapid Payments, a trusted merchant service provider, partners with top payment processors to deliver secure, seamless, and scalable online payment solutions. Whether you operate an eCommerce store, subscription service, or professional business, our solutions ensure smooth transactions, fraud protection, and quick payouts.'

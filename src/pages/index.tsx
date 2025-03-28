@@ -18,7 +18,7 @@ const Home = () => {
 
       <section className={`wrapper ${isLaptop && 'container'}`}>
         <Services services={services} />
-        <PaymentType />
+        <PaymentType showBtn={true} />
       </section>
       <RapidPaymentUniversity />
       <PaymentForm />

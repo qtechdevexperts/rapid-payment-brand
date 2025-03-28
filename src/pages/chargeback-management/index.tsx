@@ -18,7 +18,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title="Chargeback <span class='fw-bold'>Management</span> "
+        title="<span class='text-secondary-standard'> Chargeback </span> <span class='fw-bold text-primary-standard'>Management</span> "
         backgroundImage={'/images/charge-back.png'}
         description={
           '"Minimize chargebacks, win disputes, and protect your revenue with our automated chargeback management system."'
@@ -28,7 +28,7 @@ const OnlinePayments = () => {
 
       <IntegratationOption
         title={
-          'Why Choose Our  <span class="fw-bold"> Chargeback  Management?</span>'
+          '<span class="text-secondary-standard"> Why Choose Our </span>  <span class="fw-bold text-primary-standard"> Chargeback  Management?</span>'
         }
         desc={
           'Our dispute resolution system helps prevent, track, and win chargeback cases, protecting businesses from lost revenue and fraud.'

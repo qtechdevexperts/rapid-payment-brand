@@ -13,7 +13,7 @@ const Resturants = () => {
       </Head>
 
       <Hero
-        title='<span class="fw-bold">Restaurants</span>'
+        title='<span class="fw-bold text-secondary-standard">Restaurants</span>'
         backgroundImage={'/images/resturant.png'}
         description={
           "Deliver fast, secure, and efficient payments with Rapid Payments' restaurant POS solutions. From quick-service eateries to fine dining, we provide customized payment systems that keep your business running smoothly."
@@ -21,7 +21,7 @@ const Resturants = () => {
       />
 
       <IntegratationOption
-        title={'Why <span class="fw-bold">Rapid Payments?</span> '}
+        title={'<Why class="text-secondary-standard"> Why </span> <span class="fw-bold text-primary-standard">Rapid Payments?</span> '}
         data={ResturantServices}
       />
 

@@ -41,7 +41,7 @@ interface RapidPaymentForSolutionsProps {
 
 const RapidPaymentForSolutions = ({
   pos,
-  title = " <span class='fw-bold'>POS Solutions</span>    for Every Business",
+  title = " <span class='fw-bold text-primary-standard'>POS Solutions</span>  <span class='text-secondary-standard'> for Every Business </span>",
 }: RapidPaymentForSolutionsProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 

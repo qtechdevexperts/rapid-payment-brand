@@ -25,7 +25,7 @@ const Resturants = () => {
       </Head>
 
       <Hero
-        title="The Perfect <span class='fw-bold'>point <br /> of sale solution<br /></span>  Tailored For You"
+        title=" <The class ='text-secondary-standard'> The Perfect </span> <span class='fw-bold text-primary-standard'>point <br /> of sale solution<br /></span>  Tailored For You"
         backgroundImage={'/images/point-of-sale-solution.png'}
         headingCss={'text-capitalize'}
         description={
@@ -35,7 +35,7 @@ const Resturants = () => {
 
       <DescriptionSection
         title={
-          'Get Started with the <br /> Perfect POS – <span class="fw-bold">Sign Up <br /> Today!</span> '
+          '<Get class="text-secondary-standard"> Get Started with the </span> <br /> Perfect POS – <span class="fw-bold text-primary-standard">Sign Up <br /> Today!</span> '
         }
         description={
           'Get the right POS system for your business with Rapid Payments. We’ve partnered with top POS providers to bring you a seamless, secure, and efficient point-of-sale experience.'

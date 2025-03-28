@@ -213,6 +213,7 @@
 
 .footerBottomText {
   font-size: clamp(16px, 4vw, 18px);
+  color: #fff !important;
 
   @media (max-width: 1500px) {
     font-size: clamp(16px, 4vw, 18px);
@@ -227,7 +228,7 @@
 .iconBox {
   width: 35px;
   height: 35px;
-  border: 1px solid #FF1F3E;
+  border: 1px solid #1c2630;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -237,7 +238,8 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #FF1F3E;
+    background-color: #1c2630;
+    border: 1px solid #fff;
 
     svg {
       color: white !important;

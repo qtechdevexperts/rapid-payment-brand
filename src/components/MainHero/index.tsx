@@ -40,7 +40,7 @@ const MainHero = () => {
               <h2 className=" fw-bold text-secondary-standard text text-1  mt-4">
                 Rapid Payments <br className="d-none d-lg-block" /> Your Partner
                 in <br className="d-none d-lg-block" />
-                <span className="text-primary-standard"> Payment Success</span>
+                <span className="text-primary-standard "> Payment Success</span>
               </h2>
               <Paragraph className="para">
                 At <span className="fw-bold">Rapid Payments</span> , we empower
@@ -53,7 +53,7 @@ const MainHero = () => {
                   <div className="d-flex justify-content-start align-items-center gap-2">
                     <UtilIcon />
                     <Paragraph className={clsx('text-secondary-standard mb-0')}>
-                      <span className=" fw-bold">Seamless</span>{' '}
+                      <span className="fw-bold">Seamless</span>{' '}
                       Payment  processing solutions
                     </Paragraph>
                   </div>
@@ -79,8 +79,8 @@ const MainHero = () => {
                       Merchant payment Processing
                     </Paragraph>
                   </div>
-                </Col>
-                 */}
+                </Col> */}
+                
               </Row>
 
               <div className="d-flex flex-column flex-sm-row gap-3 mt-3 justify-content-start align-items-sm-center">
@@ -92,11 +92,11 @@ const MainHero = () => {
                   Talk To an Expert
                 </Button>
                 <Button
-                  onClick={() => router.push('tel:012-3456-789')}
+                  onClick={() => router.push('tel:888-562-4060')}
                   className={` btn btn-outline-feature `}
                   iconLeft={<CallIcon />}
                 >
-                  Call Us: 012-3456-789
+                  Call Us: 888-562-4060
                 </Button>
               </div>
             </Col>

@@ -122,7 +122,7 @@ div[role='dialog'] {
 .service-sct{
   .btn-outline-feature{
     &:hover {
-      background: #ff1f3e;
+      background: #3c88e0;
       color: #fff !important;
       path {
         fill: #fff;
@@ -133,3 +133,26 @@ div[role='dialog'] {
    }
   }
 }
+
+
+// footer labael css
+.footer-lbl{
+  color: white;
+  font-size: 20px;
+}
+
+.copyright{
+  h3{
+    font-size: 14px !important;
+  }
+  h6{
+    font-size: 14px !important;
+  }
+
+  
+}
+
+
+// .text-primary-standard {
+//   color: #000 !important;
+// }

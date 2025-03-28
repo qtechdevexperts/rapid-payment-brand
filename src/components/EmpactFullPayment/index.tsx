@@ -77,9 +77,9 @@ const EmpactFullPayment = () => {
             <div className={`badge  ${style.badge}`}>
               <h6 className="mb-0">Products</h6>
             </div>
-            <h4 className="heading-3 fw-normal text-capitalize">
+            <h4 className="heading-3 text-secondary-standard fw-normal text-capitalize">
               Rapid Payment <br />{' '}
-              <span className="fw-bold">Impactful Tech</span>{' '}
+              <span className="fw-bold text-primary-standard">Impactful Tech</span>{' '}
             </h4>
           </div>
           <div className="col-xl-4">

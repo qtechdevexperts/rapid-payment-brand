@@ -18,15 +18,16 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title='Payment <br /> <span class="fw-bold">Gateways</span> '
+        title='Payment <br /> <span class="fw-bold text-primary-standard">Gateways</span> '
         backgroundImage={'/images/payment-gateways.png'}
+        
         description={
           '"Partnered with leading US payment processors, our gateway solutions offer seamless transactions, enhanced security, and full control over your payments."'
         }
       />
 
       <IntegratationOption
-        title={'Why Choose Our <span class="fw-bold">Payment Gateway?</span> '}
+        title={'Why Choose Our <span class="text-primary-standard fw-bold">Payment Gateway?</span> '}
         desc={
           'Our advanced payment gateway gives you a <span class="fw-bold">fast, secure, and fully integrated</span>  way to accept payments online, in-store, and via mobile.'
         }

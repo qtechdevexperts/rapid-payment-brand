@@ -79,9 +79,9 @@ const RapidPaymentForSolutions = () => {
       <div className={clsx({ container: isBigScreen })}>
         <div className="row">
           <div className="col-xl-8">
-            <h4 className={`text text-3 fw-normal text-capitalize`}>
+            <h4 className={`text text-3 fw-normal text-capitalize text-secondary-standard`}>
               At Rapid Payment, We <br className="d-none d-lg-block" />{' '}
-              Understand <span className="fw-bold">your Industry</span>{' '}
+              Understand <span className="fw-bold text-primary-standard">your Industry</span>{' '}
             </h4>
           </div>
           <div className="col-xl-4">

@@ -67,9 +67,9 @@ const SolutionForInnerPages = () => {
           <Row>
             <Col lg={6} className="pb-xxl-8 pb-5">
               <div>
-                <h2 className="text text-2 fw-normal mt-xxl-9 mt-4">
+                <h2 className="text text-2 fw-normal mt-xxl-9 mt-4 text-secondary-standard">
                   Big Solutions for <br />
-                  <span className="fw-bold">Small Businesses</span>
+                  <span className="fw-bold text-primary-standard">Small Businesses</span>
                 </h2>
                 <Paragraph className="max-w-sm-65">
                   Smoothly running a small business is challenging, we simplify
@@ -108,10 +108,10 @@ const SolutionForInnerPages = () => {
                   Talk to Sales
                 </Button>
                 <Button
-                  onClick={() => router.push('tel:012-3456-789')}
+                  onClick={() => router.push('tel:888-562-4060')}
                   className={`${!isLaptop && 'btn-lg'} btn-outline-feature`}
                 >
-                  Call Us: 012-3456-789
+                  Call Us: 888-562-4060
                 </Button>
               </div>
             </Col>

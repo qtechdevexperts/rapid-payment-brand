@@ -196,7 +196,8 @@ const Header = () => {
       <Navbar expand="lg" className="py-3">
         <Container>
           <Link href="/" className="navbar-brand">
-            <img src="/images/logo.png" className="img-fluid" alt="Logo" />
+            <img src="/images/header-logo.png" className="img-fluid" alt="Logo" />
+            {/* <img src="/images/logo.png" className="img-fluid" alt="Logo" /> */}
           </Link>
           {/* Remove default Bootstrap Toggle and use custom hamburger */}
           <CiMenuBurger

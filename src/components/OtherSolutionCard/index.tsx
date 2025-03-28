@@ -22,8 +22,8 @@ const OtherSolutionCard = ({ data }: OtherSolutionProps) => {
 
   return (
     <div className="container py-5">
-      <h2 className="text text-2 fw-normal mb-md-6 mb-4">
-        Check Out Our Other <span className="fw-bold">Solutions</span>{' '}
+      <h2 className="text text-2 fw-normal mb-md-6 mb-4 text-secondary-standard">
+        Check Out Our Other <span className="fw-bold text-primary-standard">Solutions</span>{' '}
       </h2>
       <Row className="gy-4 justify-content-center">
         {data?.map((item, index) => {

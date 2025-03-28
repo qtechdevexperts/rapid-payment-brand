@@ -40,7 +40,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title='Omnichannel<br /> <span class="fw-bold">Payments</span> '
+        title='<Omnichannel class ="text-secondary-standard"> Omnichannel </span> <br /> <span class="fw-bold text-primary-standard">Payments</span> '
         backgroundImage={'/images/omni-channel.png'}
         description={
           'Rapid Payments, a leading merchant service provider, partners with top payment processors, gateways, and POS providers to deliver a truly unified payment experience. Accept payments in-store, online, or via mobile with a seamless and secure solution that connects all sales channels.'
@@ -48,12 +48,12 @@ const OnlinePayments = () => {
       />
 
       <IntegratationOption
-        title={'Your Integration <span class="fw-bold">Options</span> '}
+        title={' <Your class="text-secondary-standard"> Your Integration </span> <span class="fw-bold text-primary-standard">Options</span> '}
         data={OmniChannelService}
       />
 
       <Hero
-        title='Start Accepting Payments & Grow Your <span class="fw-bold">Small Business Today!</span> '
+        title='<Start class="text-secondary-standard"> Start Accepting Payments & Grow Your </span> <span class="fw-bold text-primary-standard">Small Business Today!</span> '
         backgroundImage={'/images/omni-channel-accept-payment.png'}
         description="Accept payments anywhere, anytime with Rapid Payments' omnichannel solutions. Whether in-store, online, or on the go, we provide a unified payment experience that keeps your business connected and your customers happy . <br />
 
