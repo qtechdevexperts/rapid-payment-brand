@@ -79,7 +79,7 @@ const EmpactFullPayment = () => {
             </div>
             <h4 className="heading-3 text-secondary-standard fw-normal text-capitalize">
               Rapid Payment <br />{' '}
-              <span className="fw-bold text-primary-standard">Impactful Tech</span>{' '}
+              <span className="fw-bold text-primary-standard">Impactful Tech</span>
             </h4>
           </div>
           <div className="col-xl-4">
