@@ -306,7 +306,7 @@ const PrivacyPolicy = () => {
           </h3>
           <p className="para">
             These Terms and Conditions are governed by and construed in
-            accordance with the laws of the State of [Insert State], United
+            accordance with the laws of the State of  United
             States, without regard to its conflict of law provisions. Any legal
             disputes or proceedings arising out of or relating to these Terms
             shall be brought exclusively in the state or federal courts located
