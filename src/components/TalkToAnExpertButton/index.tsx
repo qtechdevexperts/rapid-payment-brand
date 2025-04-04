@@ -1,3 +1,4 @@
+import CtaButton from '@/common/Button/CtaButton';
 import Modal from '@/common/Modal';
 import { HTMLAttributes, useState } from 'react';
 import { Button } from 'react-bootstrap';
@@ -18,13 +19,13 @@ const TalkToAnExpertButton = ({
 
   return (
     <>
-      <Button
+      <CtaButton
         onClick={() => setContactModal(true)}
         className={className}
         {...props}
       >
         {text}
-      </Button>
+      </CtaButton>
       <Modal show={contactModal} handleClose={() => setContactModal(false)} />
     </>
   );

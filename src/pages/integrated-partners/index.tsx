@@ -11,7 +11,7 @@ const Integrated = () => {
       </Head>
 
       <Hero
-        title='<Integrated class ="text-secondary-standard"> Integrated </span> <span class="fw-bold text-primary-standard">Partners</span>'
+        title='<span class ="text-secondary-standard fw-bold"> Integrated </span> <span class="fw-bold text-primary-standard">Partners</span>'
         backgroundImage={'/images/integrated-partners.png'}
         description={
           'Need assistance or have questions? Our payment experts are here to support you! Whether you&apos;re seeking a custom payment solution, a robust POS system, or strategic partnership opportunities, we’re just a message away. Let’s work together to power seamless transactions for your business.'

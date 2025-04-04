@@ -5,15 +5,21 @@ import Head from 'next/head';
 
 const slides = [
   {
-    title: 'Smart Point Of Sales',
+    title: 'Smart Terminal',
     imgSrc: '/images/smart-point-of-sale.png',
     desc: 'Upgrade your business with a modern, intuitive POS system that supports contactless, chip, and mobile payments, while also managing inventory and sales insights seamlessly.',
   },
   {
-    title: 'Smart Terminal',
+    title: 'Terminal',
     imgSrc: '/images/smart-point-of-sale.png',
     desc: 'Experience fast, secure, and all-in-one smart terminals designed for on-the-go and in-store transactions, ensuring flexibility and ease of use.',
   },
+  {
+    title: 'Mobile Readers',
+    imgSrc: '/images/smart-point-of-sale.png',
+    desc: 'Experience fast, secure, and all-in-one smart terminals designed for on-the-go and in-store transactions, ensuring flexibility and ease of use.',
+  },
+
 ];
 
 const Resturants = () => {
@@ -25,7 +31,7 @@ const Resturants = () => {
       </Head>
 
       <Hero
-        title=" <The class ='text-secondary-standard'> The Perfect </span> <span class='fw-bold text-primary-standard'>point <br /> of sale solution<br /></span>  Tailored For You"
+        title=" <span class ='text-secondary-standard fw-bold'> The Perfect </span> <span class='fw-bold text-primary-standard'>point <br /> of sale solution<br /></span>  <span class='text-secondary-standard fw-bold'>Tailored For You</span> "
         backgroundImage={'/images/point-of-sale-solution.png'}
         headingCss={'text-capitalize'}
         description={
@@ -35,7 +41,7 @@ const Resturants = () => {
 
       <DescriptionSection
         title={
-          '<Get class="text-secondary-standard"> Get Started with the </span> <br /> Perfect POS – <span class="fw-bold text-primary-standard">Sign Up <br /> Today!</span> '
+          '<span class="text-secondary-standard fw-bold"> Get Started with the </span> <br />  <span class="text-secondary-standard fw-bold">Perfect POS</span>   – <span class="fw-bold text-primary-standard">Sign Up <br /> Today!</span> '
         }
         description={
           'Get the right POS system for your business with Rapid Payments. We’ve partnered with top POS providers to bring you a seamless, secure, and efficient point-of-sale experience.'

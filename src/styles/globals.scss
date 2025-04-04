@@ -5,6 +5,10 @@
 @import './typography';
 @import './max-width';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
   margin: 0px;
@@ -21,6 +25,7 @@ body {
 
 input,
 textarea {
+
   &:active,
   &:focus {
     outline: none !important;
@@ -54,7 +59,7 @@ div[role='dialog'] {
   position: relative;
   overflow-x: auto !important;
 
-  & > * {
+  &>* {
     position: relative;
     z-index: 100;
   }
@@ -89,7 +94,7 @@ div[role='dialog'] {
   .slick-slide {
     height: 100%;
 
-    & > div {
+    &>div {
       height: 100%;
     }
   }
@@ -117,42 +122,55 @@ div[role='dialog'] {
   overflow: hidden;
 }
 
-
 // service section button css
-.service-sct{
-  .btn-outline-feature{
+.service-sct {
+  .btn-outline-feature {
     &:hover {
       background: #3c88e0;
       color: #fff !important;
+
       path {
         fill: #fff;
-     }
+      }
     }
+
     path {
       fill: gray;
-   }
+    }
   }
 }
 
-
 // footer labael css
-.footer-lbl{
+.footer-lbl {
   color: white;
   font-size: 20px;
 }
 
-.copyright{
-  h3{
-    font-size: 14px !important;
-  }
-  h6{
+.copyright {
+  h3 {
     font-size: 14px !important;
   }
 
-  
+  h6 {
+    font-size: 14px !important;
+  }
 }
-
 
 // .text-primary-standard {
 //   color: #000 !important;
 // }
+
+.content-page-heading {
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+    background-color: #1a2e5b;
+    width: 20%;
+    height: 3px;
+    content: '';
+  }
+}

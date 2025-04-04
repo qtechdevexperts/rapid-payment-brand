@@ -18,7 +18,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title="<span class='text-secondary-standard'> Chargeback </span> <span class='fw-bold text-primary-standard'>Management</span> "
+        title="<span class='text-secondary-standard fw-bold'> Chargeback </span> <span class='fw-bold text-primary-standard'>Management</span> "
         backgroundImage={'/images/charge-back.png'}
         description={
           '"Minimize chargebacks, win disputes, and protect your revenue with our automated chargeback management system."'

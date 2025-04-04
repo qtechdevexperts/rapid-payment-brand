@@ -1,10 +1,13 @@
+@import '@/styles/theme';
+
 .megaDropdown {
   position: relative !important;
   // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  z-index: 1000 !important;
 
   &.show {
     .dropdownToggle {
-      color: #007bff;
+      color: var(--blue-10);
     }
   }
 
@@ -21,7 +24,7 @@
   border: none !important;
 
   &:hover {
-    color: #007bff;
+    color: var(--blue-10);
   }
 }
 
@@ -32,11 +35,14 @@
   transform: translateX(-50%) !important;
   z-index: 100;
   margin-top: 36px !important;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   // min-height: 400px;
 
   border-radius: 20px;
-  min-width: 900px !important;
+  max-width: 1150px !important;
+  z-index: 100000 !important;
 
   &::before {
     position: absolute;
@@ -47,7 +53,7 @@
     transform-origin: center;
     box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.05);
     border-radius: 2px;
-    background: white;
+    background: var(--white);
     width: 16px;
     height: 16px;
     content: '';
@@ -61,13 +67,13 @@
     left: 0;
     z-index: -1;
     border-radius: 12px;
-    background: white;
+    background: var(--white);
     content: '';
   }
 
   .dropdown-header {
     padding: 0.5rem 1.5rem;
-    color: #333;
+    color: var(--gray-11);
     font-weight: 600;
     font-size: 1rem;
   }
@@ -76,7 +82,7 @@
     padding: 0.5rem 1.5rem;
 
     &:hover {
-      background-color: #f8f9fa;
+      background-color: var(--gray-light-1);
     }
   }
 
@@ -93,7 +99,7 @@
     transform: translateX(-50%) !important;
     margin: 0 auto;
     width: 100%;
-    max-width: 100%;
+    max-width: 950px !important;
   }
 
   @media (min-width: 992px) and (max-width: 1500px) {
@@ -115,13 +121,14 @@
     align-items: center;
 
     gap: 10px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     padding-right: 10px;
     // height: 100%;
     padding-left: 10px;
 
-    padding: 5px;
-    // height: 35px;
+    // padding: 10px;
+
+    height: 40px;
     // border: 1px solid #000;
     font-size: 18px;
 
@@ -154,61 +161,60 @@
 }
 
 .border {
-  border-right: 1px solid #dddcdc;
+  border-right: 1px solid var(--gray-light-3);
 }
 
 .anchorTab {
   &>div {
     cursor: pointer;
-    border-bottom: 1px solid #dddcdc;
+    border-bottom: 1px solid var(--gray-light-3);
     padding: 20px;
-    color: #4990e2;
+    color: var(--sky-blue-10);
 
     &:not(.lastTab) {
       font-size: 20px;
 
       &.activeLabel {
         transition: all 0.4s ease-in;
+        background-color: var(--gray-light-2);
         height: 100%;
         max-height: 90px;
-        background-color: #e5f0fb;
 
         &:hover {}
+      }
 
+      @media (max-width: 1200px) {
+        font-size: 16px;
       }
     }
   }
 }
 
 .megaMenuLink {
+  position: relative;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
-  position: relative;
 
   svg {
     display: none;
     position: relative;
-    transition: transform 0.3s ease-in-out;
-    /* Add transition for transform */
     transform: translateX(-20px);
-
+    transition: transform 0.3s ease-in-out;
   }
 
   &:hover {
     svg {
       display: block;
-      transition-delay: 0.2s;
-      /* Add delay before translate */
       transform: translateX(0);
-      /* Translate the svg when hovered */
+      transition-delay: 0.2s;
+
     }
   }
 }
 
-
 .RapidHeading {
-  color: #4990e2;
-  font-size: 30px;
+  color: var(--sky-blue-10);
+  font-size: 26px;
 }
 
 .lastTab {
@@ -218,18 +224,18 @@
   transform: translateX(-50%) !important;
   transition: all 0.4sease-in-out;
   // border-radius: 15px;
-  border-radius: 15px;
-  background-color: #4990e2 !important;
-  padding: 8px !important;
+  border-radius: 5px;
+  background-color: var(--sky-blue-10) !important;
+  padding: 12px !important;
   width: 100%;
   max-width: 90%;
-  text-align: center;
   color: white !important;
+  text-align: center;
 
   &:hover {
-    border: 1px solid #4990e2;
+    border: 1px solid var(--sky-blue-10);
     background-color: transparent !important;
-    color: #4990e2 !important;
+    color: var(--sky-blue-10) !important;
   }
 
   @media (max-width: 992px) {
@@ -249,7 +255,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #e5f0fb;
+  background-color: var(--gray-light-2);
   padding: 35px !important;
 
   img {
@@ -270,7 +276,7 @@
     font-weight: 600;
 
     &:hover {
-      color: #4990e2;
+      color: var(--sky-blue-10);
     }
 
     @media (max-width: 767px) {
@@ -288,9 +294,11 @@
   top: -30px;
   left: 0;
   z-index: 1050;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow:
+    rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   background-color: #fff;
-  width: 85%;
+  width: 100%;
   overflow: hidden;
 
   @media (max-width: 991px) {
@@ -332,13 +340,13 @@
     cursor: pointer;
 
     &:hover {
-      color: #4990e2;
+      color: var(--sky-blue-10);
     }
   }
 }
 
 .lastTab {
-  color: #999;
+  color: var(--gray-12);
   font-weight: bold;
 }
 
@@ -361,7 +369,7 @@
   // margin-bottom: 1rem;
   padding-left: 20px;
   height: 55px;
-  color: #4990e2;
+  color: var(--sky-blue-10);
   font-size: 1.2rem;
 }
 
@@ -369,7 +377,7 @@
   display: flex !important;
   justify-content: space-between !important;
   align-items: center;
-  border: 1px solid #4990e2 !important;
+  border: 1px solid var(--sky-blue-10) !important;
   border-right: 0px !important;
   border-left: 0px !important;
 
@@ -410,7 +418,7 @@
 
 .subMenu {
   position: absolute;
-  background-color: white;
+  background-color: var(--white);
   width: 100%;
 
   &:not(&.innerLinks) {
@@ -426,7 +434,7 @@
     &:not(.innerLinks) {
       top: 70px !important;
       right: 0px !important;
-      background-color: white;
+      background-color: var(--white);
       height: 700px !important;
     }
   }
@@ -439,7 +447,7 @@
   z-index: 100;
   z-index: 100;
   transition: right 0.3s ease-in-out;
-  background-color: white;
+  background-color: var(--white);
   width: 100%;
   height: 700px !important;
 
@@ -453,7 +461,7 @@
 }
 
 .mainListItem {
-  border-top: 2px solid rgba($color: #007bff, $alpha: 0.5) !important;
+  border-top: 2px solid rgba($color: var(--blue-10), $alpha: 0.5) !important;
   border-radius: 0px !important;
 
   padding-top: 20px !important;

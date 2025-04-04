@@ -15,9 +15,9 @@ const ServiceCard = ({ title, id, description }: ServiceCardProps) => {
         style.ServiceCard,
         {
           [style.first]: id === 1,
-          [style.third]: id === 2
+          [style.third]: id === 2,
         },
-        'rounded-4 h-100'
+        'rounded-4 h-100',
       )}
     >
       <svg

@@ -1,10 +1,11 @@
 import Paragraph from '@/common/Paragraph';
 import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
-import { useRouter } from 'next/router';
+import CtaButton from '@/common/Button/CtaButton';
 
 const slickSettings = {
   infinite: false,
@@ -61,7 +62,6 @@ const RapidPaymentForSolutions = () => {
     },
   ];
 
-
   const router = useRouter();
 
   const totalSlides = slides.length;
@@ -79,9 +79,14 @@ const RapidPaymentForSolutions = () => {
       <div className={clsx({ container: isBigScreen })}>
         <div className="row">
           <div className="col-xl-8">
-            <h4 className={`text text-3 fw-normal text-capitalize text-secondary-standard`}>
+            <h4
+              className={`text text-3 fw-bold text-capitalize text-secondary-standard`}
+            >
               At Rapid Payment, We <br className="d-none d-lg-block" />{' '}
-              Understand <span className="fw-bold text-primary-standard">your Industry</span>{' '}
+              Understand{' '}
+              <span className="fw-bold text-primary-standard">
+                your Industry
+              </span>{' '}
             </h4>
           </div>
           <div className="col-xl-4">
@@ -111,16 +116,19 @@ const RapidPaymentForSolutions = () => {
                         <div className="col-md-6 d-flex justify-content-center align-items-center">
                           <div className="card-body">
                             <h5
-                              className={` ${style.cardTitle}  card-title heading-4 text-black-1 fw-bold`}
+                              className={` ${style.cardTitle}  card-title heading-4 text-secondary-standard fw-bold`}
                             >
                               {slide.title}
                             </h5>
-                            <Paragraph className="card-text para my-4">
+                            <p className="card-text para my-4">
                               {slide?.desc}
-                            </Paragraph>
-                            <button onClick={() => router.push(slide.href)} className={`btn btn-feature  px-sm-5 py-2`}>
+                            </p>
+                            <CtaButton
+                              onClick={() => router.push(slide.href)}
+                              className={`btn btn-feature  px-sm-5 py-2`}
+                            >
                               Get Started
-                            </button>
+                            </CtaButton>
                           </div>
                         </div>
                         <div className="col-md-6">

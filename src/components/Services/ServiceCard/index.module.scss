@@ -1,19 +1,17 @@
 @import '@/styles/responsive.scss';
+@import '@/styles/theme';
 
 .ServiceCard {
   transition: background 0.4s ease-in-out;
   border: 1px solid transparent;
-  background: #4990e2;
+  background: var(--sky-blue-10);
+
+  background-color: var(--gray-light-4) !important; // Use
   padding: 16px !important;
-
-  background-color: #F1F8FF !important; // Use 
-
-
-
 
   &.first,
   &.third {
-    background-color: #CDE4FF !important; // Use 
+    background-color: var(--gray-light-6) !important; // Use
   }
 
   h5 {
@@ -22,7 +20,7 @@
   }
 
   p {
-    color: #1E1E1E;
+    color: var(--blue-12);
     font-weight: 300;
     font-size: 18px;
   }

@@ -1,9 +1,11 @@
+@import '@/styles/theme';
+
 .linkTag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   transition: color 0.3s ease;
-  color: #1A2E5B;
+  color: var(--blue-11);
   font-weight: 700;
   font-size: clamp(16px, 4vw, 25px);
 
@@ -13,15 +15,15 @@
   }
 
   &:hover {
-    color: #1A2E5B !important;
     opacity: 0.9;
+    color: var(--blue-11) !important;
 
     svg {
       transform: translateX(8px);
       opacity: 0.9;
 
       path {
-        fill: #1A2E5B;
+        fill: var(--blue-11);
       }
     }
   }

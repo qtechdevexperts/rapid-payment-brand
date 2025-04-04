@@ -1,6 +1,8 @@
+import Button from '@/common/Button';
 import Modal from '@/common/Modal';
 import Paragraph from '@/common/Paragraph';
 import useResponsive from '@/hooks/useResponsive';
+import { ArrowRightIcon, CallIcon } from '@/utils/Icon';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
@@ -10,8 +12,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import LinkTag from '../LinkTag';
 import style from './index.module.scss';
-import { ArrowRightIcon, CallIcon } from '@/utils/Icon';
-import Button from '@/common/Button';
+import CtaButton from '@/common/Button/CtaButton';
 
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
@@ -134,14 +135,15 @@ const Solutions = () => {
                 {/* Small Business Tab */}
               </div>
 
-
               {currentTab === 'small-business' ? (
                 <>
                   <h2
                     className={` text fw-bold text-secondary-standard text-2  mt-large-9 mt-4 mt-lg-6`}
                   >
                     Big Solutions for <br />
-                    <span className="text-primary-standard">Small Businesses</span>
+                    <span className="text-primary-standard">
+                      Small Businesses
+                    </span>
                   </h2>
                   <Paragraph className="max-w-sm-70">
                     Smoothly running a small business is challenging, we
@@ -154,19 +156,19 @@ const Solutions = () => {
                   <div className="mt-4">
                     <LinkTag
                       href="/online-payments/"
-                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
                     >
                       Online Payments
                     </LinkTag>
                     <LinkTag
                       href="/in-person-payments/"
-                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
                     >
                       In-Person Payments
                     </LinkTag>
                     <LinkTag
                       href="/point-of-sale-solution/"
-                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
                     >
                       Point of sales Solutions
                     </LinkTag>
@@ -177,9 +179,10 @@ const Solutions = () => {
                   <h2
                     className={`text  text-secondary-standard  fw-bold text-2  mt-large-9 mt-4 mt-lg-6`}
                   >
-                    Enterprise <br />  {" "}
+                    Enterprise <br />{' '}
                     <span className="text-primary-standard">
-                      Payment Solutions</span>
+                      Payment Solutions
+                    </span>
                   </h2>
                   <Paragraph className="max-w-lg-70">
                     Power your business with scalable, secure, and seamless{' '}
@@ -204,21 +207,21 @@ const Solutions = () => {
                     </Link> */}
                     <LinkTag
                       href={'/in-person-payments/'}
-                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
                     >
                       In Person
                     </LinkTag>
 
                     <LinkTag
                       href={'/online-payments/'}
-                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
                     >
                       Online
                     </LinkTag>
 
                     <LinkTag
                       href={'/omni-channel-payments/'}
-                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
                     >
                       Omnichannel
                     </LinkTag>
@@ -227,13 +230,13 @@ const Solutions = () => {
               )}
 
               <div className="d-flex flex-column flex-sm-row mt-8 justify-content-start align-items-sm-center gap-3">
-                <Button
+                <CtaButton
                   onClick={() => setShowModal(true)}
                   className={`${!isLaptop && 'btn-lg'} btn btn-feature`}
-                  iconRight={<ArrowRightIcon />}
+                  iconRight={<ArrowRightIcon color='#FFF' />}
                 >
                   Talk To an Expert
-                </Button>
+                </CtaButton>
                 <Button
                   onClick={() => router.push('tel:888-562-4060')}
                   className={`${!isLaptop && 'btn-lg'} btn btn-outline-feature`}

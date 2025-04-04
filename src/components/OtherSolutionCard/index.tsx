@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import style from './index.module.scss';
+import CtaButton from '@/common/Button/CtaButton';
+import { useRouter } from 'next/router';
 
 interface OtherSolutionCardProps {
   title?: string;
@@ -16,14 +18,20 @@ interface OtherSolutionProps {
 }
 
 const OtherSolutionCard = ({ data }: OtherSolutionProps) => {
+
+
+  const router = useRouter();
+
+
   useEffect(() => {
     console.log(data);
   }, [data]);
 
   return (
     <div className="container py-5">
-      <h2 className="text text-2 fw-normal mb-md-6 mb-4 text-secondary-standard">
-        Check Out Our Other <span className="fw-bold text-primary-standard">Solutions</span>{' '}
+      <h2 className="text text-2 fw-bold mb-md-6 mb-4 text-secondary-standard">
+        Check Out Our Other{' '}
+        <span className="fw-bold text-primary-standard">Solutions</span>{' '}
       </h2>
       <Row className="gy-4 justify-content-center">
         {data?.map((item, index) => {
@@ -36,16 +44,16 @@ const OtherSolutionCard = ({ data }: OtherSolutionProps) => {
                 <div className="card-body ps-0 d-flex flex-column justify-content-between align-items-start">
                   <div>
                     <h6 className={`text-primary-100 `}>Solutions</h6>
-                    <h5 className={`card-title ${style.solutionTitle}`}>
+                    <h5 className={`card-title  text-secondary-standard ${style.solutionTitle}`}>
                       {item?.title}
                     </h5>
                   </div>
                   <Paragraph className="" variant="sm">
                     {item?.desc}.
                   </Paragraph>
-                  <Link href={item?.href || '#'} className="btn btn-feature  ">
+                  <CtaButton onClick={()=>router.push(item?.href || '#')} className="btn btn-feature  ">
                     Find Out More
-                  </Link>
+                  </CtaButton>
                 </div>
               </div>
             </Col>

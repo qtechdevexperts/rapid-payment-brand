@@ -1,12 +1,13 @@
+import Button from '@/common/Button';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import { FaLongArrowAltDown, FaLongArrowAltUp, FaPhone } from 'react-icons/fa';
-import { TfiEmail } from 'react-icons/tfi';
+import { Col, Container, Row } from 'react-bootstrap';
+import { FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
+import CtaButton from '@/common/Button/CtaButton';
 
 const Footer = () => {
   const [acceptPaymentFooter, setPaymentFooter] = useState<boolean>(false);
@@ -22,19 +23,19 @@ const Footer = () => {
       <Container>
         <Row>
           <Col lg="12">
-            <div className="d-flex justify-content-between align-center mb-3">
+            <div className="d-flex justify-content-between align-items-center mb-3">
               <img src="/images/logo-dark.png" className="img-fluid" alt="" />
-              <Button
-                className="btn-feature"
+
+              <CtaButton
                 onClick={() => router.push('/contact')}
+                className="btn-feature  mt-3  px-2"
               >
                 Contact Us
-              </Button>
+              </CtaButton>
             </div>
           </Col>
         </Row>
         <div className={clsx(style['border-footer'], style.footerRow, '')}>
-        
           <div
             className={clsx(
               style.borderright,
@@ -45,31 +46,28 @@ const Footer = () => {
             )}
           >
             <div className={clsx('pt-5', style.notInclude, style.lastBox)}>
-            <h2 className={`footer-lbl`}>Sales:</h2>
+              <h2 className={`footer-lbl`}>Sales:</h2>
               <div className="mb-3">
-                <div>
-                  {/* <FaPhone size={16} color="#1C2630" /> */}
-                </div>
-                <div
+                <div>{/* <FaPhone size={16} color="#1C2630" /> */}</div>
+                <Link
+                  href={'tel:888-562-4060'}
                   onClick={() => router.push('tel:888-562-4060')}
-                  className={`text-white cursor-pointer ${style.footerBottomText}  fw-reguler`}
+                  className={`text-white cursor-pointer ${style.footerLink} text-decoration-none  fw-reguler`}
                 >
                   888-562-4060
                   {/* 888-562-4060 */}
-                </div>
+                </Link>
               </div>
               <h2 className={`footer-lbl`}>Email:</h2>
               <div className="mb-3">
-    
-                <div>
-                  {/* <TfiEmail size={16} color="#1c2630" /> */}
-                </div>
-                <div
+                <div>{/* <TfiEmail size={16} color="#1c2630" /> */}</div>
+                <Link
+                  href={'mailto:sales@rapidpayments.io'}
                   onClick={() => router.push('mailto:sales@rapidpayments.io')}
-                  className={`text-white cursor-pointer ${style.footerBottomText}  fw-reguler`}
+                  className={`text-white cursor-pointer ${style.footerLink} text-decoration-none fw-reguler`}
                 >
                   sales@rapidpayments.io
-                </div>
+                </Link>
               </div>
               <div className="mb-3"></div>
             </div>
@@ -81,20 +79,25 @@ const Footer = () => {
                 <img src="/images/facbook.png" alt="" />
                   <FaFacebook size={16} color='#FF1F3E' />
                 </Link> */}
-                <Link href={'#!'}>
+                <Link
+                  href={'#!'}
+                  className={`${style.socialIcon} ${style.icon3}`}
+                >
                   <img src="/images/facbook.png" alt="" />
                   {/* <FaFacebook size={16} color='#FF1F3E' /> */}
                 </Link>
-                <Link href={'#!'}>
+                <Link
+                  href={'#!'}
+                  className={`${style.socialIcon} ${style.icon3}`}
+                >
                   <img src="/images/instagrames.png" alt="" />
                   {/* <SiTrustpilot size={16} color='#FF1F3E' /> */}
                 </Link>
-                <Link href={'#!'}>
+                <Link
+                  href={'#!'}
+                  className={`${style.socialIcon} ${style.icon3}`}
+                >
                   <img src="/images/twitter.png" alt="" />
-                  {/* <SiTrustpilot size={16} color='#FF1F3E' /> */}
-                </Link>
-                <Link href={'#!'}>
-                  {/* <img src="/images/instagrames.png" alt="" /> */}
                   {/* <SiTrustpilot size={16} color='#FF1F3E' /> */}
                 </Link>
               </div>
@@ -337,12 +340,12 @@ const Footer = () => {
             ©2025, RapidPayment. All Rights Reserved
           </h3>
           <h6 className={`${style.footerLink} text-white `}>
-            <Link href={'#!'} className="text-white text-decoration-none">
+            <Link href={'/privacy-policy'} className={`text-white ${style.notForHover} text-decoration-none`}>
               {' '}
               Privacy Policy
             </Link>{' '}
             |{' '}
-            <Link href={'#!'} className="text-white text-decoration-none">
+            <Link href={'/terms-and-condition'} className={`text-white ${style.notForHover} text-decoration-none`}>
               Terms and Conditions
             </Link>
           </h6>

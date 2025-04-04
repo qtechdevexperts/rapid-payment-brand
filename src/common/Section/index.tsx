@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import style from './index.module.scss';
 
-interface SectionProps extends React.HTMLAttributes<HTMLElement> { }
+interface SectionProps extends React.HTMLAttributes<HTMLElement> {}
 
 const Section = ({ children, className, ...props }: SectionProps) => {
   return (

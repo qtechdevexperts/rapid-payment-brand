@@ -18,7 +18,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title="<Billing class='text-secondary-standard'> Billing </span> <br /> <span class='fw-bold text-primary-standard'>& Invoicing</span> "
+        title="<Billing class='text-secondary-standard fw-bold'> Billing </span> <br /> <span class='fw-bold text-primary-standard'>& Invoicing</span> "
         backgroundImage={'/images/biling.png'}
         description={
           '"Automate billing and invoicing for seamless customer payments."'

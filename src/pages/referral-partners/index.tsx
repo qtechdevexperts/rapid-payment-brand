@@ -13,7 +13,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title=' <Referral class ="text-secondary-standard"> Referral </span> <br /> <span class="fw-bold text-primary-standard">Partners</span> '
+        title=' <span class="text-secondary-standard fw-bold"> Referral </span> <br /> <span class="fw-bold text-primary-standard">Partners</span> '
         backgroundImage={'/images/referel.png'}
         description={
           'Earn competitive commissions while helping businesses access fast, secure, and seamless payment solutions. As a Rapid Payments Referral Partner, you’ll get the tools and support needed to maximize your earnings and expand your network.'
@@ -30,7 +30,10 @@ const OnlinePayments = () => {
       <section className="py-8">
         <Container>
           <h2 className="text text-2 text-center text-secondary-standard">
-            Why Partner with <span className="fw-bold text-primary-standard">Rapid Payments?</span>
+            Why Partner with{' '}
+            <span className="fw-bold text-primary-standard">
+              Rapid Payments?
+            </span>
           </h2>
           <Row className="gy-4 mt-lg-5 mt-sm-4">
             <Col lg={4} md={6}>

@@ -10,6 +10,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import LinkTag from '../LinkTag';
 import style from './index.module.scss';
+import CtaButton from '@/common/Button/CtaButton';
 
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
@@ -67,33 +68,35 @@ const SolutionForInnerPages = () => {
           <Row>
             <Col lg={6} className="pb-xxl-8 pb-5">
               <div>
-                <h2 className="text text-2 fw-normal mt-xxl-9 mt-4 text-secondary-standard">
+                <h2 className="text text-2 fw-bold mt-xxl-9 mt-4 text-secondary-standard">
                   Big Solutions for <br />
-                  <span className="fw-bold text-primary-standard">Small Businesses</span>
+                  <span className="fw-bold text-primary-standard">
+                    Small Businesses
+                  </span>
                 </h2>
-                <Paragraph className="max-w-sm-65">
+                <p className="max-w-sm-65 para">
                   Smoothly running a small business is challenging, we simplify
                   payments with proven payment processing solutions. Whether
                   in-store, online, or on the go, our secure, fast, and flexible
                   solutions let you focus on business growth and succeed.
-                </Paragraph>
+                </p>
 
                 <div className="mt-4">
                   <LinkTag
                     href="/online-payments/"
-                    className="heading-4 d-block text-reset text-decoration-none mt-sm-3 mt-2 mb-3"
+                    className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-sm-3 mt-2 mb-3"
                   >
                     Online Payments
                   </LinkTag>
                   <LinkTag
                     href="/in-person-payments/"
-                    className="heading-4 d-block text-reset text-decoration-none mt-sm-3 mt-2 mb-3"
+                    className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-sm-3 mt-2 mb-3"
                   >
                     In-Person Payments
                   </LinkTag>
                   <LinkTag
                     href="/point-of-sale-solution/"
-                    className="heading-4 d-block text-reset text-decoration-none mt-sm-3 mt-2 mb-3"
+                    className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-sm-3 mt-2 mb-3"
                   >
                     Point of sales Solutions
                   </LinkTag>
@@ -101,12 +104,12 @@ const SolutionForInnerPages = () => {
               </div>
 
               <div className="d-flex flex-column flex-sm-row mt-8 justify-content-start align-items-sm-center gap-3">
-                <Button
+                <CtaButton
                   onClick={() => setShowModal(true)}
                   className={`${!isLaptop && 'btn-lg'} btn-feature`}
                 >
                   Talk to Sales
-                </Button>
+                </CtaButton>
                 <Button
                   onClick={() => router.push('tel:888-562-4060')}
                   className={`${!isLaptop && 'btn-lg'} btn-outline-feature`}

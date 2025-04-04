@@ -9,6 +9,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
 import ServiceCard from './ServiceCard';
+import CtaButton from '@/common/Button/CtaButton';
 
 interface ServicesProps {
   title?: string;
@@ -17,7 +18,7 @@ interface ServicesProps {
 }
 
 const Services = ({
-  title = 'Rapid Payments  <br /> Elevate Your Business <br /> with <span class="text-primary-standard"> Next-Level  <br /> Merchant</span>   Services',
+  title = 'Rapid Payments  <br /> Elevate Your Business <br /> with <span class="text-primary-standard"> Next-Level  <br /> Merchant</span> Services',
   services,
 }: ServicesProps) => {
   const router = useRouter();
@@ -38,19 +39,22 @@ const Services = ({
                 dangerouslySetInnerHTML={{ __html: title }}
               />
               <Paragraph className="para fw-normal max-w-sm-70">
-                At <span className=" fw-bold text-secondary-standard">Rapid Payments</span> ,
-                we do more than just payment processing—we empower businesses
+                At{' '}
+                <span className=" fw-bold text-secondary-standard">
+                  Rapid Payments
+                </span>{' '}
+                , we do more than just payment processing—we empower businesses
                 with innovative solutions that drive efficiency, increase
                 revenue, and enhance customer experience.
               </Paragraph>
             </div>
 
-            <Button
+            <CtaButton
               onClick={() => setShowModal(true)}
               className={`btn btn-feature ${!isLaptop && 'btn-lg'} mt-4`}
             >
               Talk to An Expert
-            </Button>
+            </CtaButton>
           </Col>
 
           {/* Services Section */}
@@ -63,7 +67,6 @@ const Services = ({
                     description={service.description}
                     id={index}
                   />
-
                 </Col>
               ))}
             </Row>

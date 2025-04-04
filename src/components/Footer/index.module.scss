@@ -1,12 +1,25 @@
 @import '@/styles/responsive.scss';
+@import '@/styles/theme';
 
 .footer {
-  background-color: #1A2E5B;
+  background-color: var(--blue-11);
+
+  a {
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    &:not(.socialIcon, .notForHover) {
+      &:hover {
+        transform: translateX(10px);
+      }
+    }
+  }
 }
 
 .border-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid var(--border-light-1);
+  border-bottom: 1px solid var(--border-light-1);
 
   @include respond-to('md', 'max') {
     border-top: 0px !important;
@@ -18,7 +31,7 @@
 }
 
 .borderright {
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid var(--border-light-1);
 }
 
 .footerRow {
@@ -32,15 +45,15 @@
 
     &>div {
       &:nth-child(1) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid var(--border-light-1);
       }
 
       &:nth-child(2) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid var(--border-light-1);
       }
 
       &:nth-child(3) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid var(--border-light-1);
         // border-right: 0px;
       }
     }
@@ -55,12 +68,12 @@
       }
 
       &:nth-child(4) {
-        // border-right: 1px solid rgba(255, 255, 255, 0.30);
+        // border-right: 1px solid var(--border-light-1););
         border-right: 0px;
       }
 
       &:nth-child(5) {
-        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-right: 1px solid var(--border-light-1);
       }
     }
   }
@@ -74,14 +87,14 @@
       // }
 
       padding-top: 40px !important;
-      padding-bottom: 40px !important;
+      padding-bottom: 20px !important;
     }
   }
 
   @media (max-width: 767px) {
     &>div {
       padding-top: 20px !important;
-      padding-bottom: 20px !important;
+      padding-bottom: 9px !important;
     }
   }
 
@@ -94,17 +107,17 @@
   //     }
 
   //     &>.thirdBox {
-  //         border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+  //         border-bottom: 1px solid var(--border-light-1););
   //     }
 
   //     &>.lastBox,
   //     &>.secondLast {
   //         max-width: calc(100% / 3) !important;
-  //         border-top: 1px solid rgba(255, 255, 255, 0.30);
+  //         border-top: 1px solid var(--border-light-1););
   //     }
 
   //     &>.lastBox {
-  //         border-right: 1px solid rgba(255, 255, 255, 0.30);
+  //         border-right: 1px solid var(--border-light-1););
   //     }
 
   // }
@@ -120,14 +133,14 @@
   //     }
 
   //     &>.thirdBox {
-  //         border-top: 1px solid rgba(255, 255, 255, 0.30);
-  //         border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+  //         border-top: 1px solid var(--border-light-1););
+  //         border-bottom: 1px solid var(--border-light-1););
   //     }
 
   //     &>.lastBox,
   //     &>.secondLast {
   //         max-width: unset !important;
-  //         border-top: 1px solid rgba(255, 255, 255, 0.30);
+  //         border-top: 1px solid var(--border-light-1););
   //     }
   // }
 
@@ -162,9 +175,9 @@
   // }
 }
 
-.icon {
+.icon2 {
   border-radius: 50%;
-  background-color: #2c353f;
+  background-color: var(--blue-13);
   width: 50px;
   min-width: 50px;
   height: 50px;
@@ -212,8 +225,8 @@
 }
 
 .footerBottomText {
-  font-size: clamp(16px, 4vw, 18px);
   color: #fff !important;
+  font-size: clamp(16px, 4vw, 18px);
 
   @media (max-width: 1500px) {
     font-size: clamp(16px, 4vw, 18px);
@@ -221,37 +234,49 @@
 }
 
 .footerLink {
-  font-size: clamp(14px, 4vw, 16px);
+  font-size: clamp(13px, 4vw, 14px);
 }
 
-
 .iconBox {
-  width: 35px;
-  height: 35px;
-  border: 1px solid #1c2630;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+  border: 1px solid var(--blue-14);
+  border-radius: 50%;
+  background-color: white;
+  width: 35px;
+  height: 35px;
 
   &:hover {
-    background-color: #1c2630;
     border: 1px solid #fff;
+    background-color: var(--blue-14);
 
     svg {
       color: white !important;
     }
   }
-
-
 }
 
 .socialIcon {
   h2 {
     color: white;
     font-size: 20px;
+  }
+}
+
+.icon3 {
+  width: 50px;
+  height: 50px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1440px) {
+    width: 40px;
+    height: 40px;
   }
 }

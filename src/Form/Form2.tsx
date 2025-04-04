@@ -1,3 +1,4 @@
+import CtaButton from '@/common/Button/CtaButton';
 import axios from 'axios';
 import { useState } from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
@@ -200,13 +201,13 @@ const Form2 = ({ onCloseModal }: FormModalProps) => {
         </Col>
 
         <Col md={12}>
-          <Button
+          <CtaButton
             disabled={isLoading}
             className="btn-feature btn-lg mt-3 px-5"
             type="submit"
           >
             {isLoading ? '...loading' : ' Submit'}
-          </Button>
+          </CtaButton>
         </Col>
       </Row>
     </form>

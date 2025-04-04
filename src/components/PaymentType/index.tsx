@@ -1,8 +1,11 @@
 import Paragraph from '@/common/Paragraph';
 import PaymentBox from '@/common/PaymentBox';
+import { useRouter } from 'next/router';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const PaymentType = ({ showBtn }: { showBtn?: boolean }) => {
+  const router = useRouter();
+
   return (
     <Container className="py-md-9 py-3 overflow-x-hidden">
       <Row>
@@ -31,22 +34,23 @@ const PaymentType = ({ showBtn }: { showBtn?: boolean }) => {
             title="Online Payments"
             description="Secure virtual terminal payment processing for cards, wallets & more."
             image="/images/online-3.png"
+            onClick={() => router.push('/online-payments/')}
           />
         </Col>
         <Col lg={4} md={6}>
           <PaymentBox
-            showBtn={showBtn}
             title="In-Person Payments"
             description="Smart POS, mobile readers & contactless terminals for speed & convenience."
             image="/images/online-2.png"
+            onClick={() => router.push('/in-person-payments/')}
           />
         </Col>
         <Col lg={4} md={6}>
           <PaymentBox
-            showBtn={showBtn}
             title="Omnichannel Payments"
             description="Seamlessly integrate online, in-store & mobile transactions"
             image="/images/online-1.png"
+            onClick={() => router.push('/omni-channel-payments/')}
           />
         </Col>
       </Row>

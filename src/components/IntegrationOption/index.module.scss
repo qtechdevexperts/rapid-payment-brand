@@ -11,6 +11,11 @@
 
 .IntegratationOption {
   .firstBox {
+
+    h2 {
+      font-weight: 700;
+    }
+
     p {
       @media (max-width: 1500px) {
         margin: 0 auto;

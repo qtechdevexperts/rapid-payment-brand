@@ -1,10 +1,10 @@
 @import '@/styles/responsive';
+@import '@/styles/theme';
 
 .RapidPayment {
   // max-width: 86%;
   // margin: 0 auto;
   background-color: transparent;
-  
 
   // @include respond-to('xxl') {
   //     max-width: 90%;
@@ -14,7 +14,7 @@
 .paymentUniversityCard {
   & > div {
     mix-blend-mode: multiply;
-    background: linear-gradient(210deg, #fff -9.83%, #4990e2 773.8%);
+    background: linear-gradient(210deg, #fff -9.83%, var(--sky-blue-10) 773.8%);
   }
 
   img {
@@ -26,7 +26,7 @@
 
 .badge {
   border-radius: 5px;
-  background: #4990e2;
+  background: var(--sky-blue-10);
 }
 
 .empactTitle {

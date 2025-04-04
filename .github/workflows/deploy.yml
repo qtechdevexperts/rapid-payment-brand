@@ -1,4 +1,4 @@
-name: Rapid Payment CI/CD Pipeline
+sname: Rapid Payment CI/CD Pipeline
 
 on:
   push:

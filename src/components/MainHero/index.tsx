@@ -1,16 +1,15 @@
+import Button from '@/common/Button';
 import Modal from '@/common/Modal';
 import Paragraph from '@/common/Paragraph';
 import useResponsive from '@/hooks/useResponsive';
+import { ArrowRightIcon, CallIcon, UtilIcon } from '@/utils/Icon';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
-import Button from '@/common/Button';
-import { ArrowRightIcon, CallIcon, UtilIcon } from '@/utils/Icon';
-
-
+import CtaButton from '@/common/Button/CtaButton';
 
 const MainHero = () => {
   const router = useRouter();
@@ -53,8 +52,8 @@ const MainHero = () => {
                   <div className="d-flex justify-content-start align-items-center gap-2">
                     <UtilIcon />
                     <Paragraph className={clsx('text-secondary-standard mb-0')}>
-                      <span className="fw-bold">Seamless</span>{' '}
-                      Payment  processing solutions
+                      <span className="fw-bold">Seamless</span> Payment
+                      processing solutions
                     </Paragraph>
                   </div>
                 </Col>
@@ -80,17 +79,17 @@ const MainHero = () => {
                     </Paragraph>
                   </div>
                 </Col> */}
-                
               </Row>
 
               <div className="d-flex flex-column flex-sm-row gap-3 mt-3 justify-content-start align-items-sm-center">
-                <Button
+                {/* <Button
                   onClick={() => setContactModal(true)}
                   className={` btn btn-feature `}
                   iconRight={<ArrowRightIcon />}
                 >
                   Talk To an Expert
-                </Button>
+                </Button> */}
+                <CtaButton />
                 <Button
                   onClick={() => router.push('tel:888-562-4060')}
                   className={` btn btn-outline-feature `}

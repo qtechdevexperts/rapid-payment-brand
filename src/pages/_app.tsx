@@ -19,7 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Header />
+      {/* <SmoothScrolling> */}
       <Component {...pageProps} />
+      {/* </SmoothScrolling> */}
       <Footer />
       <Toaster position="top-center" />
     </>

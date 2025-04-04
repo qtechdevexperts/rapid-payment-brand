@@ -1,11 +1,12 @@
 @import 'rfs/scss';
+@import '@/styles/theme';
 
 .ProcessingFeeCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border: 1px solid #4990e2;
+  border: 1px solid var(--sky-blue-10);
 
   border-radius: 10px;
   background-color: #f9fcff;

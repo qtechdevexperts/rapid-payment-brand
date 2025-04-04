@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
+import CtaButton from '@/common/Button/CtaButton';
 
 const slickSettings = {
   infinite: false,
@@ -61,7 +62,7 @@ const RapidPaymentForSolutions = ({
         <div className="row">
           <div className="col-md-8">
             <h4
-              className={` text text-3 fw-normal text-capitalize`}
+              className={` text text-3 fw-bold text-capitalize`}
               dangerouslySetInnerHTML={{ __html: title || '' }}
             />
           </div>
@@ -85,16 +86,16 @@ const RapidPaymentForSolutions = ({
                         <div className="col-md-6 d-flex justify-content-center align-items-center">
                           <div className="card-body">
                             <h5
-                              className={`card-title ${style.cardHeading} text-black-1 fw-bold`}
+                              className={`card-title ${style.cardHeading} text-secondary-standard fw-bold`}
                             >
                               {slide.title}
                             </h5>
                             <Paragraph className="card-text para my-4">
                               {slide?.desc}
                             </Paragraph>
-                            <button className={`btn btn-feature  px-sm-5 py-2`}>
+                            <CtaButton className={`btn btn-feature  px-sm-5 py-2`}>
                               Get Started
-                            </button>
+                            </CtaButton>
                           </div>
                         </div>
                         <div className="col-md-6">

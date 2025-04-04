@@ -21,9 +21,14 @@ const PaymentForm = ({
       <Container className="" id="ContactForm">
         <Row>
           <Col lg={6}>
-            <h2 className={`text-capitalize  text-secondary-standard fw-bold text text-3  fw-normal`}>
+            <h2
+              className={`text-capitalize  text-secondary-standard fw-bold text text-3  fw-normal`}
+            >
               Payment
-              <span className="text-primary-standard"> Solutions <br /> to help your </span>{' '}
+              <span className="text-primary-standard">
+                {' '}
+                Solutions <br /> to help your{' '}
+              </span>{' '}
               business
             </h2>
             <h3 className={`text-primary-100 ${style.subHeading}`}>

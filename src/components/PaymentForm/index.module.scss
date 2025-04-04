@@ -1,4 +1,5 @@
 @import 'rfs/scss';
+@import '@/styles/theme';
 
 .paymentHeading {
   font-size: 56px;
@@ -26,7 +27,7 @@
 }
 
 .paymentParagraph {
-  color: #4f4f4f;
+  color: var(--blue-15);
   font-size: 18px;
 }
 
@@ -43,7 +44,7 @@
 }
 
 .paymentParagraph2 {
-  color: #1c2630 !important;
+  color: var(--blue-14) !important;
   font-size: 24px !important;
 
   @media (max-width: 1500px) {

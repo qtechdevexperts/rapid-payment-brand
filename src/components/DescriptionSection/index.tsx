@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 import style from './index.module.scss';
+import CtaButton from '@/common/Button/CtaButton';
 
 interface SolutionsTabProps {
   title?: string;
@@ -67,19 +68,19 @@ const DescriptionSection = ({
                 <div className="mt-4">
                   {list?.map((item, index) => {
                     return (
-                      <h6 className="heading-4 mt-3 mb-3 fw-medium">{item} </h6>
+                      <h6 className="heading-4 mt-3 text-secondary-standard mb-3 fw-medium">{item} </h6>
                     );
                   })}
                 </div>
               </>
 
               <div className="d-flex flex-column flex-sm-row mt-8 justify-content-start align-items-sm-center gap-3">
-                <Button
+                <CtaButton
                   onClick={() => setShowModal(true)}
                   className={`${!isLaptop && 'btn-lg'} btn-feature`}
                 >
                   Learn More
-                </Button>
+                </CtaButton>
               </div>
             </Col>
           </Row>

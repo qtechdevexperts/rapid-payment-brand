@@ -16,7 +16,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title='<Enterprise class="text-secondary-standard"> Enterprise </span> <br /> <span class="fw-bold text-primary-standard">Payment Solutions</span>  <br /> Built for Scale'
+        title='<Enterprise class="text-secondary-standard fw-bold"> Enterprise </span> <br /> <span class="fw-bold text-primary-standard">Payment Solutions</span>  <br /> Built for Scale'
         backgroundImage={'/images/enterprise.png'}
         description={
           'At Rapid Payments, we provide scalable, secure, and efficient payment solutions tailored for enterprises handling high transaction volumes. With our partnerships with top payment processors, gateways, and POS providers, we deliver seamless integrations, advanced security, and real-time analytics to power your business.'

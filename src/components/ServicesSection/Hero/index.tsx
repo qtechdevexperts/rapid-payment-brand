@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
+import CtaButton from '@/common/Button/CtaButton';
 
 interface HeroProps {
   title?: string;
@@ -64,12 +65,12 @@ const Hero = ({
 
               {!isHideAllButton && (
                 <div className="d-flex flex-column flex-xl-row gap-3 mt-3 justify-content-start align-items-xl-center">
-                  <Button
+                  <CtaButton
                     onClick={() => setContactModal(true)}
                     className={`${isLaptop ? '' : 'btn-lg'}  ${style.Hero}   btn-feature`}
                   >
                     Talk To an Expert
-                  </Button>
+                  </CtaButton>
                   {!isShowContact && (
                     <>
                       <Button

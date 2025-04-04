@@ -18,7 +18,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title='<span class="text-secondary-standard" > Fraud </span></span><br /> <span class="fw-bold text-primary-standard"> Protection</span>'
+        title='<span class="text-secondary-standard fw-bold" > Fraud </span></span><br /> <span class="fw-bold text-primary-standard"> Protection</span>'
         backgroundImage={'/images/fraud-protection.png'}
         description={
           '"Stay ahead of fraud with AI-powered protection and multi- <br /> layer security solutions."'
@@ -26,7 +26,9 @@ const OnlinePayments = () => {
       />
 
       <IntegratationOption
-        title={'<span class="text-secondary-standard" > Why Choose Our </span>  <span class="fw-bold text-primary-standard">Fraud Protection?</span> '}
+        title={
+          '<span class="text-secondary-standard" > Why Choose Our </span>  <span class="fw-bold text-primary-standard">Fraud Protection?</span> '
+        }
         desc={
           "Our fraud detection and prevention tools <span class='text-gray-2 fw-bold'> use real-time risk analysis to protect your business from chargebacks, unauthorized transactions, and financial losses. </span>"
         }

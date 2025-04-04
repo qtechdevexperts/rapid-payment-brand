@@ -50,7 +50,7 @@ const IntegrationCard = ({ desc, title }: IntegrationCardProps) => {
           </div>
           <h3
             dangerouslySetInnerHTML={{ __html: title || '' }}
-            className={` text-capitalize mt-2 ${style.integrationCardHeading} ${router.pathname.includes('referral-partner') ? 'text-start' : 'text-center'}`}
+            className={` text-capitalize text-secondary-standard mt-2 ${style.integrationCardHeading} ${router.pathname.includes('referral-partner') ? 'text-start' : 'text-center'}`}
           />
         </div>
       </div>

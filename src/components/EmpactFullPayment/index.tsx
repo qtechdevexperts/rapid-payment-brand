@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
+import CtaButton from '@/common/Button/CtaButton';
+import { useRouter } from 'next/router';
 
 const slickSettings = {
   infinite: false,
@@ -67,6 +69,10 @@ const EmpactFullPayment = () => {
 
   const isBigScreen = useResponsive({ query: '(min-width: 1921px)' });
 
+
+
+  const router = useRouter();
+
   return (
     <section
       className={clsx(style.RapidPayment, 'container p-sm-4 p-3 rounded-3 ')}
@@ -77,9 +83,11 @@ const EmpactFullPayment = () => {
             <div className={`badge  ${style.badge}`}>
               <h6 className="mb-0">Products</h6>
             </div>
-            <h4 className="heading-3 text-secondary-standard fw-normal text-capitalize">
+            <h4 className="heading-3 text-secondary-standard fw-bold text-capitalize">
               Rapid Payment <br />{' '}
-              <span className="fw-bold text-primary-standard">Impactful Tech</span>
+              <span className="fw-bold text-primary-standard">
+                Impactful Tech
+              </span>
             </h4>
           </div>
           <div className="col-xl-4">
@@ -117,13 +125,13 @@ const EmpactFullPayment = () => {
                             <Paragraph className="card-text para my-2">
                               {slide.desc}
                             </Paragraph>
-                            <Link
-                              href={slide.href}
+                            <CtaButton
+                              onClick={() => router.push(slide.href)}
                               className={`btn btn-feature ${!isBigScreen && 'btn-lg'
                                 } px-sm-5 py-2`}
                             >
                               Get Started
-                            </Link>
+                            </CtaButton>
                           </div>
                         </div>
                         <div className="col-md-6">

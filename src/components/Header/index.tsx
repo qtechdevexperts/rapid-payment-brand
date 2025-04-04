@@ -8,6 +8,7 @@ import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { CiMenuBurger } from 'react-icons/ci';
 import { FaArrowLeft } from 'react-icons/fa';
 import style from './index.module.scss';
+import CtaButton from '@/common/Button/CtaButton';
 
 const solutionsTabs = [
   { id: 'AcceptPayment', label: 'Accept Payments', lastTab: false, href: '' },
@@ -108,11 +109,40 @@ const Header = () => {
     null | keyof typeof megaMenuDataMap
   >(null);
 
+  const [isSticky, setIsSticky] = useState(false);
+
   const [currentTab, setCurrentTab] = useState<string | null>(null);
   const [lastMenu, setLastMenu] = useState(false);
   const [mobileCanvas, setOffcanvasView] = useState(false);
 
-  // For mobile offcanvas inner navigation:
+  const [activeLink, setActiveLink] = useState<string>('solution');
+
+  const solutionActiveLink = [
+    '/online-payments',
+    '/in-person-payments',
+    '/in-person-payments',
+    '/omni-channel-payments',
+    '/point-of-sale-solution',
+    '/payment-gateways',
+    '/virtual-terminals',
+    '/fraud-protection',
+    '/funding',
+    '/chargeback-management',
+    '/reporting-and-analytics',
+    '/billing-and-invoicing',
+    '/our-pricing',
+  ];
+
+  const whoWeServeActiveLink = [
+    '/smb',
+    '/enterprise-solution',
+    '/retail',
+    '/restaurant',
+    '/professional-services',
+    '/ecommerce',
+    '/referral-partners',
+  ];
+
   const [mobileActiveMain, setMobileActiveMain] = useState<string | null>(null);
   const [mobileActiveSub, setMobileActiveSub] = useState<string | null>(null);
 
@@ -142,6 +172,24 @@ const Header = () => {
       }
     }
   };
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
 
   useEffect(() => {
     if (router && router.events) {
@@ -191,19 +239,28 @@ const Header = () => {
     setMobileActiveSub(key);
   };
 
+  const getActiveClass = (pathname: string) => {
+    for (const path of solutionActiveLink) {
+      if (path === pathname) return style.activeLink;
+    }
+    return '';
+  };
+
   return (
     <div className={style.headerWrapper}>
-      <Navbar expand="lg" className="py-3">
+      <nav className={`py-3 navbar navbar-expand-lg ${style.navbar}  ${isSticky ? style.stickyActive : ''} sticky-top`}>
         <Container>
           <Link href="/" className="navbar-brand">
-            <img src="/images/header-logo.png" className="img-fluid" alt="Logo" />
-            {/* <img src="/images/logo.png" className="img-fluid" alt="Logo" /> */}
+            <img
+              src="/images/header-logo.png"
+              className="img-fluid "
+              alt="Logo"
+            />
           </Link>
-          {/* Remove default Bootstrap Toggle and use custom hamburger */}
+
           <CiMenuBurger
             onClick={() => {
               setOffcanvasView(!mobileCanvas);
-              // Reset mobile inner navigation when opening mobile menu
               setMobileActiveMain(null);
               setMobileActiveSub(null);
             }}
@@ -220,29 +277,29 @@ const Header = () => {
                 className={`${style.navItem} navItem`}
                 onMouseEnter={(e) => handleMouseEnter('solutions', e)}
               >
-                <Link
-                  href="#!"
-                  className={`${style.dropdownToggle} px-0 ${activeMegaMenu === 'solutions' ? `${style.active} active` : ''} text-decoration-none mb-0`}
+                <a
+
+                  id={router.pathname}
+                  className={`${style.dropdownToggle} ${solutionActiveLink.includes(router.pathname) ? style.active : ''} px-0 ${activeMegaMenu === 'solutions' ? `${style.active} active` : ''} text-decoration-none mb-0`}
                 >
                   Solutions
-                </Link>
+                </a>
               </div>
               <div
                 className={style.navItem}
                 onMouseEnter={(e) => handleMouseEnter('whoWeServe', e)}
               >
-                <Link
-                  href="#!"
-                  className={`${style.dropdownToggle} px-0 text-decoration-none ${activeMegaMenu === 'whoWeServe' ? `${style.active} active` : ''} text-decoration-none mb-0`}
+                <a
+                  className={`${style.dropdownToggle} ${whoWeServeActiveLink.includes(router.pathname) ? style.active : ''} px-0 text-decoration-none ${activeMegaMenu === 'whoWeServe' ? `${style.active} active` : ''} text-decoration-none mb-0`}
                 >
                   Who We Serve
-                </Link>
+                </a>
               </div>
 
               <div className={style.navItem} onMouseEnter={handleMouseLeave}>
                 <Link
                   href="/who-we-are"
-                  className={`${style.dropdownToggle} px-0 text-decoration-none`}
+                  className={`${style.dropdownToggle} ${router.pathname == '/who-we-are' ? style.active : ''} px-0 text-decoration-none`}
                 >
                   Who we Are
                 </Link>
@@ -250,7 +307,8 @@ const Header = () => {
               <div className={style.navItem} onMouseEnter={handleMouseLeave}>
                 <Link
                   href="/integrated-partners"
-                  className={`${style.dropdownToggle} px-0 text-decoration-none`}
+                  id={router.pathname}
+                  className={`${style.dropdownToggle} ${router.pathname == '/integrated-partners' ? style.active : ''} px-0 text-decoration-none`}
                 >
                   Integrated Partner
                 </Link>
@@ -267,15 +325,15 @@ const Header = () => {
                 </div>
               )}
             </Nav>
-            <Button
+            <CtaButton
               className="btn-feature"
               onClick={() => router.push('/contact')}
             >
               Contact Us
-            </Button>
+            </CtaButton>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+      </nav>
 
       {/* Desktop MegaMenu */}
       {activeMegaMenu && !mobileCanvas && (
@@ -288,7 +346,8 @@ const Header = () => {
               tabContents={megaMenuDataMap[activeMegaMenu].tabContents}
               currentTab={currentTab ?? undefined}
               setCurrentTab={setCurrentTab}
-              offcanvasView="menu" // not used on desktop
+              offcanvasView="menu"
+              // onMouseLeave={handleMouseLeave}
               setOffcanvasView={() => { }}
             />
           </Container>
@@ -370,7 +429,11 @@ const Header = () => {
                   'list-group-item  text-primary-100 d-flex justify-content-start align-items-center gap-3',
                   styles.mainListItem,
                 )}
-                onClick={() => tab?.lastTab ? router.push("/our-pricing") : handleOpenSub(tab.id)}
+                onClick={() =>
+                  tab?.lastTab
+                    ? router.push('/our-pricing')
+                    : handleOpenSub(tab.id)
+                }
               >
                 {tab.label}
               </li>

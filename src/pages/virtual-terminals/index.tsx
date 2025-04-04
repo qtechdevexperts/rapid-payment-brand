@@ -21,7 +21,7 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title='<span class="text-secondary-standard">Virtual</span> <br class="d-none d-lg-block" /> <span class="fw-bold text-primary-standard">Terminals</span>  '
+        title='<span class="text-secondary-standard fw-bold">Virtual</span> <br class="d-none d-lg-block" /> <span class="fw-bold text-primary-standard">Terminals</span>  '
         backgroundImage={'/images/virtual-terminal.png'}
         description={
           '"Process secure payments remotely without the need for <br class="d-none d-lg-block" /> hardware. Perfect for businesses accepting phone, email, <br class="d-none d-lg-block" /> and mail-order payments."'
@@ -29,7 +29,9 @@ const OnlinePayments = () => {
       />
 
       <IntegratationOption
-        title={'<span class="text-secondary-standard">Why Choose Our </span> <span class="fw-bold text-primary-standard">Virtual Terminal?</span> '}
+        title={
+          '<span class="text-secondary-standard">Why Choose Our </span> <span class="fw-bold text-primary-standard">Virtual Terminal?</span> '
+        }
         desc={
           "Process payments remotely with <span class='fw-bold text-gray-2'>our secure virtual terminal</span> , allowing businesses to manually enter transactions from any device with internet access."
         }

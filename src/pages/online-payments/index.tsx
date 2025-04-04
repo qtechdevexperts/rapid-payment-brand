@@ -40,17 +40,19 @@ const OnlinePayments = () => {
       </Head>
 
       <Hero
-        title='<span class="text-secondary-standard"> Online </span> <br /> <span class="fw-bold text-primary-standard">Payments</span> '
+        title='<span class="text-secondary-standard fw-bold"> Online </span> <br /> <span class="fw-bold text-primary-standard">Payments</span> '
         backgroundImage={'/images/online-bg.png'}
       />
 
       <IntegratationOption
-        title={'<span class="text-secondary-standard"> Your Integration </span> <span class="fw-bold text-primary-standard">Options</span> '}
+        title={
+          '<span class="text-secondary-standard fw-bold"> Your Integration </span> <span class="fw-bold text-primary-standard">Options</span> '
+        }
         data={OnlinePaymentServices}
       />
 
       <Hero
-        title='<Start class="text-secondary-standard"> Start taking  <br /> payments for your </span> <br /> <span class="fw-bold text-primary-standard">small business!</span> '
+        title='<span class="text-secondary-standard fw-bold"> Start taking  <br /> payments for your </span> <br /> <span class="fw-bold text-primary-standard">small business!</span> '
         headingCss="text-capitalize"
         backgroundImage={'/images/online-payment-1.png'}
         description="Rapid Payments is a leading merchant service provider partnered with top payment processors and payment gateways to help small businesses accept payments quickly, securely, and seamlessly.

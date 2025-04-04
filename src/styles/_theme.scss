@@ -1,0 +1,97 @@
+@import 'css-vars/css-vars.scss';
+// Define SCSS variables for your colors
+$white: #fff;
+$sky-blue-10: #4990e2;
+
+$blue-10: #007bff;
+$blue-11: #1a2e5b;
+$blue-12: #1e1e1e;
+$blue-13: #2c353f;
+$blue-14: #1c2630;
+$blue-15: #4f4f4f;
+$blue-16: #2a5885;
+
+$gray-10: #4f4f4f;
+$gray-11: #333;
+$gray-12: #999;
+$gray-13: #444;
+
+$gray-light-1: #f8f9fa;
+$gray-light-2: #e5f0fb;
+$gray-light-3: #dddcdc;
+$gray-light-4: #f1f8ff;
+$gray-light-5: #eff5fc;
+$gray-light-6: #cde4ff;
+$gray-light-7: #f1f7fd;
+$gray-light-8: #e0e0e0;
+$gray-light-9: #f8fafc;
+$gray-light-10: #e6f0fa;
+
+// Update your $colors map to use SCSS variables
+$colors: (
+  'primary-standard': $sky-blue-10,
+  'secondary-standard': $blue-11,
+
+  'blue-12': $blue-12,
+  'blue-13': $blue-13,
+  'blue-14': $blue-14,
+  'blue-15': $blue-15,
+  'blue-16': $blue-16,
+
+  'gray-10': $gray-10,
+  'gray-11': $gray-11,
+  'gray-12': $gray-12,
+  'gray-13': $gray-13,
+
+  'gray-light-1': $gray-light-1,
+  'gray-light-2': $gray-light-2,
+  'gray-light-3': $gray-light-3,
+  'gray-light-4': $gray-light-4,
+  'gray-light-5': $gray-light-5,
+  'gray-light-6': $gray-light-6,
+  'gray-light-7': $gray-light-7,
+  'gray-light-8': $gray-light-8,
+  'gray-light-9': $gray-light-9,
+  'gray-light-10': $gray-light-10,
+);
+
+@include css-vars(
+  (
+    --white: $white,
+    --sky-blue-10: $sky-blue-10,
+
+    --blue-10: $blue-10,
+    --blue-11: $blue-11,
+    --blue-12: $blue-12,
+    --blue-13: $blue-13,
+    --blue-14: $blue-14,
+    --blue-15: $blue-15,
+    --blue-16: $blue-16,
+
+    --gray-10: $gray-10,
+    --gray-11: $gray-11,
+    --gray-12: $gray-12,
+    --gray-13: $gray-13,
+
+    --gray-light-1: $gray-light-1,
+    --gray-light-2: $gray-light-2,
+    --gray-light-3: $gray-light-3,
+    --gray-light-4: $gray-light-4,
+    --gray-light-5: $gray-light-5,
+    --gray-light-6: $gray-light-6,
+    --gray-light-7: $gray-light-7,
+    --gray-light-8: $gray-light-8,
+    --gray-light-9: $gray-light-9,
+    --gray-light-10: $gray-light-10,
+
+    // Shadow
+    --border-light-1: rgba(255, 255, 255, 0.3),
+    --bg-opacity-1: rgba(0, 0, 0, 0.1),
+    --bg-opacity-2: rgba(0, 0, 0, 0.2),
+    --shadow-1: rgba(0, 0, 0, 0.03),
+    // Font Size
+    --extra-large-size: 70px,
+  )
+);
+
+// @import '@/styles/theme';

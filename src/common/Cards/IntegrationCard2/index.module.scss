@@ -1,10 +1,11 @@
 @import 'rfs/scss';
+@import '@/styles/theme';
 
 .card1 {
   box-shadow:
     rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border: 1px solid #4990e2;
+  border: 1px solid var(--sky-blue-10);
   border-radius: 10px;
   background-color: #f9fcff;
   width: 100%;
@@ -28,7 +29,11 @@
     align-items: center;
     mix-blend-mode: multiply;
     border-radius: 5px;
-    background: linear-gradient(180deg, #fff -32.14%, #4990e2 84.9%);
+    background: linear-gradient(
+      180deg,
+      var(--white) -32.14%,
+      var(--sky-blue-10) 84.9%
+    );
     width: 80px;
     height: 80px;
   }

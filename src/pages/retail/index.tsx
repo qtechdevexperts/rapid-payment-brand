@@ -21,12 +21,16 @@ const Resturants = () => {
       />
 
       <IntegratationOption
-        title={'<Why class="text-secondary-standard"> Why </span> <span class="fw-bold text-primary-standard">Rapid Payments?</span> '}
+        title={
+          '<Why class="text-secondary-standard"> Why </span> <span class="fw-bold text-primary-standard">Rapid Payments?</span> '
+        }
         data={ResturantServices}
       />
 
       <POSSolutions
-        title={"<span class='fw-bold text-primary-standard'> POS Solutions </span> <for class='text-secondary-standard'> for Every Business </span>"}
+        title={
+          "<span class='fw-bold text-primary-standard'> POS Solutions </span> <for class='text-secondary-standard'> for Every Business </span>"
+        }
         pos={whoWeServePosData}
       />
 

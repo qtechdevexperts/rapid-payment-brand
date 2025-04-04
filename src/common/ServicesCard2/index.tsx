@@ -1,16 +1,12 @@
-import React from 'react'
-import style from "./index.module.scss"
-import clsx from 'clsx'
-
+import clsx from 'clsx';
+import style from './index.module.scss';
 
 const ServicesCard2 = () => {
-    return (
-        <div className={clsx(style.serviceCard2)}>
-            <div className={`${style.serviceIcon}`}>
+  return (
+    <div className={clsx(style.serviceCard2)}>
+      <div className={`${style.serviceIcon}`}></div>
+    </div>
+  );
+};
 
-            </div>
-        </div>
-    )
-}
-
-export default ServicesCard2
+export default ServicesCard2;

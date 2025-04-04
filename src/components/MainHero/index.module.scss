@@ -1,5 +1,6 @@
 @import '@/styles/responsive';
 @import 'rfs/scss';
+@import '@/styles/theme';
 
 .mainHero {
   @media (max-width: 1920px) {
@@ -21,7 +22,7 @@
   min-height: 85vh;
   overflow: hidden;
 
-  &>* {
+  & > * {
     position: relative;
     z-index: 10;
   }

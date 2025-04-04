@@ -21,7 +21,9 @@ const Resturants = () => {
       />
 
       <IntegratationOption
-        title={'<Why class="text-secondary-standard"> Why </span> <span class="fw-bold text-primary-standard">Rapid Payments?</span> '}
+        title={
+          '<Why class="text-secondary-standard"> Why </span> <span class="fw-bold text-primary-standard">Rapid Payments?</span> '
+        }
         data={ResturantServices}
       />
 

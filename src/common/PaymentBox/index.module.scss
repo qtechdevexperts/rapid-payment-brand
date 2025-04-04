@@ -1,30 +1,69 @@
-@import "rfs/scss";
+@import 'rfs/scss';
+@import '@/styles/theme';
 
 .paymentBox {
-    width: 100%;
-    @include padding(30px);
-    height: 100%;
-    border-radius: 5px;
-    border: 1px solid rgba(48, 100, 197, 0.30);
-    background: linear-gradient(180deg, #FFF 57.79%, #F1F8FF 101.39%);
+  width: 100%;
+  @include padding(30px);
 
-    gap: 20px;
+  gap: 20px;
+  border: 1px solid rgba(48, 100, 197, 0.3);
+  border-radius: 5px;
+  background: linear-gradient(180deg, #fff 57.79%, var(--gray-light-4) 101.39%);
+  height: 100%;
 
-    img {
-        width: 60px;
-        height: 60px
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  h2 {
+    color: var(--blue-11);
+    font-size: clamp(20px, 4vw, 30px);
+  }
+
+  p {
+    color: var(--blue-12);
+    font-size: 18px;
+  }
+}
+
+.btnOutline {
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--blue-11);
+  border-radius: 5px;
+  height: 48px;
+
+  svg {
+    path {
+      fill: var(--blue-11);
     }
+  }
 
-    h2 {
-        color: #1A2E5B;
-        font-size: clamp(20px, 4vw, 30px);
+  &:hover {
+    background-color: var(--sky-blue-10);
+    color: white;
+
+    svg {
+      path {
+        fill: #fff;
+      }
     }
+  }
+}
 
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background: #fff;
+  aspect-ratio: 1/1;
+  width: 80px;
+  height: 80px;
 
-
-    p {
-        font-size: 18px;
-        color: #1E1E1E;
-    }
-
+  img {
+    width: 60%;
+    height: 60%;
+  }
 }

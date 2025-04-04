@@ -1,14 +1,14 @@
+import Button from '@/common/Button';
 import Paragraph from '@/common/Paragraph';
 import Section from '@/common/Section';
 import useResponsive from '@/hooks/useResponsive';
+import { ArrowRightIcon } from '@/utils/Icon';
 import clsx from 'clsx';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
-import { useRouter } from 'next/router';
-import Button from '@/common/Button';
-import { ArrowRightIcon } from '@/utils/Icon';
+import CtaButton from '@/common/Button/CtaButton';
 
 const slickSettings = {
   infinite: false,
@@ -38,10 +38,7 @@ const slickSettings = {
 const RapidPaymentUniversity = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-
   const router = useRouter();
-
-
 
   const slides = [
     {
@@ -87,7 +84,7 @@ const RapidPaymentUniversity = () => {
           <div className="col-lg-8">
             <h4 className="text text-secondary-standard fw-bold text-3 text-capitalize">
               At Rapid Payment,
-              <span className='text-primary-standard'>
+              <span className="text-primary-standard">
                 We <br /> Understand{' '}
               </span>
               <span className="">your Industry</span>{' '}
@@ -120,7 +117,7 @@ const RapidPaymentUniversity = () => {
                         <div className="col-md-6 d-flex justify-content-center align-items-center">
                           <div className="card-body">
                             <h5
-                              className={`card-title ${style.CardTitle} } text-capitalize heading-4 text-black-1 fw-bold`}
+                              className={`card-title ${style.CardTitle} text-secondary-standard  text-capitalize heading-4 text-black-1 fw-bold`}
                             >
                               {slide.title}
                             </h5>
@@ -134,11 +131,13 @@ const RapidPaymentUniversity = () => {
                               Get Started
                             </Link> */}
 
-                            <Button
+                            <CtaButton
                               iconRight={<ArrowRightIcon />}
                               onClick={() => router.push(slide.href)}
-                              className='btn btn-feature'>Get Started
-                            </Button>
+                              className="btn btn-feature"
+                            >
+                              Get Started
+                            </CtaButton>
                           </div>
                         </div>
                         <div className="col-md-6">
