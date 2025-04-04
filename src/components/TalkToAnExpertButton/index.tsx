@@ -1,7 +1,6 @@
 import CtaButton from '@/common/Button/CtaButton';
 import Modal from '@/common/Modal';
 import { HTMLAttributes, useState } from 'react';
-import { Button } from 'react-bootstrap';
 
 interface TalkToAnExpertButtonProps extends HTMLAttributes<HTMLElement> {
   text?: string;

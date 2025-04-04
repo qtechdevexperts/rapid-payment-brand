@@ -271,8 +271,6 @@ $feature-bg: #4990e2;
   }
 }
 
-
-
 .btn-feature {
   @include button-variant($background: $feature-bg,
     $border: darken($feature-bg, 3%),
@@ -280,14 +278,26 @@ $feature-bg: #4990e2;
     $hover-border: darken($feature-bg, 8%),
     $active-background: darken($feature-bg, 10%),
     $active-border: darken($feature-bg, 13%));
+  transition: all 0.2s ease-in-out;
 
-  border-color: darken($feature-bg, 3%);
+  border: 1px solid transparent;
   background-color: $feature-bg;
-
 
   color: #fff !important;
 
   @extend .btn-sizes;
+
+  &:hover {
+    background-color: transparent;
+    color: $feature-bg !important;
+    border: 1px solid $feature-bg !important;
+
+    svg {
+      path {
+        fill: $feature-bg !important;
+      }
+    }
+  }
 }
 
 $dark: #1a2e5b;
@@ -319,9 +329,9 @@ $dark: #1a2e5b;
 
   &:hover,
   &:focus {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: rgba($dark, 0.3);
-    color: #fff !important;
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: transparent !important;
+    color: $dark !important;
   }
 
   @extend .btn-sizes;
@@ -331,24 +341,28 @@ $dark: #1a2e5b;
   @include button-variant($background: transparent,
     $border: $feature-bg,
     $hover-background: transparent,
-    $hover-border: darken($feature-bg, 5%),
+    $hover-border: #1a2e5b,
     $active-background: darken($feature-bg, 10%),
-    $active-border: darken($feature-bg, 15%));
+    $active-border: #1a2e5b);
 
   transition: all 0.3s ease-in-out;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #1a2e5b !important;
 
   color: #1a2e5b !important;
 
-  &:hover {
-    // transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: rgba($feature-bg, 0.1);
-  }
+  background-color: transparent !important;
 
+  &:hover,
   &:active {
-    // transform: translateY(1px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    background-color: #1a2e5b !important;
+    color: white !important;
+
+    svg {
+      path {
+        fill: white !important;
+      }
+    }
   }
 
   @extend .btn-sizes;

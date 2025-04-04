@@ -9,7 +9,6 @@ import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
 
 const MainHero = () => {
   const router = useRouter();
@@ -82,14 +81,15 @@ const MainHero = () => {
               </Row>
 
               <div className="d-flex flex-column flex-sm-row gap-3 mt-3 justify-content-start align-items-sm-center">
-                {/* <Button
+                <Button
                   onClick={() => setContactModal(true)}
                   className={` btn btn-feature `}
                   iconRight={<ArrowRightIcon />}
                 >
                   Talk To an Expert
-                </Button> */}
-                <CtaButton />
+                </Button>
+
+                {/* <CtaButton /> */}
                 <Button
                   onClick={() => router.push('tel:888-562-4060')}
                   className={` btn btn-outline-feature `}

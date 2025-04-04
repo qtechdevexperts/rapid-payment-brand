@@ -85,6 +85,7 @@
   position: absolute;
   // border: 2px solid #777;
   bottom: -38px;
+  z-index: -2 !important;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transition: left 0.2s ease-in-out;
   box-shadow:
@@ -93,8 +94,6 @@
   background-color: var(--bg-opacity-2);
   width: 20px;
   height: 20px;
-  z-index: -2 !important;
-
 
   .innerSection {
     position: absolute;

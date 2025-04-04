@@ -10,7 +10,9 @@ interface ProcessingFeeCardProps {
 const ProcessingFeeCard = ({ description, title }: ProcessingFeeCardProps) => {
   return (
     <div className={clsx(style.ProcessingFeeCard, 'p-sm-4 p-3')}>
-      <h2 className={`${clsx('text-capitalize text-secondary-standard', style.processingHeader)}`}>
+      <h2
+        className={`${clsx('text-capitalize text-secondary-standard', style.processingHeader)}`}
+      >
         {title}
       </h2>
       <Paragraph>{description}</Paragraph>

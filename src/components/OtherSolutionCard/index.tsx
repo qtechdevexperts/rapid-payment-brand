@@ -1,10 +1,9 @@
+import Button from '@/common/Button';
 import Paragraph from '@/common/Paragraph';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
-import { useRouter } from 'next/router';
 
 interface OtherSolutionCardProps {
   title?: string;
@@ -18,10 +17,7 @@ interface OtherSolutionProps {
 }
 
 const OtherSolutionCard = ({ data }: OtherSolutionProps) => {
-
-
   const router = useRouter();
-
 
   useEffect(() => {
     console.log(data);
@@ -44,16 +40,21 @@ const OtherSolutionCard = ({ data }: OtherSolutionProps) => {
                 <div className="card-body ps-0 d-flex flex-column justify-content-between align-items-start">
                   <div>
                     <h6 className={`text-primary-100 `}>Solutions</h6>
-                    <h5 className={`card-title  text-secondary-standard ${style.solutionTitle}`}>
+                    <h5
+                      className={`card-title  text-secondary-standard ${style.solutionTitle}`}
+                    >
                       {item?.title}
                     </h5>
                   </div>
                   <Paragraph className="" variant="sm">
                     {item?.desc}.
                   </Paragraph>
-                  <CtaButton onClick={()=>router.push(item?.href || '#')} className="btn btn-feature  ">
+                  <Button
+                    onClick={() => router.push(item?.href || '#')}
+                    className="btn btn-feature  "
+                  >
                     Find Out More
-                  </CtaButton>
+                  </Button>
                 </div>
               </div>
             </Col>

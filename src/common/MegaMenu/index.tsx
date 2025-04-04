@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FaArrowLeft, FaLongArrowAltRight } from 'react-icons/fa';
 import { RiArrowRightLine } from 'react-icons/ri';
+import Button from '../Button';
 import style from './index.module.scss';
-import CtaButton from '../Button/CtaButton';
 
 interface TabItem {
   id: string;
@@ -115,30 +115,29 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
     <Container className="px-0">
       <Row>
         <Col md={3} className={`${style.border} pe-0 position-relative`}>
-          <div className={clsx(style.anchorTab,)}>
+          <div className={clsx(style.anchorTab)}>
             {tabs?.map((item) =>
               item.lastTab ? (
-                <CtaButton
+                <Button
                   key={item.id}
                   className={style.lastTab}
                   onClick={() => router.push(item.href ?? '/our-pricing')}
                 >
                   {item.label}
-                </CtaButton>
+                </Button>
               ) : (
-
                 <div
                   key={item.id}
                   className={clsx(
                     currentTab === item.id ? style.active : '',
-                    `${currentTab === item?.id && style.activeLabel}`
+                    `${currentTab === item?.id && style.activeLabel}`,
                   )}
                   onMouseEnter={() => handleTabClick(item)}
                   onClick={() => handleTabClick(item)}
                 >
                   {item.label}
                 </div>
-              )
+              ),
             )}
           </div>
         </Col>
@@ -182,19 +181,24 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
     </Container>
   );
 
-
   const renderOffcanvasContent = () => {
     if (offcanvasView === 'menu') {
       return (
         <div className={style.offcanvasMenu}>
           <ul className={`list-group ${style.tabList}`}>
-            {tabs?.map((item) => (
+            {tabs?.map((item) =>
               item.lastTab ? (
-                <li key={item.id} className={clsx('list-group-item text-primary-100')}>
-                  <CtaButton className={style.buttonClass} onClick={() => router.push('/our-pricing')}>
+                <li
+                  key={item.id}
+                  className={clsx('list-group-item text-primary-100')}
+                >
+                  <Button
+                    className={style.buttonClass}
+                    onClick={() => router.push('/our-pricing')}
+                  >
                     {item.label}
                     <FaLongArrowAltRight color="#4990e2" />
-                  </CtaButton>
+                  </Button>
                 </li>
               ) : (
                 <li
@@ -202,16 +206,15 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
                   className={clsx(
                     'list-group-item text-primary-100',
                     style.offcanvasLink,
-                    currentTab === item.id ? style.active : ''
+                    currentTab === item.id ? style.active : '',
                   )}
                   onClick={() => handleTabClick(item)}
                 >
                   {item.label}
                   <FaLongArrowAltRight color="#4990e2" />
                 </li>
-              )
-            ))}
-
+              ),
+            )}
           </ul>
         </div>
       );

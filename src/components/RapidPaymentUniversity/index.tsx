@@ -8,7 +8,6 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
 
 const slickSettings = {
   infinite: false,
@@ -131,13 +130,13 @@ const RapidPaymentUniversity = () => {
                               Get Started
                             </Link> */}
 
-                            <CtaButton
+                            <Button
                               iconRight={<ArrowRightIcon />}
                               onClick={() => router.push(slide.href)}
                               className="btn btn-feature"
                             >
                               Get Started
-                            </CtaButton>
+                            </Button>
                           </div>
                         </div>
                         <div className="col-md-6">

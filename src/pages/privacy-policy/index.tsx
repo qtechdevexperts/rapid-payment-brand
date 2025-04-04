@@ -94,7 +94,6 @@ const PrivacyPolicy = () => {
           </p>
         </div>
 
-
         <div>
           <p className="para">
             At Rapid Payments, we are deeply committed to maintaining the

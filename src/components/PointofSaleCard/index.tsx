@@ -1,4 +1,3 @@
-import CtaButton from '@/common/Button/CtaButton';
 import Paragraph from '@/common/Paragraph';
 import { Button, Card } from 'react-bootstrap';
 
@@ -16,7 +15,7 @@ const PointofSaleCard = ({ title, desc }: PointofSaleCardProps) => {
         <Card.Title className="fs-xxl-17 my-2 text-dark">{title}</Card.Title>
         <Paragraph className="text-gray-100">{desc}</Paragraph>
         <div className="d-flex align-items-center gap-3">
-          <CtaButton className="btn btn-feature">Talk to an expert</CtaButton>
+          <Button className="btn btn-feature">Talk to an expert</Button>
           <Button className="btn btn-outline-feature">Talk to an expert</Button>
         </div>
       </Card.Body>

@@ -1,5 +1,4 @@
 import Modal from '@/common/Modal';
-import Paragraph from '@/common/Paragraph';
 import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
@@ -10,7 +9,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import LinkTag from '../LinkTag';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
 
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
@@ -104,12 +102,12 @@ const SolutionForInnerPages = () => {
               </div>
 
               <div className="d-flex flex-column flex-sm-row mt-8 justify-content-start align-items-sm-center gap-3">
-                <CtaButton
+                <Button
                   onClick={() => setShowModal(true)}
                   className={`${!isLaptop && 'btn-lg'} btn-feature`}
                 >
                   Talk to Sales
-                </CtaButton>
+                </Button>
                 <Button
                   onClick={() => router.push('tel:888-562-4060')}
                   className={`${!isLaptop && 'btn-lg'} btn-outline-feature`}

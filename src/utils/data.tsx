@@ -427,12 +427,17 @@ export const ResturantServices: ServiceProps[] = [
 export const whoWeServePosData = [
   {
     title: 'Smart Point Of Sales',
-    imgSrc: '/images/smart-point-of-sale.png',
-    desc: 'Upgrade your business with a modern, intuitive POS system that supports contactless, chip, and mobile payments, while also managing inventory and sales insights seamlessly.',
+    imgSrc: '/images/smart-2.png',
+    desc: 'Upgrade to a modern, intuitive POS system that accepts EMV chip, contactless, and mobile payments while offering inventory tracking and business insights',
   },
   {
-    title: 'Smart Terminal Flex',
+    title: 'Smart Terminals',
     imgSrc: '/images/smart-point-of-sale.png',
-    desc: 'Experience fast, secure, and all-in-one smart terminals designed for on-the-go and in-store transactions, ensuring flexibility and ease of use.',
+    desc: 'Enjoy flexibility with all-in-one smart terminals that allow fast, secure, and mobile transactions, keeping your business running smoothly anywhere.',
+  },
+  {
+    title: 'Mobile Readers',
+    imgSrc: '/images/mobile-readers-image.png',
+    desc: 'Turn any device into a payment powerhouse with compact, wireless mobile readers—perfect for on-the-go businesses and remote transactions.',
   },
 ];

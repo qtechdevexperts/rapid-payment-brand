@@ -1,7 +1,7 @@
-import CtaButton from '@/common/Button/CtaButton';
+import Button from '@/common/Button';
 import axios from 'axios';
 import { useState } from 'react';
-import { Button, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
@@ -201,13 +201,13 @@ const Form = ({ onCloseModal }: FormModalProps) => {
         </Col>
 
         <Col md={12}>
-          <CtaButton
+          <Button
             disabled={isLoading}
             className="btn-feature  mt-4 "
             type="submit"
           >
             {isLoading ? '...loading' : ' Submit'}
-          </CtaButton>
+          </Button>
         </Col>
       </Row>
     </form>

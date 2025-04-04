@@ -19,7 +19,6 @@ const slides = [
     imgSrc: '/images/smart-point-of-sale.png',
     desc: 'Experience fast, secure, and all-in-one smart terminals designed for on-the-go and in-store transactions, ensuring flexibility and ease of use.',
   },
-
 ];
 
 const Resturants = () => {

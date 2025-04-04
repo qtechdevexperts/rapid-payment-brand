@@ -8,7 +8,6 @@ import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { CiMenuBurger } from 'react-icons/ci';
 import { FaArrowLeft } from 'react-icons/fa';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
 
 const solutionsTabs = [
   { id: 'AcceptPayment', label: 'Accept Payments', lastTab: false, href: '' },
@@ -173,7 +172,6 @@ const Header = () => {
     }
   };
 
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -188,8 +186,6 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-
 
   useEffect(() => {
     if (router && router.events) {
@@ -248,7 +244,9 @@ const Header = () => {
 
   return (
     <div className={style.headerWrapper}>
-      <nav className={`py-3 navbar navbar-expand-lg ${style.navbar}  ${isSticky ? style.stickyActive : ''} sticky-top`}>
+      <nav
+        className={`py-3 navbar navbar-expand-lg ${style.navbar}  ${isSticky ? style.stickyActive : ''} sticky-top`}
+      >
         <Container>
           <Link href="/" className="navbar-brand">
             <img
@@ -278,7 +276,6 @@ const Header = () => {
                 onMouseEnter={(e) => handleMouseEnter('solutions', e)}
               >
                 <a
-
                   id={router.pathname}
                   className={`${style.dropdownToggle} ${solutionActiveLink.includes(router.pathname) ? style.active : ''} px-0 ${activeMegaMenu === 'solutions' ? `${style.active} active` : ''} text-decoration-none mb-0`}
                 >
@@ -325,12 +322,12 @@ const Header = () => {
                 </div>
               )}
             </Nav>
-            <CtaButton
+            <Button
               className="btn-feature"
               onClick={() => router.push('/contact')}
             >
               Contact Us
-            </CtaButton>
+            </Button>
           </Navbar.Collapse>
         </Container>
       </nav>
@@ -347,8 +344,8 @@ const Header = () => {
               currentTab={currentTab ?? undefined}
               setCurrentTab={setCurrentTab}
               offcanvasView="menu"
-              // onMouseLeave={handleMouseLeave}
-              setOffcanvasView={() => { }}
+              onMouseLeave={handleMouseLeave}
+              setOffcanvasView={() => {}}
             />
           </Container>
         </div>

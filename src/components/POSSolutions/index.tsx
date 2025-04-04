@@ -1,10 +1,10 @@
+import Button from '@/common/Button';
 import Paragraph from '@/common/Paragraph';
 import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
 import { useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
 
 const slickSettings = {
   infinite: false,
@@ -93,9 +93,9 @@ const RapidPaymentForSolutions = ({
                             <Paragraph className="card-text para my-4">
                               {slide?.desc}
                             </Paragraph>
-                            <CtaButton className={`btn btn-feature  px-sm-5 py-2`}>
+                            <Button className={`btn btn-feature  px-sm-5 py-2`}>
                               Get Started
-                            </CtaButton>
+                            </Button>
                           </div>
                         </div>
                         <div className="col-md-6">

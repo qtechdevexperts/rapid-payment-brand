@@ -1,25 +1,36 @@
-import React from 'react'
-import style from "./index.module.scss"
-import Button, { ButtonProps } from '..'
-import clsx from 'clsx'
+import clsx from 'clsx';
+import React from 'react';
+import Button, { ButtonProps } from '..';
 
 interface CtaButtonProps extends ButtonProps {
-    onClick?: () => void
-    disabled?: boolean
-    children?: React.ReactNode
-    className?: string
+  onClick?: () => void;
+  disabled?: boolean;
+  iconLeft?: React.ReactNode;
+  iconRight?: React.ReactNode;
+  children?: React.ReactNode;
+  className?: string;
 }
 
+const CtaButton = ({
+  iconLeft,
+  children = 'Talk To an Expert',
+  className,
+  iconRight,
+  onClick,
+  disabled,
+  ...props
+}: CtaButtonProps) => {
+  return (
+    <Button
+      iconLeft={iconLeft}
+      disabled={disabled}
+      iconRight={iconRight}
+      onClick={onClick}
+      className={clsx('btn btn-feature', className)}
+    >
+      {children}
+    </Button>
+  );
+};
 
-const CtaButton = ({ iconLeft, children = "Talk To an Expert", className, iconRight, onClick, disabled, ...props }: CtaButtonProps) => {
-
-
-
-
-
-    return (
-        <Button iconLeft={iconLeft} disabled={disabled} iconRight={iconRight} onClick={onClick} className={clsx('btn btn-feature', style.ctaButton, className)}>{children}</Button>
-    )
-}
-
-export default CtaButton
+export default CtaButton;

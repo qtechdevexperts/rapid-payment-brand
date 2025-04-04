@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Head from 'next/head';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import style from './index.module.scss';
 
@@ -71,8 +71,6 @@ const PrivacyPolicy = () => {
           </p>
         </div>
 
-
-
         <div>
           <p className="para">
             Welcome to Rapid Payments. By accessing or subscribing to our
@@ -85,7 +83,6 @@ const PrivacyPolicy = () => {
             services. If you do not agree with any part of these terms, you must
             not use our services.
           </p>
-
 
           <h3 className="heading-5 text-secondary-standard text-uppercase">
             Subscription and Payment Terms

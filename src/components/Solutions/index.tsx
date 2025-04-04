@@ -12,7 +12,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import LinkTag from '../LinkTag';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
 
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
@@ -230,13 +229,13 @@ const Solutions = () => {
               )}
 
               <div className="d-flex flex-column flex-sm-row mt-8 justify-content-start align-items-sm-center gap-3">
-                <CtaButton
+                <Button
                   onClick={() => setShowModal(true)}
                   className={`${!isLaptop && 'btn-lg'} btn btn-feature`}
-                  iconRight={<ArrowRightIcon color='#FFF' />}
+                  iconRight={<ArrowRightIcon color="#FFF" />}
                 >
                   Talk To an Expert
-                </CtaButton>
+                </Button>
                 <Button
                   onClick={() => router.push('tel:888-562-4060')}
                   className={`${!isLaptop && 'btn-lg'} btn btn-outline-feature`}

@@ -5,11 +5,12 @@ import { ServiceProps } from '@/utils/data';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
 import ServiceCard from './ServiceCard';
-import CtaButton from '@/common/Button/CtaButton';
+import { ArrowRightIcon } from '@/utils/Icon';
+import Button from '@/common/Button';
 
 interface ServicesProps {
   title?: string;
@@ -49,12 +50,14 @@ const Services = ({
               </Paragraph>
             </div>
 
-            <CtaButton
+            <Button
               onClick={() => setShowModal(true)}
               className={`btn btn-feature ${!isLaptop && 'btn-lg'} mt-4`}
+              iconRight={<ArrowRightIcon />}
+
             >
               Talk to An Expert
-            </CtaButton>
+            </Button>
           </Col>
 
           {/* Services Section */}

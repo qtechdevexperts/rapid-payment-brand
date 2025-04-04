@@ -1,6 +1,6 @@
+import Button from '@/common/Button';
 import Paragraph from '@/common/Paragraph';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
 
 const PointofSaleCard = () => {
   return (
@@ -16,9 +16,7 @@ const PointofSaleCard = () => {
           get the right solution to accept payments quickly, securely, and
           effortlessly.
         </Paragraph>
-        <CtaButton className="btn btn-feature  ">
-          Find Out More
-        </CtaButton>
+        <Button className="btn btn-feature  ">Find Out More</Button>
       </div>
     </div>
   );

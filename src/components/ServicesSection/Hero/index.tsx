@@ -3,10 +3,11 @@ import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { Button, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
+import { ArrowRightIcon } from '@/utils/Icon';
+import Button from '@/common/Button';
 
 interface HeroProps {
   title?: string;
@@ -65,12 +66,13 @@ const Hero = ({
 
               {!isHideAllButton && (
                 <div className="d-flex flex-column flex-xl-row gap-3 mt-3 justify-content-start align-items-xl-center">
-                  <CtaButton
+                  <Button
                     onClick={() => setContactModal(true)}
                     className={`${isLaptop ? '' : 'btn-lg'}  ${style.Hero}   btn-feature`}
+                    iconRight={<ArrowRightIcon />}
                   >
                     Talk To an Expert
-                  </CtaButton>
+                  </Button>
                   {!isShowContact && (
                     <>
                       <Button

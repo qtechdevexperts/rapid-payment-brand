@@ -46,12 +46,12 @@ const PointOfSaleCard2 = ({
               text="Talk to Expert"
               className="btn btn-feature"
             />
-            <button
+            {/* <button
               onClick={onProductClick}
               className="btn btn-outline-feature"
             >
               Product Details
-            </button>
+            </button> */}
           </div>
         </div>
       </Card.Body>

@@ -1,12 +1,11 @@
+import Button from '@/common/Button';
 import Paragraph from '@/common/Paragraph';
 import useResponsive from '@/hooks/useResponsive';
 import clsx from 'clsx';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
-import { useRouter } from 'next/router';
 
 const slickSettings = {
   infinite: false,
@@ -69,8 +68,6 @@ const EmpactFullPayment = () => {
 
   const isBigScreen = useResponsive({ query: '(min-width: 1921px)' });
 
-
-
   const router = useRouter();
 
   return (
@@ -125,13 +122,14 @@ const EmpactFullPayment = () => {
                             <Paragraph className="card-text para my-2">
                               {slide.desc}
                             </Paragraph>
-                            <CtaButton
+                            <Button
                               onClick={() => router.push(slide.href)}
-                              className={`btn btn-feature ${!isBigScreen && 'btn-lg'
-                                } px-sm-5 py-2`}
+                              className={`btn btn-feature ${
+                                !isBigScreen && 'btn-lg'
+                              } px-sm-5 py-2`}
                             >
                               Get Started
-                            </CtaButton>
+                            </Button>
                           </div>
                         </div>
                         <div className="col-md-6">

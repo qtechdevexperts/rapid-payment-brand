@@ -7,7 +7,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
-import CtaButton from '@/common/Button/CtaButton';
 
 const Footer = () => {
   const [acceptPaymentFooter, setPaymentFooter] = useState<boolean>(false);
@@ -26,12 +25,12 @@ const Footer = () => {
             <div className="d-flex justify-content-between align-items-center mb-3">
               <img src="/images/logo-dark.png" className="img-fluid" alt="" />
 
-              <CtaButton
+              <Button
                 onClick={() => router.push('/contact')}
                 className="btn-feature  mt-3  px-2"
               >
                 Contact Us
-              </CtaButton>
+              </Button>
             </div>
           </Col>
         </Row>
@@ -340,12 +339,18 @@ const Footer = () => {
             ©2025, RapidPayment. All Rights Reserved
           </h3>
           <h6 className={`${style.footerLink} text-white `}>
-            <Link href={'/privacy-policy'} className={`text-white ${style.notForHover} text-decoration-none`}>
+            <Link
+              href={'/privacy-policy'}
+              className={`text-white ${style.notForHover} text-decoration-none`}
+            >
               {' '}
               Privacy Policy
             </Link>{' '}
             |{' '}
-            <Link href={'/terms-and-condition'} className={`text-white ${style.notForHover} text-decoration-none`}>
+            <Link
+              href={'/terms-and-condition'}
+              className={`text-white ${style.notForHover} text-decoration-none`}
+            >
               Terms and Conditions
             </Link>
           </h6>
