@@ -250,6 +250,8 @@ $container-max-widths: (
 // $feature-bg: #FF1F3E;
 
 $feature-bg: #4990e2;
+$dark: #1a2e5b;
+
 
 /*
   Change Bootstrap Border
@@ -288,19 +290,19 @@ $feature-bg: #4990e2;
   @extend .btn-sizes;
 
   &:hover {
-    background-color: transparent;
-    color: $feature-bg !important;
-    border: 1px solid $feature-bg !important;
+    background-color: $dark;
+    color: white !important;
+    // border: 1px solid $feature-bg !important;
 
     svg {
       path {
-        fill: $feature-bg !important;
+        fill: white !important;
       }
     }
   }
 }
 
-$dark: #1a2e5b;
+
 
 .btn-dark-feature {
   @include button-variant($background: $dark,
