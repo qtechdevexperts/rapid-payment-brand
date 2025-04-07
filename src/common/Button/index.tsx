@@ -23,7 +23,7 @@ const Button = ({
   return (
     <button
       onClick={onClick}
-      className={`${className} d-flex  justify-content-lg-center justify-content-between align-items-center gap-3 `}
+      className={`${className} d-flex  justify-content-lg-center justify-content-between align-items-center gap-xxl-3 gap-1 `}
       disabled={disabled}
       type={type}
       {...props}
