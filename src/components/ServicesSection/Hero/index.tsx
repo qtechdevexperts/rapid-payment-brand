@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
-import { ArrowRightIcon } from '@/utils/Icon';
+import { ArrowRightIcon, CallIcon } from '@/utils/Icon';
 import Button from '@/common/Button';
 
 interface HeroProps {
@@ -78,6 +78,7 @@ const Hero = ({
                       <Button
                         onClick={() => router.push('tel:888-562-4060')}
                         className={`  ${style.Hero}  ${isLaptop ? '' : 'btn-lg'} btn-outline-feature`}
+                        iconLeft={<CallIcon />}
                       >
                         Call Us: 888-562-4060
                       </Button>

@@ -26,6 +26,7 @@ $gray-light-7: #f1f7fd;
 $gray-light-8: #e0e0e0;
 $gray-light-9: #f8fafc;
 $gray-light-10: #e6f0fa;
+$gray-light-11: #F9FCFF;
 
 // Update your $colors map to use SCSS variables
 $colors: (
@@ -53,11 +54,10 @@ $colors: (
   'gray-light-8': $gray-light-8,
   'gray-light-9': $gray-light-9,
   'gray-light-10': $gray-light-10,
+  'gray-light-11': $gray-light-11,
 );
 
-@include css-vars(
-  (
-    --white: $white,
+@include css-vars((--white: $white,
     --sky-blue-10: $sky-blue-10,
 
     --blue-10: $blue-10,
@@ -83,6 +83,7 @@ $colors: (
     --gray-light-8: $gray-light-8,
     --gray-light-9: $gray-light-9,
     --gray-light-10: $gray-light-10,
+    --gray-light-11: $gray-light-11,
 
     // Shadow
     --border-light-1: rgba(255, 255, 255, 0.3),
@@ -91,7 +92,6 @@ $colors: (
     --shadow-1: rgba(0, 0, 0, 0.03),
     // Font Size
     --extra-large-size: 70px,
-  )
-);
+  ));
 
 // @import '@/styles/theme';

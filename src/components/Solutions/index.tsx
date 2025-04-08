@@ -68,70 +68,35 @@ const Solutions = () => {
         >
           <Row>
             <Col lg={6} className={`  ${style.leftSide} pb-3`}>
-              <div className={`${style.carouselTab}`}>
-                <Slider {...sliderSettings}>
-                  <div>
-                    <Button
-                      className={clsx(
-                        'px-md-5 px-sm-3 btn py-md-3 py-2 me-2 w-100',
-                        { 'btn-lg': !isLaptop },
-                        currentTab === 'small-business'
-                          ? 'btn-feature'
-                          : 'btn-outline-feature',
-                      )}
-                      onClick={() => handleTabClick('small-business')}
-                    >
-                      Small Business
-                    </Button>
-                  </div>
-
-                  <div>
-                    <Button
-                      className={clsx(
-                        'px-md-5 px-sm-3 btn py-md-3 py-2 me-2 w-100',
-                        { 'btn-lg': !isLaptop },
-                        currentTab === 'enterprises'
-                          ? 'btn-feature'
-                          : 'btn-outline-feature',
-                      )}
-                      onClick={() => handleTabClick('enterprises')}
-                    >
-                      Enterprises
-                    </Button>
-                  </div>
-                </Slider>
-              </div>
-
-              <div
-                className={`d-flex ${style.solutinTabButton}  gap-3 justify-content-start align-items-sm-center`}
-              >
-                <Button
-                  className={clsx(
-                    'px-md-5  px-3 py-md-3 btn py-2 rounded-0',
-                    { 'btn-lg': !isLaptop },
-                    currentTab === 'small-business'
-                      ? 'btn-dark-feature'
-                      : 'btn-outline-dark-feature',
-                  )}
-                  onClick={() => handleTabClick('small-business')}
-                >
-                  Small Business
-                </Button>
-
-                {/* Enterprises Tab */}
-                <Button
-                  className={clsx(
-                    'px-md-5 px-3 btn py-md-3 rounded-0 py-2',
-                    { 'btn-lg': !isLaptop },
-                    currentTab === 'enterprises'
-                      ? 'btn-dark-feature'
-                      : 'btn-outline-dark-feature',
-                  )}
-                  onClick={() => handleTabClick('enterprises')}
-                >
-                  Enterprises
-                </Button>
-                {/* Small Business Tab */}
+              <div className={`${style.carouselTab} d-flex justify-content-start gap-2 align-items-center`}>
+                <div>
+                  <Button
+                    className={clsx(
+                      'px-md-5 px-sm-3 btn py-md-3 py-2 me-2 w-100',
+                      { 'btn-lg': !isLaptop },
+                      currentTab === 'small-business'
+                        ? 'btn-feature'
+                        : 'btn-outline-feature',
+                    )}
+                    onClick={() => handleTabClick('small-business')}
+                  >
+                    Small Business
+                  </Button>
+                </div>
+                <div>
+                  <Button
+                    className={clsx(
+                      'px-md-5 px-sm-3 btn py-md-3 py-2 me-2 w-100',
+                      { 'btn-lg': !isLaptop },
+                      currentTab === 'enterprises'
+                        ? 'btn-feature'
+                        : 'btn-outline-feature',
+                    )}
+                    onClick={() => handleTabClick('enterprises')}
+                  >
+                    Enterprises
+                  </Button>
+                </div>
               </div>
 
               {currentTab === 'small-business' ? (
@@ -155,19 +120,19 @@ const Solutions = () => {
                   <div className="mt-4">
                     <LinkTag
                       href="/online-payments/"
-                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-sm-3 mt-1 mb-sm-3 mb-sm-1"
                     >
                       Online Payments
                     </LinkTag>
                     <LinkTag
                       href="/in-person-payments/"
-                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-sm-3 mt-1 mb-sm-3 mb-sm-1"
                     >
                       In-Person Payments
                     </LinkTag>
                     <LinkTag
                       href="/point-of-sale-solution/"
-                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-sm-3 mt-1 mb-sm-3 mb-sm-1"
                     >
                       Point of sales Solutions
                     </LinkTag>
@@ -194,33 +159,24 @@ const Solutions = () => {
                   </Paragraph>
 
                   <div className="mt-4">
-                    {/* <Link
-                      href={'/in-person-payments/'}
-                      className="heading-4 d-block text-reset text-decoration-none mt-3 mb-3"
-                    >
-                      In Person{' '}
-                      <img
-                        src="/images/icons/outline-interface-arrow-right.png"
-                        alt=""
-                      />
-                    </Link> */}
+
                     <LinkTag
                       href={'/in-person-payments/'}
-                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-sm-3 mt-1 mb-sm-3 mb-1"
                     >
                       In Person
                     </LinkTag>
 
                     <LinkTag
                       href={'/online-payments/'}
-                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-sm-3 mt-1 mb-sm-3 mb-1"
                     >
                       Online
                     </LinkTag>
 
                     <LinkTag
                       href={'/omni-channel-payments/'}
-                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-3 mb-3"
+                      className="heading-4 d-block text-reset text-secondary-standard text-decoration-none mt-sm-3 mt-1 mb-sm-3 mb-1"
                     >
                       Omnichannel
                     </LinkTag>
@@ -228,7 +184,7 @@ const Solutions = () => {
                 </>
               )}
 
-              <div className="d-flex flex-column flex-sm-row mt-8 justify-content-start align-items-sm-center gap-3">
+              <div className="d-flex flex-column flex-sm-row mt-sm-8 mt-4 justify-content-start align-items-sm-center gap-3">
                 <Button
                   onClick={() => setShowModal(true)}
                   className={`${!isLaptop && 'btn-lg'} btn btn-feature`}

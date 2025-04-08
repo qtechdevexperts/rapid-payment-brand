@@ -173,8 +173,9 @@
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  border-bottom: 1px solid #eee;
-  padding: 1rem;
+  // border: transparent !important;
+  border-top: 1px solid #eee !important;
+  padding: 15px 20px;
   font-weight: 600;
 
   &:hover {
@@ -197,7 +198,7 @@
 
 .mainListItem {
   cursor: pointer;
-  border-bottom: 1px solid #eee;
+  // border-bottom: 1px solid #eee;
   padding: 15px 20px;
 
   &:hover {

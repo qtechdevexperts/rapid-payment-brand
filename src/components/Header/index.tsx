@@ -345,7 +345,7 @@ const Header = () => {
               setCurrentTab={setCurrentTab}
               offcanvasView="menu"
               onMouseLeave={handleMouseLeave}
-              setOffcanvasView={() => {}}
+              setOffcanvasView={() => { }}
             />
           </Container>
         </div>
@@ -358,7 +358,7 @@ const Header = () => {
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title className={clsx(style.mainOffcanvasTile)}>
-            RapidPayments
+            <img src="/images/header-logo.png" alt="" />
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="px-0">
@@ -367,7 +367,7 @@ const Header = () => {
           <ul className={`list-group px-0 ps-0 ${style.tabList}  `}>
             <li
               className={clsx(
-                'list-group-item  text-primary-100 d-flex justify-content-start align-items-center gap-3',
+                'list-group-item  text-secondary-standard fw-medium d-flex justify-content-start align-items-center gap-3',
                 styles.mainListItem,
               )}
               onClick={() => setMobileActiveMain('solutions')}
@@ -376,7 +376,7 @@ const Header = () => {
             </li>
             <li
               className={clsx(
-                'list-group-item  text-primary-100 d-flex justify-content-start align-items-center gap-3',
+                'list-group-item  text-secondary-standard fw-medium d-flex justify-content-start align-items-center gap-3',
                 styles.mainListItem,
               )}
               onClick={() => setMobileActiveMain('whoWeServe')}
@@ -385,7 +385,7 @@ const Header = () => {
             </li>
             <li
               className={clsx(
-                'list-group-item  text-primary-100 d-flex justify-content-start align-items-center gap-3',
+                'list-group-item  text-secondary-standard fw-medium d-flex justify-content-start align-items-center gap-3',
                 styles.mainListItem,
               )}
               onClick={() => router.push('/who-we-are/')}
@@ -395,7 +395,7 @@ const Header = () => {
 
             <li
               className={clsx(
-                'list-group-item  text-primary-100 d-flex justify-content-start align-items-center gap-3',
+                'list-group-item  text-secondary-standard fw-medium d-flex justify-content-start align-items-center gap-3',
                 styles.mainListItem,
               )}
               onClick={() => router.push('/integrated-partners/')}
@@ -409,7 +409,7 @@ const Header = () => {
           >
             <li
               className={clsx(
-                'list-group-item border-top-0 px-3 pb-3 text-black d-flex justify-content-start align-items-center gap-3',
+                'list-group-item border-bottom-0  px-3 pb-3 text-black d-flex justify-content-start align-items-center gap-3 list-sub-heading-border rounded-0',
                 style.subMenuTitle,
               )}
               onClick={() => setMobileActiveMain(null)}
@@ -423,7 +423,7 @@ const Header = () => {
               <li
                 key={tab.id}
                 className={clsx(
-                  'list-group-item  text-primary-100 d-flex justify-content-start align-items-center gap-3',
+                  'list-group-item  text-secondary-standard d-flex justify-content-start align-items-center gap-3',
                   styles.mainListItem,
                 )}
                 onClick={() =>
@@ -450,7 +450,7 @@ const Header = () => {
           >
             <li
               className={clsx(
-                'list-group-item px-3 pb-3 text-black d-flex justify-content-start align-items-center gap-3',
+                'list-group-item px-3 pb-3 text-black d-flex list-sub-heading-border justify-content-start align-items-center gap-3',
                 styles.subMenuTitle,
               )}
               onClick={() => setLastMenu(false)}
@@ -480,7 +480,7 @@ const Header = () => {
                         'd-flex gap-2 align-items-center text-decoration-none',
                       )}
                     >
-                      <span className="text-primary-100">{item.label}</span>
+                      <span className="text-secondary-standard">{item.label}</span>
                     </Link>
                   </li>
                 ))}

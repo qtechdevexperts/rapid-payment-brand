@@ -18,16 +18,16 @@ const Footer = () => {
   const router = useRouter();
 
   return (
-    <div className={clsx(style.footer, 'pt-9')}>
+    <div className={clsx(style.footer, '')}>
       <Container>
         <Row>
           <Col lg="12">
             <div className="d-flex justify-content-between align-items-center mb-3">
-              <img src="/images/logo-dark.png" className="img-fluid" alt="" />
+              <img src="/images/logo-dark.png" className={`img-fluid ${style.footerLogo}`} alt="" />
 
               <Button
                 onClick={() => router.push('/contact')}
-                className="btn-feature  mt-3  px-2"
+                className={`btn-feature  mt-3  px-2 contact`}
               >
                 Contact Us
               </Button>

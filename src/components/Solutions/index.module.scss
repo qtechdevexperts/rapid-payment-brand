@@ -27,43 +27,6 @@
   }
 }
 
-.carouselTab {
-  display: none;
-
-  @media (max-width: 500px) {
-    display: block !important;
-    margin: 0 auto;
-    max-width: 95%;
-  }
-
-  @media (max-width: 340px) {
-    max-width: unset !important;
-
-    li {
-      width: 100% !important;
-      max-width: calc(100% / 2) !important;
-
-      button {
-        width: 100% !important;
-      }
-    }
-  }
-
-  @media (max-width: 575px) {
-    display: block;
-    margin-bottom: 20px;
-
-    :global {
-      .slick-slide {
-        padding: 0 5px;
-      }
-
-      .slick-track {
-        display: flex;
-      }
-    }
-  }
-}
 
 .imageSection {
   height: 100%;

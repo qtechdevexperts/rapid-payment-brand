@@ -262,16 +262,31 @@ $dark: #1a2e5b;
 }
 
 .btn-sizes {
+  min-height: 40px; // Default min-height for fallback
+
   @media (min-width: 1400px) {
     padding: 0.5rem 1.2rem;
     font-size: 1rem;
+    min-height: 44px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    min-height: 42px;
   }
 
   @media (max-width: 450px) {
-    padding: 7px !important;
+    padding: 0.4rem 1.2rem !important;
     font-size: 12px !important;
+    min-height: 36px !important;
   }
 }
+
+
+
+$border-radius: 2px;
+
 
 .btn-feature {
   @include button-variant($background: $feature-bg,
@@ -282,21 +297,23 @@ $dark: #1a2e5b;
     $active-border: darken($feature-bg, 13%));
   transition: all 0.2s ease-in-out;
 
-  border: 1px solid transparent;
+  border: $border-radius solid transparent;
   background-color: $feature-bg;
 
-  color: #fff !important;
+  color: #fff;
 
   @extend .btn-sizes;
 
-  &:hover {
-    background-color: $dark;
-    color: white !important;
-    // border: 1px solid $feature-bg !important;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent !important;
+    color: $dark !important;
+    border-color: $feature-bg !important;
 
     svg {
       path {
-        fill: white !important;
+        fill: $dark !important;
       }
     }
   }
@@ -325,6 +342,9 @@ $dark: #1a2e5b;
 
   transition: all 0.4s ease-in-out;
 
+
+  border-width: $border-radius;
+
   border-color: darken($dark, 3%);
   background-color: transparent;
   color: $dark !important;
@@ -349,7 +369,7 @@ $dark: #1a2e5b;
 
   transition: all 0.3s ease-in-out;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  border: 1px solid #1a2e5b !important;
+  border: $border-radius solid #1a2e5b !important;
 
   color: #1a2e5b !important;
 

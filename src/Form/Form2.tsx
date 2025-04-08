@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
+import style from "./index.module.scss"
 
 // Define the type for form data
 interface FormValues {
@@ -73,7 +74,8 @@ const Form2 = ({ onCloseModal }: FormModalProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className={``}>
+      
       <Row>
         <Col md={6} className="">
           <div className="mb-3">

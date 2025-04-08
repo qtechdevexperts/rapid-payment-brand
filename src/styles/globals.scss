@@ -25,6 +25,7 @@ body {
 
 input,
 textarea {
+
   &:active,
   &:focus {
     outline: none !important;
@@ -58,7 +59,7 @@ div[role='dialog'] {
   position: relative;
   overflow-x: auto !important;
 
-  & > * {
+  &>* {
     position: relative;
     z-index: 100;
   }
@@ -93,7 +94,7 @@ div[role='dialog'] {
   .slick-slide {
     height: 100%;
 
-    & > div {
+    &>div {
       height: 100%;
     }
   }
@@ -171,5 +172,21 @@ div[role='dialog'] {
     width: 20%;
     height: 3px;
     content: '';
+  }
+}
+
+
+.list-sub-heading-border {
+  border-top: 1px solid rgba(231 234 242);
+  padding: 15px 20px;
+  margin-top: 20px;
+}
+
+
+
+.contact {
+
+  &:hover {
+    color: white !important;
   }
 }

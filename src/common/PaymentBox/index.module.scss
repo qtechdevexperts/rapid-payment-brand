@@ -1,5 +1,8 @@
 @import 'rfs/scss';
 @import '@/styles/theme';
+$border-radius: 2px;
+
+
 
 .paymentBox {
   width: 100%;
@@ -29,7 +32,7 @@
 
 .btnOutline {
   transition: all 0.3s ease-in-out;
-  border: 1px solid var(--blue-11);
+  border: $border-radius solid var(--blue-11);
   border-radius: 5px;
   height: 48px;
 
@@ -40,7 +43,7 @@
   }
 
   &:hover {
-    background-color: var(--sky-blue-10);
+    background-color: var(--blue-11);
     color: white;
 
     svg {
