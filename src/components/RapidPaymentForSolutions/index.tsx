@@ -122,7 +122,7 @@ const RapidPaymentForSolutions = () => {
                             <p className="card-text para my-4">{slide?.desc}</p>
                             <Button
                               onClick={() => router.push(slide.href)}
-                              className={`btn btn-feature  px-sm-5 py-2`}
+                              className={`btn btn-feature  px-sm-5`}
                             >
                               Get Started
                             </Button>

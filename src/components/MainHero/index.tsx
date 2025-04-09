@@ -9,6 +9,10 @@ import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
+import { IoCallOutline } from "react-icons/io5";
+
+
+
 
 const MainHero = () => {
   const router = useRouter();
@@ -93,7 +97,7 @@ const MainHero = () => {
                 <Button
                   onClick={() => router.push('tel:888-562-4060')}
                   className={` btn btn-outline-feature `}
-                  iconLeft={<CallIcon />}
+                  iconLeft={<IoCallOutline />}
                 >
                   Call Us: 888-562-4060
                 </Button>

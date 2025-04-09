@@ -1,1 +1,15 @@
 @import "@/styles/theme";
+
+.modalIcon {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--sky-blue-11);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

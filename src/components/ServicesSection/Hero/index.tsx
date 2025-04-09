@@ -8,6 +8,9 @@ import { useMediaQuery } from 'react-responsive';
 import style from './index.module.scss';
 import { ArrowRightIcon, CallIcon } from '@/utils/Icon';
 import Button from '@/common/Button';
+import { IoCallOutline } from "react-icons/io5";
+
+
 
 interface HeroProps {
   title?: string;
@@ -78,7 +81,7 @@ const Hero = ({
                       <Button
                         onClick={() => router.push('tel:888-562-4060')}
                         className={`  ${style.Hero}  ${isLaptop ? '' : 'btn-lg'} btn-outline-feature`}
-                        iconLeft={<CallIcon />}
+                        iconLeft={<IoCallOutline />}
                       >
                         Call Us: 888-562-4060
                       </Button>

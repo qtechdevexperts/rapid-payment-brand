@@ -263,16 +263,24 @@ $dark: #1a2e5b;
 
 .btn-sizes {
   min-height: 40px; // Default min-height for fallback
+  font-weight: 700;
+  padding: 0.75rem 1rem;
 
   @media (min-width: 1400px) {
-    padding: 0.5rem 1.2rem;
+    padding: 0.75rem 1rem;
     font-size: 1rem;
     min-height: 44px;
   }
 
+  @media (max-width:1400px) {
+    padding: 0.75rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+
   @media (max-width: 992px) {
     padding: 0.7rem 1.2rem;
-    font-size: 1rem;
+    // font-size: 1rem;
     min-height: 42px;
   }
 
@@ -285,7 +293,7 @@ $dark: #1a2e5b;
 
 
 
-$border-radius: 2px;
+$border-radius: 2.5px;
 
 
 .btn-feature {
@@ -299,6 +307,7 @@ $border-radius: 2px;
 
   border: $border-radius solid transparent;
   background-color: $feature-bg;
+
 
   color: #fff;
 

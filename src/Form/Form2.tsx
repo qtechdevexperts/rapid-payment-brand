@@ -74,10 +74,10 @@ const Form2 = ({ onCloseModal }: FormModalProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={``}>
-      
-      <Row>
-        <Col md={6} className="">
+    <form onSubmit={handleSubmit(onSubmit)} className={`position-relative`}>
+
+      <Row className='mt-5 mt-lg-3'>
+        <Col md={6} xs={6} className="">
           <div className="mb-3">
             <label htmlFor="firstName" className="form-label">
               First Name:
@@ -94,7 +94,7 @@ const Form2 = ({ onCloseModal }: FormModalProps) => {
           </div>
         </Col>
 
-        <Col md={6} className="">
+        <Col md={6} xs={6} className="">
           <div className="mb-3">
             <label htmlFor="lastName" className="form-label">
               Last Name:
@@ -111,7 +111,7 @@ const Form2 = ({ onCloseModal }: FormModalProps) => {
           </div>
         </Col>
 
-        <Col md={6} className="">
+        <Col md={6} xs={6} className="">
           <div className="mb-3">
             <label htmlFor="company" className="form-label">
               Company Name:
@@ -128,7 +128,7 @@ const Form2 = ({ onCloseModal }: FormModalProps) => {
           )}
         </Col>
 
-        <Col md={6} className="">
+        <Col md={6} xs={6} className="">
           <div className="mb-3">
             <label htmlFor="phone" className="form-label">
               Phone Number:

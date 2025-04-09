@@ -100,7 +100,7 @@ const RapidPaymentForSolutions = ({
                               <Paragraph className="card-text para my-4">
                                 {slide?.desc}
                               </Paragraph>
-                              <Button onClick={() => setShowModal(true)} className={`btn btn-feature  px-sm-5 py-2`}>
+                              <Button onClick={() => setShowModal(true)} className={`btn btn-feature  px-sm-5 `}>
                                 Get Started
                               </Button>
                             </div>

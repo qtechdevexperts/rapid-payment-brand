@@ -123,12 +123,7 @@ const RapidPaymentUniversity = () => {
                             <Paragraph className="card-text para my-4">
                               {slide?.desc}
                             </Paragraph>
-                            {/* <Link
-                              href={slide?.href}
-                              className={`btn btn-feature  px-sm-5 py-2`}
-                            >
-                              Get Started
-                            </Link> */}
+
 
                             <Button
                               iconRight={<ArrowRightIcon />}
