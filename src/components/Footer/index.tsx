@@ -50,11 +50,10 @@ const Footer = () => {
                 <div>{/* <FaPhone size={16} color="#1C2630" /> */}</div>
                 <Link
                   href={'tel:888-562-4060'}
-                  onClick={() => router.push('tel:888-562-4060')}
                   className={`text-white cursor-pointer ${style.footerLink} text-decoration-none  fw-reguler`}
                 >
                   888-562-4060
-                  {/* 888-562-4060 */}
+
                 </Link>
               </div>
               <h2 className={`footer-lbl`}>Email:</h2>
@@ -62,12 +61,24 @@ const Footer = () => {
                 <div>{/* <TfiEmail size={16} color="#1c2630" /> */}</div>
                 <Link
                   href={'mailto:sales@rapidpayments.io'}
-                  onClick={() => router.push('mailto:sales@rapidpayments.io')}
                   className={`text-white cursor-pointer ${style.footerLink} text-decoration-none fw-reguler`}
                 >
                   sales@rapidpayments.io
                 </Link>
               </div>
+              <h2 className={`footer-lbl`}>Address:</h2>
+              <div className="mb-3">
+                <div>{/* <TfiEmail size={16} color="#1c2630" /> */}</div>
+                <Link
+                  href={'https://maps.app.goo.gl/sEAGN821HeTfgTJv6'}
+                  target='_blank'
+
+                  className={`text-white cursor-pointer ${style.footerLink} text-decoration-none fw-reguler`}
+                >
+                  11658 S. Copper Sky Dr, South Jordan, UT, 84009, USA
+                </Link>
+              </div>
+
               <div className="mb-3"></div>
             </div>
 
